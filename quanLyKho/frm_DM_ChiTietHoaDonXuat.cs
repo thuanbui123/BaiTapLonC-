@@ -241,5 +241,349 @@ namespace quanLyKho
         {
             addCustomer();
         }
+        private void btn_DM_InDonXuat_Click(object sender, EventArgs e)
+        {
+            frm_DM_IN f = new frm_DM_IN();
+            f.ShowDialog();
+        }
     }
 }
+//  private bool error()
+//        {
+//            bool error = true;
+//            int dg, sl, slk, gg;
+//            if (txt_DonGia.Text == "")
+//            {
+//                errorProvider1.SetError(txt_DonGia, "Chưa nhập thông tin");
+//                txt_DonGia.Focus();
+//                error = false;
+//            }
+//            else
+
+//                if (int.TryParse(txt_DonGia.Text, out dg) == false)
+//            {
+//                errorProvider1.SetError(txt_DonGia, "Sai định dạng");
+//                txt_DonGia.Focus();
+//                error = false;
+//            }
+
+//            if (txt_GiaGoc.Text == "")
+//            {
+//                errorProvider1.SetError(txt_GiaGoc, "Chưa nhập thông tin");
+//                txt_GiaGoc.Focus();
+//                error = false;
+//            }
+//            else
+
+//                if (int.TryParse(txt_GiaGoc.Text, out gg) == false)
+//            {
+//                errorProvider1.SetError(txt_GiaGoc, "Sai định dạng");
+//                txt_DonGia.Focus();
+//                error = false;
+//            }
+
+
+
+//            if (txt_SoLuong.Text == "")
+//            {
+//                errorProvider1.SetError(txt_SoLuong, "Chưa nhập thông tin");
+//                txt_SoLuong.Focus();
+//                error = false;
+//            }
+//            else
+
+//                if (int.TryParse(txt_SoLuong.Text, out sl) == false)
+//            {
+//                errorProvider1.SetError(txt_SoLuong, "Sai định dạng");
+//                txt_SoLuong.Focus();
+//                error = false;
+//            }
+
+
+//            if (txt_SoLuongKho.Text == "")
+//            {
+//                errorProvider1.SetError(txt_SoLuongKho, "Chưa nhập thông tin");
+//                txt_SoLuongKho.Focus();
+//                error = false;
+//            }
+//            else
+
+//                if (int.TryParse(txt_SoLuongKho.Text, out slk) == false)
+//            {
+//                errorProvider1.SetError(txt_SoLuongKho, "Sai định dạng");
+//                txt_SoLuongKho.Focus();
+//                error = false;
+//            }
+
+//            return error;
+//        }
+//        public int thanhtien()
+//        {
+           
+//            return  Convert.ToInt32(txt_SoLuong.Text)*Convert.ToInt32(txt_DonGia.Text);
+//        }
+//        public string id()
+//        {
+//            string id = cbo_HangHoa.SelectedValue.ToString();
+//            return id;
+//        }
+//        public object idkho1()
+//        {
+           
+//            object idKho = DataProvider.Instance.executeScalar("Select id from kho where idHangHoa = '" + id() + "'");
+//            return idKho;
+//        }
+        
+//        public object idchitietphieuxuat()
+//        {
+//            object idChiTietPhieuXuat = DataProvider.Instance.executeScalar("select ctpx.idXuat from chiTietPhieuXuat as ctpx, hangHoa as hh, kho as k where hh.id = '" + id() + "' and hh.id = k.idHangHoa and k.id = ctpx.idKho");
+//            return idChiTietPhieuXuat;
+//        }
+//        public object idPhieuXuat()
+//        {
+//            object idPhieuXuat = DataProvider.Instance.executeScalar("Select px.soPhieuXuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '" + idchitietphieuxuat() + "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+//            return idPhieuXuat;
+//        }
+
+//        private void addCustomer()
+//        {
+//            state = true;
+//            try
+//            {
+//                string id = cbo_HangHoa.SelectedValue.ToString();
+               
+//                object idkho = DataProvider.Instance.executeScalar("select id from kho where idHangHoa = '" + id + "'");
+//                object soluong = DataProvider.Instance.executeScalar("select soLuong from kho where idHangHoa = '" + id + "'");
+//                if (Convert.ToInt32(soluong) < Convert.ToInt32(txt_SoLuong.Text))
+//                {
+
+//                    MessageBox.Show("Không thành công");
+
+//                }
+
+
+//                else
+//                {
+//                    string query = "insert  into chiTietPhieuXuat values ( '" + idkho1() + "', '" + lbl_DM_CTPX_SoHoaDon.Text+ "', " + Convert.ToInt32(txt_SoLuong.Text.Trim()) + ",  " + Convert.ToDecimal(txt_DonGia.Text) + ")";
+//                    int i = DataProvider.Instance.executeNonQuery(query);
+//                    if (i > 0)
+//                    {
+//                        int sl = Convert.ToInt32(soluong) - Convert.ToInt32(txt_SoLuong.Text);
+//                        MessageBox.Show("Thêm thành công");
+//                        string query1 = "update kho set soLuong= '" + sl + "where idHangHoa = '" + id + "'";
+//                        loadDuLieuLenLuoi();
+//                    }
+//                }
+//            }
+//            catch (Exception e)
+//            {
+//                MessageBox.Show(e.Message);
+//            }
+
+
+
+//        }
+//        private void edit()
+//        {
+//            try
+//            {
+//                string query = "update chiTietPhieuXuat set  idKho = '"+idkho1()+"', idPhieuXuat = '"+ idPhieuXuat()+"',soLuongXuat ='" + Convert.ToInt32(txt_SoLuong.Text.Trim()) + "', donGiaXuat = '"+thanhtien()+"' where idPhieuXuat='"+ idPhieuXuat()+"'";
+//                int i = DataProvider.Instance.executeNonQuery(query);
+
+//                if (i > 0)
+//                {
+//                    MessageBox.Show("thành công");
+//                    loadDuLieuLenLuoi();
+//                }
+//                else
+//                {
+
+//                }
+//            }
+//            catch (Exception e)
+//            {
+//                MessageBox.Show(e.Message);
+//            }
+//        }
+
+//        private void bnt_DM_LuuDonXuat_Click(object sender, EventArgs e)
+//        {
+
+//            errorProvider1.Clear();
+//            if (error() == false)
+//            {
+//                error();
+//            }
+//            else
+//            {
+//                if (state == true)
+
+
+//                {
+//                    addCustomer();
+
+//                }
+//                else
+//                {
+//                    edit();
+//                }
+//            }
+//        }
+
+//        private void btn_DM_ThemDonXuat_Click(object sender, EventArgs e)
+//        {
+//            state = true;
+//            txt_SoLuong.Focus();
+//            btn_DM_ThemDonXuat.Enabled = false;
+//            btn_DM_SuaDonXuat.Enabled = false;
+//            btn_DM_XoaDonXuat.Enabled = false;
+//            btn_DM_HuyDonXuat.Enabled = true;
+//            btn_DM_InDonXuat.Enabled = true;
+//            bnt_DM_LuuDonXuat.Enabled = true;
+//            cbo_HangHoa.Enabled = true;
+//            txt_GiaGoc.Enabled = true;
+//            txt_DonGia.Enabled = true;
+//            txt_SoLuong.Enabled = true;
+//            txt_SoLuongKho.Enabled = false;
+            
+//            txt_SoLuong.Text = "";
+//            txt_GiaGoc.Text = "";
+//            txt_DonGia.Text = "";
+//        }
+
+//        private void btn_DM_SuaDonXuat_Click(object sender, EventArgs e)
+//        {
+//            state = false;
+//            txt_DonGia.Focus();
+//            btn_DM_ThemDonXuat.Enabled = false;
+//            btn_DM_SuaDonXuat.Enabled = false;
+//            btn_DM_XoaDonXuat.Enabled = false;
+//            btn_DM_HuyDonXuat.Enabled = true;
+//            btn_DM_InDonXuat.Enabled = true;
+//            bnt_DM_LuuDonXuat.Enabled = true;
+            
+//            cbo_HangHoa.Enabled = true;
+//            txt_GiaGoc.Enabled = true;
+//            txt_DonGia.Enabled = true;
+//            txt_SoLuong.Enabled = true;
+//            txt_SoLuongKho.Enabled = false;
+
+//        }
+
+//        private void loadCboHangHoa ()
+//        {
+//            string query = "Select hh.id, hh.tenHangHoa from hangHoa as hh";
+//            DataTable data = DataProvider.Instance.executeQuery(query);
+//            cbo_HangHoa.DataSource = data;
+//            cbo_HangHoa.ValueMember = "id";
+//            cbo_HangHoa.DisplayMember = "tenHangHoa";
+//        }
+
+//        private void getDongThuI(int i)
+//        {
+//            try
+//            {
+//                string tenHH = dgv_Main_DonXuat.Rows[i].Cells[0].Value.ToString();
+//                Object idHH = DataProvider.Instance.executeScalar("Select id from hangHoa where tenHangHoa = N'" + tenHH + "'");
+//                cbo_HangHoa.SelectedValue = idHH;
+//                object data = DataProvider.Instance.executeScalar("Select donViTinh from hangHoa where tenHangHoa = N'" + tenHH + "'");
+//                lbl_DonVi.Text = Convert.ToString(data);
+//                data = DataProvider.Instance.executeScalar("Select k.soLuong from hangHoa as hh, kho as k where hh.tenHangHoa = N'" + tenHH + "' and k.idHangHoa = hh.id");
+//                txt_SoLuongKho.Text = Convert.ToString(data);
+//                data = DataProvider.Instance.executeScalar("Select xuatXu from hangHoa where tenHangHoa = N'" + tenHH + "'");
+//                lbl_XuatXu.Text = Convert.ToString(data);
+//                data = DataProvider.Instance.executeScalar("Select ctpn.donGiaNhap from hangHoa as hh, chiTietPhieuNhap as ctpn where hh.tenHangHoa = N'" + tenHH + "' and ctpn.idHangHoa = hh.id");
+//                txt_GiaGoc.Text = Convert.ToString(data);
+//                data = DataProvider.Instance.executeScalar("Select ctpx.soLuongXuat * ctpx.donGiaXuat from hangHoa as hh, chiTietPhieuXuat as ctpx, kho as k where tenHangHoa = N'" + tenHH + "' and ctpx.idKho = k.id and k.idHangHoa = hh.id");
+//                lbl_ThanhTien.Text = Convert.ToString(data);
+//                txt_SoLuong.Text = dgv_Main_DonXuat.Rows[i].Cells[2].Value.ToString();
+//                txt_DonGia.Text = dgv_Main_DonXuat.Rows[i].Cells[3].Value.ToString();
+//                int soLuongXuat = Convert.ToInt32(txt_SoLuong.Text.ToString());
+//                object idChiTietPhieuXuat = DataProvider.Instance.executeScalar("select ctpx.idXuat from chiTietPhieuXuat as ctpx, hangHoa as hh, kho as k where hh.id = '"+idHH+"' and hh.id = k.idHangHoa and k.id = ctpx.idKho");
+//                object idPhieuXuat = DataProvider.Instance.executeScalar("Select px.soPhieuXuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '"+idChiTietPhieuXuat+ "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+//                lbl_DM_CTPX_SoHoaDon.Text = idPhieuXuat.ToString();
+//                data = DataProvider.Instance.executeScalar("Select px.ngayLap_Xuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '" + idChiTietPhieuXuat + "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+//                lbl_NgayLapHD.Text = Convert.ToDateTime(data).ToString("dd/MM/yyyy");
+//                data = DataProvider.Instance.executeScalar("Select kh.tenKhachHang from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text+"'");
+//                lbl_KhachHang.Text = data.ToString();
+//                data = DataProvider.Instance.executeScalar("Select kh.soDienThoai from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "'");
+//                lbl_SoDienThoai.Text = data.ToString();
+//                data = DataProvider.Instance.executeScalar("Select kh.diaChi from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "'");
+//                lbl_DiaChi.Text = data.ToString();
+//            }
+//            catch (Exception e)
+//            {
+//                MessageBox.Show(e.Message);
+//            }
+//        }
+
+//        private void dgv_Main_DonXuat_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+//        {
+//            int i = dgv_Main_DonXuat.CurrentCell.RowIndex;
+//            getDongThuI(i);
+
+//        }
+     
+
+//        private void frm_DM_ChiTietHoaDonXuat_Load(object sender, EventArgs e)
+//        {
+//            loadCboHangHoa();
+//            loadDuLieuLenLuoi();
+//            getDongThuI(0);
+            
+//        }
+
+//        private void btn_DM_HuyDonXuat_Click(object sender, EventArgs e)
+//        {
+//            errorProvider1.Clear();
+//            state = true;
+
+//            btn_DM_ThemDonXuat.Enabled = true;
+//            btn_DM_SuaDonXuat.Enabled = true;
+//            btn_DM_XoaDonXuat.Enabled = true;
+//            btn_DM_HuyDonXuat.Enabled = false;
+//            btn_DM_InDonXuat.Enabled = false;
+//            bnt_DM_LuuDonXuat.Enabled = false;
+//            txt_SoLuongKho.Text = "";
+//            txt_SoLuong.Text = "";
+//            txt_GiaGoc.Text = "";
+//            txt_DonGia.Text = "";
+//        }
+
+//        private void btn_DM_XoaDonXuat_Click(object sender, EventArgs e)
+//        {
+//            DialogResult dialog = MessageBox.Show("Bạn có muốn xóa", "Thông báo", MessageBoxButtons.YesNo);
+
+//            if (dialog == DialogResult.Yes)
+//            {
+//                try
+//                {
+//                    string query = "Delete from chiTietPhieuXuat where idPhieuXuat = '" + idPhieuXuat() + "'";
+
+//                    var result = DataProvider.Instance.executeNonQuery(query);
+
+//                    if (result > 0)
+//                    {
+//                        MessageBox.Show("Delete success");
+//                        loadDuLieuLenLuoi();
+//                    }
+//                    else
+//                    {
+//                        MessageBox.Show("Delete error");
+//                    }
+//                    loadDuLieuLenLuoi();
+//                }
+//                catch (Exception ex)
+//                {
+//                    MessageBox.Show(ex.Message);
+//                }
+//            }
+//        }
+
+//        private void btn_DM_InDonXuat_Click(object sender, EventArgs e)
+//        {
+//            frmDM_IN f = new frmDM_IN();
+//            f.ShowDialog();
+//        }
+//    }
+//}

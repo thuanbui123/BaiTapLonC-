@@ -29,6 +29,7 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DM_ChiTietHoaDonXuat));
             this.label17 = new System.Windows.Forms.Label();
             this.lbl_DM_CTPX_SoHoaDon = new System.Windows.Forms.Label();
@@ -68,10 +69,12 @@ namespace quanLyKho
             this.btn_DM_SuaDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_ThemDonXuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4.SuspendLayout();
             this.grbChiTietDonXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_DonXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -472,6 +475,10 @@ namespace quanLyKho
             this.label2.Text = "CHI TIẾT HÓA ĐƠN XUẤT ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_DM_ChiTietHoaDonXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -494,6 +501,7 @@ namespace quanLyKho
             this.grbChiTietDonXuat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_DonXuat)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,5 +546,6 @@ namespace quanLyKho
         private System.Windows.Forms.Button btn_DM_SuaDonXuat;
         private System.Windows.Forms.Button btn_DM_ThemDonXuat;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

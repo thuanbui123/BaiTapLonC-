@@ -73,7 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="anHienMatKhau.cs" />
+    <Compile Include="class_ChiTietHoaDonNhap.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="dsChiTietPhieuNhap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsChiTietPhieuNhap.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsHangHoa.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +89,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNhapKho.cs">
+      <DependentUpon>dsNhapKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNhapKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNhapKho.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsXuatHang.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,6 +191,12 @@
     <Compile Include="frm_BC_ThongKeKhachHang.Designer.cs">
       <DependentUpon>frm_BC_ThongKeKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_BieuDoThongKeDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BieuDoThongKeDoanhThu.Designer.cs">
+      <DependentUpon>frm_BieuDoThongKeDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DM_ChiTietHoaDonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +250,18 @@
     </Compile>
     <Compile Include="frm_DM_ThongTinLoaiHang.Designer.cs">
       <DependentUpon>frm_DM_ThongTinLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_InBCTK_NhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_InBCTK_NhapKho.Designer.cs">
+      <DependentUpon>frm_InBCTK_NhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_InChiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_InChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>frm_InChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_In_ThongKeXuatHang.cs">
       <SubType>Form</SubType>
@@ -285,6 +317,9 @@
     <EmbeddedResource Include="frm_BC_ThongKeKhachHang.resx">
       <DependentUpon>frm_BC_ThongKeKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_BieuDoThongKeDoanhThu.resx">
+      <DependentUpon>frm_BieuDoThongKeDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DM_ChiTietHoaDonNhap.resx">
       <DependentUpon>frm_DM_ChiTietHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +347,12 @@
     <EmbeddedResource Include="frm_DM_ThongTinLoaiHang.resx">
       <DependentUpon>frm_DM_ThongTinLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_InBCTK_NhapKho.resx">
+      <DependentUpon>frm_InBCTK_NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_InChiTietPhieuNhap.resx">
+      <DependentUpon>frm_InChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_In_ThongKeXuatHang.resx">
       <DependentUpon>frm_In_ThongKeXuatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,10 +368,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportChiTietPhieuNhap.rdlc" />
     <EmbeddedResource Include="ReportHangDaBan.rdlc" />
     <EmbeddedResource Include="ReportHangHoa.rdlc" />
     <EmbeddedResource Include="ReportKho.rdlc" />
+    <EmbeddedResource Include="ReportNhapKho.rdlc" />
     <EmbeddedResource Include="Report_Ctpx.rdlc" />
+    <None Include="dsChiTietPhieuNhap.xsc">
+      <DependentUpon>dsChiTietPhieuNhap.xsd</DependentUpon>
+    </None>
+    <None Include="dsChiTietPhieuNhap.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsChiTietPhieuNhap.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsChiTietPhieuNhap.xss">
+      <DependentUpon>dsChiTietPhieuNhap.xsd</DependentUpon>
+    </None>
     <None Include="dsHangHoa.xsc">
       <DependentUpon>dsHangHoa.xsd</DependentUpon>
     </None>
@@ -352,6 +406,17 @@
     </None>
     <None Include="dsKho.xss">
       <DependentUpon>dsKho.xsd</DependentUpon>
+    </None>
+    <None Include="dsNhapKho.xsc">
+      <DependentUpon>dsNhapKho.xsd</DependentUpon>
+    </None>
+    <None Include="dsNhapKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNhapKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsNhapKho.xss">
+      <DependentUpon>dsNhapKho.xsd</DependentUpon>
     </None>
     <None Include="dsXuatHang.xsc">
       <DependentUpon>dsXuatHang.xsd</DependentUpon>

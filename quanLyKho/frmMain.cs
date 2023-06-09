@@ -84,6 +84,7 @@ namespace quanLyKho
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             frmTrangChu f = new frmTrangChu();
             formManager fm = new formManager();
             fm.showForm(pnlContainer, f);
@@ -193,6 +194,13 @@ namespace quanLyKho
         private void btn_BCTK_Kho_Click(object sender, EventArgs e)
         {
             frm_BCTK_BaoCaoKho f = new frm_BCTK_BaoCaoKho();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_TopMatHangBanChay f = new frm_TopMatHangBanChay();
             formManager fm = new formManager();
             fm.showForm(pnlContainer, f);
         }

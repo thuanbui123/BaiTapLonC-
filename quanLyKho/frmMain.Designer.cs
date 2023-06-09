@@ -56,6 +56,7 @@ namespace quanLyKho
             this.btn_BCTK_KhachHang = new System.Windows.Forms.Button();
             this.tpHuongDan = new System.Windows.Forms.TabPage();
             this.btn_HD_HoTro = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcThanhDieuHuong.SuspendLayout();
             this.tpHeThong.SuspendLayout();
             this.tpDanhMuc.SuspendLayout();
@@ -90,6 +91,7 @@ namespace quanLyKho
             // 
             // tpHeThong
             // 
+            this.tpHeThong.Controls.Add(this.button1);
             this.tpHeThong.Controls.Add(this.btnThoat);
             this.tpHeThong.Controls.Add(this.btnDangXuat);
             this.tpHeThong.Controls.Add(this.btnDoiMatKhau);
@@ -409,6 +411,16 @@ namespace quanLyKho
             this.btn_HD_HoTro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_HD_HoTro.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(718, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -461,6 +473,7 @@ namespace quanLyKho
         private System.Windows.Forms.Button btn_BCTK_HangHoa;
         private System.Windows.Forms.Button btn_BCTK_NhaCungCap;
         private System.Windows.Forms.Button btn_HD_HoTro;
+        private System.Windows.Forms.Button button1;
     }
 }
 

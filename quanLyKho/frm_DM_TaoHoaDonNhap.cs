@@ -34,7 +34,14 @@ namespace quanLyKho
         {
             string query = "Select pn.soPhieuNhap, ncc.tenNhaCungCap, pn.ngayLap_Nhap from phieuNhap as pn, nhaCungCap as ncc where pn.idNhaCungCap = ncc.id";
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgvMain.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgvMain.DataSource = data;
+            }
+            else
+            {
+                dgvMain.DataSource = null;
+            }
             dinhDangluoi();
         }
 

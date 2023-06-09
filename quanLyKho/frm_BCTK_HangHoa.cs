@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//Thêm thư viện
+using Microsoft.Reporting.WinForms;
 
 namespace quanLyKho
 {
@@ -18,31 +20,16 @@ namespace quanLyKho
             InitializeComponent();
         }
 
-        private void dinhDangLuoi ()
-        {
-            dgvMain.Columns[0].HeaderText = "Mã hàng hóa";
-            dgvMain.Columns[0].Width = 150;
-            dgvMain.Columns[1].HeaderText = "Tên hàng hóa";
-            dgvMain.Columns[1].Width = 170;
-            dgvMain.Columns[2].HeaderText = "Tên loại";
-            dgvMain.Columns[2].Width = 170;
-            dgvMain.Columns[3].HeaderText = "Đơn vị tính";
-            dgvMain.Columns[3].Width = 170;
-            dgvMain.Columns[4].HeaderText = "Xuất xứ";
-            dgvMain.Columns[4].Width = 150;
-        }
-
-        private void loadDuLieuLenLuoi ()
-        {
-            string query = "Select hh.id, hh.tenHangHoa, lh.tenLoai, hh.donViTinh, hh.XuatXu from hangHoa as hh, loaiHang as lh where hh.idLoaiHang = lh.id";
-            DataTable data = DataProvider.Instance.executeQuery(query);
-            dgvMain.DataSource = data;
-            dinhDangLuoi();
-        }
-
         private void frm_BCTK_HangHoa_Load(object sender, EventArgs e)
         {
-            loadDuLieuLenLuoi();
+            string query = "Select hh.id, hh.tenHangHoa, hh.donViTinh, lh.tenLoai, hh.xuatXu from hangHoa as hh, loaiHang as lh where hh.idLoaiHang = lh.id";
+            DataTable dt = DataProvider.Instance.executeQuery(query);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportHangHoa.rdlc";
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "DataSet1";
+            rds.Value = dt;
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
         }
     }
 }

@@ -34,7 +34,14 @@ namespace quanLyKho
         {
             string query = "select hh.tenHangHoa, hh.donViTinh, k.soLuong, hh.xuatXu from hangHoa as hh, kho as k where hh.id = k.idHangHoa";
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgv_DM_Kho.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgv_DM_Kho.DataSource = data;
+            }
+            else
+            {
+                dgv_DM_Kho.DataSource = null;
+            }
             dinhDangLuoi();
         }
 

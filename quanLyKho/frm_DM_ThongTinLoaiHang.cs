@@ -22,7 +22,14 @@ namespace quanLyKho
         {
             string query = "SELECT lh.id,lh.tenLoai,lh.dienGiai from loaiHang as lh";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            dgvMain.DataSource = dt;
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                dgvMain.DataSource = dt;
+            }
+            else
+            {
+                dgvMain.DataSource = null;
+            }
             DinhDangLuoi();
         }
 

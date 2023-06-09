@@ -21,12 +21,22 @@ namespace quanLyKho
 
         public void loadDuLieuLenLuoi()
         {
-            string query = "Select hh.tenHangHoa, hh.donViTinh, ctpx.soLuongXuat, ctpx.donGiaXuat from chiTietPhieuXuat as ctpx, kho as k, hangHoa as hh, phieuXuat as px where ctpx.idKho = k.id and ctpx.idPhieuXuat = px.soPhieuXuat and k.idHangHoa = hh.id";
+            string query = "Select hh.tenHangHoa, hh.donViTinh, ctpx.soLuongXuat, ctpx.donGiaXuat, ctpx.idXuat " +
+                "from chiTietPhieuXuat as ctpx, kho as k, hangHoa as hh, phieuXuat as px" +
+                " where ctpx.idKho = k.id and ctpx.idPhieuXuat = px.soPhieuXuat and k.idHangHoa = hh.id and ctpx.idPhieuXuat = '" + GlobalDataChiTietHoaDonXuat.soHoaDon + "'";
 
             DataTable data = getData(query);
 
-            dgv_Main_DonXuat.DataSource = data;
-            dinhDangLuoi();
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgv_Main_DonXuat.DataSource = data;
+                dinhDangLuoi();
+            }
+            else
+            {
+                dgv_Main_DonXuat.DataSource = null;
+                dinhDangLuoi();
+            }
         }
 
         private DataTable getData(string query)
@@ -48,6 +58,8 @@ namespace quanLyKho
             dgv_Main_DonXuat.Columns[2].Width = 200;
             dgv_Main_DonXuat.Columns[3].HeaderText = "Đơn giá";
             dgv_Main_DonXuat.Columns[3].Width = 250;
+            dgv_Main_DonXuat.Columns[4].HeaderText = "id xuất";
+            dgv_Main_DonXuat.Columns[4].Visible = false;
 
         }
 
@@ -56,7 +68,9 @@ namespace quanLyKho
         {
             try
             {
-                string query = "insert chiTietPhieuXuat" + " values ( '" + Convert.ToDecimal(txt_DonGia.Text.Trim()) + "" + Convert.ToDecimal(txt_SoLuongKho.Text.Trim()) + "" + Convert.ToDecimal(txt_GiaGoc.Text.Trim()) + "',  " + Convert.ToDecimal(txt_SoLuong.Text.Trim()) + ")";
+
+                object idKho = DataProvider.Instance.executeScalar("Select id from kho where idHangHoa = '"+cbo_HangHoa.SelectedValue+"'");
+                string query = "insert into chiTietPhieuXuat values ('"+idKho +"', '"+lbl_DM_CTPX_SoHoaDon.Text+"',  "+ Convert.ToInt32(txt_SoLuong.Text) +", "+ Convert.ToDecimal(txt_DonGia.Text) +")";
                 int i = DataProvider.Instance.executeNonQuery(query);
                 if (i > 0)
                 {
@@ -96,15 +110,14 @@ namespace quanLyKho
             }
         }
 
-        private void bnt_DM_LuuDonXuat_Click(object sender, EventArgs e)
-        {
-            addCustomer();
-        }
+        
 
         private void btn_DM_ThemDonXuat_Click(object sender, EventArgs e)
         {
             btn_DM_ThemDonXuat.Enabled = false;
+            cbo_HangHoa.Enabled = true;
             txt_DonGia.Focus();
+            btn_DM_LuuDonXuat.Enabled = true;
             btn_DM_SuaDonXuat.Enabled = false;
             btn_DM_XoaDonXuat.Enabled = false;
             btn_DM_HuyDonXuat.Enabled = true;
@@ -113,16 +126,37 @@ namespace quanLyKho
             txt_DonGia.Enabled = true;
             txt_GiaGoc.Enabled = true;
             txt_SoLuong.Enabled = true;
-            txt_SoLuongKho.Enabled = true;
-            txt_SoLuongKho.Text = "";
             txt_SoLuong.Text = "";
             txt_GiaGoc.Text = "";
             txt_DonGia.Text = "";
         }
 
+        public int getSoLuong ()
+        {
+            string id = cbo_HangHoa.SelectedValue.ToString();
+            object soLuong = DataProvider.Instance.executeScalar("select k.soLuong from kho as k where k.idHangHoa = '"+id+"'");
+            return Convert.ToInt32(soLuong);
+        }
+
+        public double getGiaGoc()
+        {
+            string id = cbo_HangHoa.SelectedValue.ToString();
+            object giaGoc = DataProvider.Instance.executeScalar("select ctpn. donGiaNhap from chiTietPhieuNhap as ctpn where ctpn.idHangHoa = '" + id.ToString() + "'");
+            return Convert.ToDouble(giaGoc);
+        }
+
         private void btn_DM_SuaDonXuat_Click(object sender, EventArgs e)
         {
+            btn_DM_ThemDonXuat.Enabled = false;
+            cbo_HangHoa.Enabled = true;
+            txt_DonGia.Focus();
+            btn_DM_SuaDonXuat.Enabled = false;
+            btn_DM_XoaDonXuat.Enabled = false;
+            btn_DM_HuyDonXuat.Enabled = true;
+            btn_DM_InDonXuat.Enabled = true;
 
+            txt_DonGia.Enabled = true;
+            txt_SoLuong.Enabled = true;
         }
 
         private void loadCboHangHoa ()
@@ -147,17 +181,14 @@ namespace quanLyKho
                 txt_SoLuongKho.Text = Convert.ToString(data);
                 data = DataProvider.Instance.executeScalar("Select xuatXu from hangHoa where tenHangHoa = N'" + tenHH + "'");
                 lbl_XuatXu.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select ctpn.donGiaNhap from hangHoa as hh, chiTietPhieuNhap as ctpn where hh.tenHangHoa = N'" + tenHH + "' and ctpn.idHangHoa = hh.id");
-                txt_GiaGoc.Text = Convert.ToString(data);
                 data = DataProvider.Instance.executeScalar("Select ctpx.soLuongXuat * ctpx.donGiaXuat from hangHoa as hh, chiTietPhieuXuat as ctpx, kho as k where tenHangHoa = N'" + tenHH + "' and ctpx.idKho = k.id and k.idHangHoa = hh.id");
                 lbl_ThanhTien.Text = Convert.ToString(data);
                 txt_SoLuong.Text = dgv_Main_DonXuat.Rows[i].Cells[2].Value.ToString();
                 txt_DonGia.Text = dgv_Main_DonXuat.Rows[i].Cells[3].Value.ToString();
                 int soLuongXuat = Convert.ToInt32(txt_SoLuong.Text.ToString());
-                object idChiTietPhieuXuat = DataProvider.Instance.executeScalar("select ctpx.idXuat from chiTietPhieuXuat as ctpx, hangHoa as hh, kho as k where hh.id = '"+idHH+"' and hh.id = k.idHangHoa and k.id = ctpx.idKho");
-                object idPhieuXuat = DataProvider.Instance.executeScalar("Select px.soPhieuXuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '"+idChiTietPhieuXuat+ "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+                object idPhieuXuat = DataProvider.Instance.executeScalar("Select px.soPhieuXuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '"+dgv_Main_DonXuat.Rows[i].Cells[4].Value.ToString()+ "' and px.soPhieuXuat = ctpx.idPhieuXuat");
                 lbl_DM_CTPX_SoHoaDon.Text = idPhieuXuat.ToString();
-                data = DataProvider.Instance.executeScalar("Select px.ngayLap_Xuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '" + idChiTietPhieuXuat + "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+                data = DataProvider.Instance.executeScalar("Select px.ngayLap_Xuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '" + dgv_Main_DonXuat.Rows[i].Cells[4].Value.ToString() + "' and px.soPhieuXuat = ctpx.idPhieuXuat");
                 lbl_NgayLapHD.Text = Convert.ToDateTime(data).ToString("dd/MM/yyyy");
                 data = DataProvider.Instance.executeScalar("Select kh.tenKhachHang from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text+"'");
                 lbl_KhachHang.Text = data.ToString();
@@ -183,7 +214,32 @@ namespace quanLyKho
         {
             loadCboHangHoa();
             loadDuLieuLenLuoi();
-            getDongThuI(0);
+            lbl_DM_CTPX_SoHoaDon.Text = GlobalDataChiTietHoaDonXuat.soHoaDon;
+            lbl_KhachHang.Text = GlobalDataChiTietHoaDonXuat.tenKhachHang;
+            lbl_NgayLapHD.Text = GlobalDataChiTietHoaDonXuat.NgayLapHD;
+            lbl_SoDienThoai.Text = GlobalDataChiTietHoaDonXuat.soDienThoai;
+            lbl_DiaChi.Text = GlobalDataChiTietHoaDonXuat.diaChi;
+        }
+
+        private void btn_DM_HuyDonXuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DM_LuuDonXuat_Click(object sender, EventArgs e)
+        {
+            addCustomer();
+        }
+
+        private void cbo_HangHoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_SoLuongKho.Text = getSoLuong().ToString();
+            txt_GiaGoc.Text = getGiaGoc().ToString();
+        }
+
+        private void btn_DM_LuuDonXuat_Click_1(object sender, EventArgs e)
+        {
+            addCustomer();
         }
     }
 }

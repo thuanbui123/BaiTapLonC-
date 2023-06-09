@@ -63,7 +63,7 @@ namespace quanLyKho
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_DM_InDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_HuyDonXuat = new System.Windows.Forms.Button();
-            this.bnt_DM_LuuDonXuat = new System.Windows.Forms.Button();
+            this.btn_DM_LuuDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_XoaDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_SuaDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_ThemDonXuat = new System.Windows.Forms.Button();
@@ -147,6 +147,7 @@ namespace quanLyKho
             // 
             // txt_SoLuongKho
             // 
+            this.txt_SoLuongKho.Enabled = false;
             this.txt_SoLuongKho.Location = new System.Drawing.Point(156, 61);
             this.txt_SoLuongKho.Name = "txt_SoLuongKho";
             this.txt_SoLuongKho.Size = new System.Drawing.Size(227, 26);
@@ -154,6 +155,7 @@ namespace quanLyKho
             // 
             // cbo_HangHoa
             // 
+            this.cbo_HangHoa.Enabled = false;
             this.cbo_HangHoa.FormattingEnabled = true;
             this.cbo_HangHoa.Items.AddRange(new object[] {
             ""});
@@ -161,6 +163,7 @@ namespace quanLyKho
             this.cbo_HangHoa.Name = "cbo_HangHoa";
             this.cbo_HangHoa.Size = new System.Drawing.Size(227, 27);
             this.cbo_HangHoa.TabIndex = 67;
+            this.cbo_HangHoa.SelectedIndexChanged += new System.EventHandler(this.cbo_HangHoa_SelectedIndexChanged);
             // 
             // lbl_SoDienThoai
             // 
@@ -197,6 +200,7 @@ namespace quanLyKho
             // 
             // txt_SoLuong
             // 
+            this.txt_SoLuong.Enabled = false;
             this.txt_SoLuong.Location = new System.Drawing.Point(156, 100);
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(227, 26);
@@ -213,6 +217,7 @@ namespace quanLyKho
             // 
             // txt_DonGia
             // 
+            this.txt_DonGia.Enabled = false;
             this.txt_DonGia.Location = new System.Drawing.Point(523, 65);
             this.txt_DonGia.Name = "txt_DonGia";
             this.txt_DonGia.Size = new System.Drawing.Size(327, 26);
@@ -220,6 +225,7 @@ namespace quanLyKho
             // 
             // txt_GiaGoc
             // 
+            this.txt_GiaGoc.Enabled = false;
             this.txt_GiaGoc.Location = new System.Drawing.Point(523, 19);
             this.txt_GiaGoc.Name = "txt_GiaGoc";
             this.txt_GiaGoc.Size = new System.Drawing.Size(327, 26);
@@ -366,7 +372,7 @@ namespace quanLyKho
             // 
             this.groupBox1.Controls.Add(this.btn_DM_InDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_HuyDonXuat);
-            this.groupBox1.Controls.Add(this.bnt_DM_LuuDonXuat);
+            this.groupBox1.Controls.Add(this.btn_DM_LuuDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_XoaDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_SuaDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_ThemDonXuat);
@@ -400,19 +406,20 @@ namespace quanLyKho
             this.btn_DM_HuyDonXuat.TabIndex = 58;
             this.btn_DM_HuyDonXuat.Text = "Hủy";
             this.btn_DM_HuyDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_HuyDonXuat.Click += new System.EventHandler(this.btn_DM_HuyDonXuat_Click);
             // 
-            // bnt_DM_LuuDonXuat
+            // btn_DM_LuuDonXuat
             // 
-            this.bnt_DM_LuuDonXuat.Enabled = false;
-            this.bnt_DM_LuuDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("bnt_DM_LuuDonXuat.Image")));
-            this.bnt_DM_LuuDonXuat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bnt_DM_LuuDonXuat.Location = new System.Drawing.Point(30, 188);
-            this.bnt_DM_LuuDonXuat.Name = "bnt_DM_LuuDonXuat";
-            this.bnt_DM_LuuDonXuat.Size = new System.Drawing.Size(124, 39);
-            this.bnt_DM_LuuDonXuat.TabIndex = 57;
-            this.bnt_DM_LuuDonXuat.Text = "Lưu";
-            this.bnt_DM_LuuDonXuat.UseVisualStyleBackColor = true;
-            this.bnt_DM_LuuDonXuat.Click += new System.EventHandler(this.bnt_DM_LuuDonXuat_Click);
+            this.btn_DM_LuuDonXuat.Enabled = false;
+            this.btn_DM_LuuDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_LuuDonXuat.Image")));
+            this.btn_DM_LuuDonXuat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_DM_LuuDonXuat.Location = new System.Drawing.Point(30, 188);
+            this.btn_DM_LuuDonXuat.Name = "btn_DM_LuuDonXuat";
+            this.btn_DM_LuuDonXuat.Size = new System.Drawing.Size(124, 39);
+            this.btn_DM_LuuDonXuat.TabIndex = 57;
+            this.btn_DM_LuuDonXuat.Text = "Lưu";
+            this.btn_DM_LuuDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_LuuDonXuat.Click += new System.EventHandler(this.btn_DM_LuuDonXuat_Click_1);
             // 
             // btn_DM_XoaDonXuat
             // 
@@ -526,7 +533,7 @@ namespace quanLyKho
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_DM_InDonXuat;
         private System.Windows.Forms.Button btn_DM_HuyDonXuat;
-        private System.Windows.Forms.Button bnt_DM_LuuDonXuat;
+        private System.Windows.Forms.Button btn_DM_LuuDonXuat;
         private System.Windows.Forms.Button btn_DM_XoaDonXuat;
         private System.Windows.Forms.Button btn_DM_SuaDonXuat;
         private System.Windows.Forms.Button btn_DM_ThemDonXuat;

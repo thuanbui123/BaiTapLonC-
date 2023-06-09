@@ -82,6 +82,7 @@ namespace quanLyKho
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_BC_ThongKeKhachHang";
             this.Text = "frm_BC_ThongKeKhachHang";
+            this.Load += new System.EventHandler(this.frm_BC_ThongKeKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_ThongKeKhachHang)).EndInit();
             this.ResumeLayout(false);
 

@@ -33,7 +33,13 @@ namespace quanLyKho
         {
             string query = "select ncc.id, ncc.tenNhaCungCap, ncc.diaChi, ncc.soDienThoai from nhaCungCap as ncc";
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgv_BCTK_NCC.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgv_BCTK_NCC.DataSource = data;
+            } else
+            {
+                dgv_BCTK_NCC.DataSource = null;
+            }
             dinhDangLuoi();
         }
 

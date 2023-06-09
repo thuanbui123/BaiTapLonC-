@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using quanLyKho.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
 
 namespace quanLyKho
 {
@@ -15,6 +19,18 @@ namespace quanLyKho
         public frm_BCTK_ThongKeLoaiHang()
         {
             InitializeComponent();
+        }
+
+        private void frm_BCTK_ThongKeLoaiHang_Load(object sender, EventArgs e)
+        {
+            string query = "SELECT lh.id,lh.tenLoai,lh.dienGiai from loaiHang as lh";
+            DataTable dt = DataProvider.Instance.executeQuery(query);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportLoaiHang.rdlc";
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "DataSetLoaiHang";
+            rds.Value = dt;
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            this.reportViewer1.RefreshReport();
         }
     }
 }

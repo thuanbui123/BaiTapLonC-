@@ -48,19 +48,19 @@ namespace quanLyKho
         {
             if (txtMaLoaiHang.Text == "")
             {
-                MessageBox.Show("Chua nhap ma loai hang ", "Thong bao");
+                MessageBox.Show("Chưa nhập mã loại hàng!", "Thông báo!");
                 Focus();
                 return false;
             }
             if (txtTenLoaiHang.Text == "")
             {
-                MessageBox.Show("Chua nhap ten loai hang ", "Thong bao");
+                MessageBox.Show("Chưa nhập mã loại hàng!", "Thông báo!");
                 Focus();
                 return false;
             }
             if (txtDienGiai.Text == "")
             {
-                MessageBox.Show("Chua nhap ten loai hang ", "Thong bao");
+                MessageBox.Show("Chưa nhập diễn giải!", "Thông báo!");
                 Focus();
                 return false;
             }

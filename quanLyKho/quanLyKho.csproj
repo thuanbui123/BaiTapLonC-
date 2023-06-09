@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsHangHoa.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsKho.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsXuatHang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -324,6 +329,7 @@
     </Compile>
     <EmbeddedResource Include="ReportHangDaBan.rdlc" />
     <EmbeddedResource Include="ReportHangHoa.rdlc" />
+    <EmbeddedResource Include="ReportKho.rdlc" />
     <EmbeddedResource Include="Report_Ctpx.rdlc" />
     <None Include="dsHangHoa.xsc">
       <DependentUpon>dsHangHoa.xsd</DependentUpon>
@@ -335,6 +341,17 @@
     </None>
     <None Include="dsHangHoa.xss">
       <DependentUpon>dsHangHoa.xsd</DependentUpon>
+    </None>
+    <None Include="dsKho.xsc">
+      <DependentUpon>dsKho.xsd</DependentUpon>
+    </None>
+    <None Include="dsKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsKho.xss">
+      <DependentUpon>dsKho.xsd</DependentUpon>
     </None>
     <None Include="dsXuatHang.xsc">
       <DependentUpon>dsXuatHang.xsd</DependentUpon>

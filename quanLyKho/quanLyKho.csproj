@@ -90,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsKho.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsLoaiHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLoaiHang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsNhapKho.cs">
       <DependentUpon>dsNhapKho.xsd</DependentUpon>
     </Compile>
@@ -372,6 +377,7 @@
     <EmbeddedResource Include="ReportHangDaBan.rdlc" />
     <EmbeddedResource Include="ReportHangHoa.rdlc" />
     <EmbeddedResource Include="ReportKho.rdlc" />
+    <EmbeddedResource Include="ReportLoaiHang.rdlc" />
     <EmbeddedResource Include="ReportNhapKho.rdlc" />
     <EmbeddedResource Include="Report_Ctpx.rdlc" />
     <None Include="dsChiTietPhieuNhap.xsc">
@@ -406,6 +412,17 @@
     </None>
     <None Include="dsKho.xss">
       <DependentUpon>dsKho.xsd</DependentUpon>
+    </None>
+    <None Include="dsLoaiHang.xsc">
+      <DependentUpon>dsLoaiHang.xsd</DependentUpon>
+    </None>
+    <None Include="dsLoaiHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLoaiHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsLoaiHang.xss">
+      <DependentUpon>dsLoaiHang.xsd</DependentUpon>
     </None>
     <None Include="dsNhapKho.xsc">
       <DependentUpon>dsNhapKho.xsd</DependentUpon>

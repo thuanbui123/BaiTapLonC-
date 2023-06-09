@@ -29,17 +29,9 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblBaoCaoKho = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(55, 69);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(520, 514);
-            this.reportViewer1.TabIndex = 11;
             // 
             // lblBaoCaoKho
             // 
@@ -51,6 +43,14 @@ namespace quanLyKho
             this.lblBaoCaoKho.TabIndex = 10;
             this.lblBaoCaoKho.Text = "Báo cáo kho";
             this.lblBaoCaoKho.Click += new System.EventHandler(this.lblBaoCaoKho_Click);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(26, 65);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(582, 526);
+            this.reportViewer1.TabIndex = 11;
             // 
             // frm_BCTK_BaoCaoKho
             // 
@@ -71,8 +71,7 @@ namespace quanLyKho
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label lblBaoCaoKho;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

@@ -22,7 +22,14 @@ namespace quanLyKho
         {
             string query = "SELECT lh.id,lh.tenLoai,lh.dienGiai from loaiHang as lh";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            dgvMain.DataSource = dt;
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                dgvMain.DataSource = dt;
+            }
+            else
+            {
+                dgvMain.DataSource = null;
+            }
             DinhDangLuoi();
         }
 
@@ -41,19 +48,19 @@ namespace quanLyKho
         {
             if (txtMaLoaiHang.Text == "")
             {
-                MessageBox.Show("Chua nhap ma loai hang ", "Thong bao");
+                MessageBox.Show("Chưa nhập mã loại hàng!", "Thông báo!");
                 Focus();
                 return false;
             }
             if (txtTenLoaiHang.Text == "")
             {
-                MessageBox.Show("Chua nhap ten loai hang ", "Thong bao");
+                MessageBox.Show("Chưa nhập mã loại hàng!", "Thông báo!");
                 Focus();
                 return false;
             }
             if (txtDienGiai.Text == "")
             {
-                MessageBox.Show("Chua nhap ten loai hang ", "Thong bao");
+                MessageBox.Show("Chưa nhập diễn giải!", "Thông báo!");
                 Focus();
                 return false;
             }

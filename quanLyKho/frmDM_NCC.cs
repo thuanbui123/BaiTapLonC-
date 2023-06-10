@@ -38,7 +38,14 @@ namespace quanLyKho
         {
             string query = "select ncc.id, ncc.tenNhaCungCap, ncc.diaChi, ncc.soDienThoai form nhaCungCap as ncc";
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgv_DM_NCC.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgv_DM_NCC.DataSource = data;
+            }
+            else
+            {
+                dgv_DM_NCC.DataSource = null;
+            }
             dinhDangLuoi();
         }
 
@@ -87,7 +94,7 @@ namespace quanLyKho
                     btn_DM_NCC_Luu.Enabled = true;
                     btn_DM_NCC_Huy.Enabled = true;
 
-                    txt_DM_MaNCC.Enabled = true;
+                    txt_DM_MaNCC.Enabled = false;
                     txt_DM_NCC_DiaChi.Enabled = true;
                     txt_DM_TenNCC.Enabled = true;
                     txt_DM_NCC_DienThoai.Enabled = true;
@@ -182,6 +189,7 @@ namespace quanLyKho
         private bool isValidData()
         {
             bool stt = true;
+            
             if (txt_DM_MaNCC.Text == "")
             {
                 MessageBox.Show("Vui long nhap ma nha cung cap", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -211,34 +219,42 @@ namespace quanLyKho
             {
                 if (isAdd)
                 {
-                    try
+                    string query1 = "select count(*) from nhaCungCap where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
+                    int kt1 = (int)DataProvider.Instance.executeScalar(query1);
+                    if(kt1 > 0)
                     {
-
-                        string query = "insert into nhaCungCap values('" + txt_DM_MaNCC.Text.Trim() + "', N'" + txt_DM_TenNCC.Text.Trim() + "', N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', '" + txt_DM_NCC_DienThoai.Text.Trim() + "')";
-
-                        int kt = DataProvider.Instance.executeNonQuery(query);
-                        if (kt > 0)
-                        {
-                            MessageBox.Show("Them thanh cong !");
-                            setState("Reset");
-                            bindingData();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Them that bai !");
-                        }
+                        MessageBox.Show("Ma nha cung cap da co. Vui long nhap lai!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+                        try
+                        {
+                            string query = "insert into nhaCungCap values('" + txt_DM_MaNCC.Text.Trim() + "', N'" + txt_DM_TenNCC.Text.Trim() + "', N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', '" + txt_DM_NCC_DienThoai.Text.Trim() + "')";
+
+                            int kt = DataProvider.Instance.executeNonQuery(query);
+                            if (kt > 0)
+                            {
+                                MessageBox.Show("Them thanh cong !");
+                                setState("Reset");
+                                bindingData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Them that bai !");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                     isAdd = false;
                 }
                 if (isEdit)
                 {
+                    
                     try
                     {
-
                         string query = "update nhaCungCap set tenNhaCungCap = N'" + txt_DM_TenNCC.Text.Trim() + "', diaChi = N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', soDienThoai = '" + txt_DM_NCC_DienThoai.Text.Trim() + "' where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
 
                         int kt = DataProvider.Instance.executeNonQuery(query);
@@ -279,15 +295,18 @@ namespace quanLyKho
                 try
                 {
 
-                    string query = "select * from nhaCungCap where id like '%" + txt_DM_NCC_TimKiem.Text.Trim() + "%'";
+                    string query = "select * from nhaCungCap where id like '%" + txt_DM_NCC_TimKiem.Text + "%'";
 
                     DataTable data = DataProvider.Instance.executeQuery(query);
 
                     dgv_DM_NCC.DataSource = data;
-                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
+                    if(data.Rows.Count > 0)
+                    {
+                        txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
+                        txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
+                        txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
+                        txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -299,15 +318,19 @@ namespace quanLyKho
                 try
                 {
 
-                    string query = "select * from nhaCungCap where tenNhaCungCap like '%" + txt_DM_NCC_TimKiem.Text.Trim() + "%'";
+                    string query = "select * from nhaCungCap where tenNhaCungCap like '%" + txt_DM_NCC_TimKiem.Text + "%'";
 
                     DataTable data = DataProvider.Instance.executeQuery(query);
 
                     dgv_DM_NCC.DataSource = data;
-                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
+
+                    if (data.Rows.Count > 0)
+                    {
+                        txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
+                        txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
+                        txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
+                        txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
+                    }
                 }
                 catch (Exception ex)
                 {

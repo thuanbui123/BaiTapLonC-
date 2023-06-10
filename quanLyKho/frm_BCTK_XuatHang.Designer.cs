@@ -33,6 +33,7 @@ namespace quanLyKho
             this.pnl_BaoCaoHangDaBan = new System.Windows.Forms.Panel();
             this.lbl_BaoCaoHangDaBan = new System.Windows.Forms.Label();
             this.grbChucNang = new System.Windows.Forms.GroupBox();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnThucHien = new System.Windows.Forms.Button();
             this.txtTimKiemHoaDon = new System.Windows.Forms.TextBox();
@@ -45,9 +46,11 @@ namespace quanLyKho
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.lblTuNgay = new System.Windows.Forms.Label();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.dgvMain = new System.Windows.Forms.DataGridView();
             this.pnl_BaoCaoHangDaBan.SuspendLayout();
             this.grbChucNang.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +76,7 @@ namespace quanLyKho
             // 
             // grbChucNang
             // 
+            this.grbChucNang.Controls.Add(this.btnHuy);
             this.grbChucNang.Controls.Add(this.btnIn);
             this.grbChucNang.Controls.Add(this.btnThucHien);
             this.grbChucNang.Controls.Add(this.txtTimKiemHoaDon);
@@ -87,32 +91,46 @@ namespace quanLyKho
             this.grbChucNang.Controls.Add(this.lblTuNgay);
             this.grbChucNang.Location = new System.Drawing.Point(12, 44);
             this.grbChucNang.Name = "grbChucNang";
-            this.grbChucNang.Size = new System.Drawing.Size(213, 448);
+            this.grbChucNang.Size = new System.Drawing.Size(213, 487);
             this.grbChucNang.TabIndex = 1;
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức năng";
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(42, 436);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(115, 40);
+            this.btnHuy.TabIndex = 12;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // btnIn
             // 
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(42, 402);
+            this.btnIn.Location = new System.Drawing.Point(42, 386);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(115, 40);
             this.btnIn.TabIndex = 11;
             this.btnIn.Text = "In";
             this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnThucHien
             // 
             this.btnThucHien.Image = ((System.Drawing.Image)(resources.GetObject("btnThucHien.Image")));
-            this.btnThucHien.Location = new System.Drawing.Point(42, 350);
+            this.btnThucHien.Location = new System.Drawing.Point(42, 340);
             this.btnThucHien.Name = "btnThucHien";
             this.btnThucHien.Size = new System.Drawing.Size(115, 40);
             this.btnThucHien.TabIndex = 10;
             this.btnThucHien.Text = "Thực hiện";
             this.btnThucHien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThucHien.UseVisualStyleBackColor = true;
+            this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
             // 
             // txtTimKiemHoaDon
             // 
@@ -202,21 +220,29 @@ namespace quanLyKho
             this.lblTuNgay.TabIndex = 0;
             this.lblTuNgay.Text = "Từ ngày";
             // 
+            // pnlMain
+            // 
+            this.pnlMain.Controls.Add(this.dgvMain);
+            this.pnlMain.Location = new System.Drawing.Point(231, 44);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(865, 487);
+            this.pnlMain.TabIndex = 2;
+            // 
             // dgvMain
             // 
             this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Location = new System.Drawing.Point(231, 53);
+            this.dgvMain.Location = new System.Drawing.Point(6, 6);
             this.dgvMain.Name = "dgvMain";
-            this.dgvMain.Size = new System.Drawing.Size(850, 439);
-            this.dgvMain.TabIndex = 2;
+            this.dgvMain.Size = new System.Drawing.Size(850, 470);
+            this.dgvMain.TabIndex = 3;
             // 
             // frm_BCTK_XuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1091, 504);
-            this.Controls.Add(this.dgvMain);
+            this.ClientSize = new System.Drawing.Size(1099, 549);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.grbChucNang);
             this.Controls.Add(this.pnl_BaoCaoHangDaBan);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,6 +254,7 @@ namespace quanLyKho
             this.pnl_BaoCaoHangDaBan.ResumeLayout(false);
             this.grbChucNang.ResumeLayout(false);
             this.grbChucNang.PerformLayout();
+            this.pnlMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
             this.ResumeLayout(false);
 
@@ -250,6 +277,8 @@ namespace quanLyKho
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.Label lblTuNgay;
         private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.DataGridView dgvMain;
     }
 }

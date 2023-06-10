@@ -29,57 +29,41 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.btnIn = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblThongKeLoaiHang = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvMain
+            // reportViewer1
             // 
-            this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Location = new System.Drawing.Point(34, 154);
-            this.dgvMain.Name = "dgvMain";
-            this.dgvMain.RowHeadersWidth = 51;
-            this.dgvMain.RowTemplate.Height = 24;
-            this.dgvMain.Size = new System.Drawing.Size(875, 408);
-            this.dgvMain.TabIndex = 5;
-            // 
-            // btnIn
-            // 
-            this.btnIn.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnIn.Location = new System.Drawing.Point(34, 77);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(84, 42);
-            this.btnIn.TabIndex = 4;
-            this.btnIn.Text = "In";
-            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIn.UseVisualStyleBackColor = true;
+            this.reportViewer1.Location = new System.Drawing.Point(21, 80);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(588, 558);
+            this.reportViewer1.TabIndex = 8;
             // 
             // lblThongKeLoaiHang
             // 
             this.lblThongKeLoaiHang.AutoSize = true;
             this.lblThongKeLoaiHang.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongKeLoaiHang.Location = new System.Drawing.Point(324, 24);
+            this.lblThongKeLoaiHang.Location = new System.Drawing.Point(177, 26);
             this.lblThongKeLoaiHang.Name = "lblThongKeLoaiHang";
-            this.lblThongKeLoaiHang.Size = new System.Drawing.Size(193, 25);
-            this.lblThongKeLoaiHang.TabIndex = 3;
+            this.lblThongKeLoaiHang.Size = new System.Drawing.Size(244, 32);
+            this.lblThongKeLoaiHang.TabIndex = 7;
             this.lblThongKeLoaiHang.Text = "Thống kê loại hàng";
             // 
             // frm_BCTK_ThongKeLoaiHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(942, 587);
-            this.Controls.Add(this.dgvMain);
-            this.Controls.Add(this.btnIn);
+            this.ClientSize = new System.Drawing.Size(633, 674);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.lblThongKeLoaiHang);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_BCTK_ThongKeLoaiHang";
             this.Text = "frm_BCTK_ThongKeLoaiHang";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
+            this.Load += new System.EventHandler(this.frm_BCTK_ThongKeLoaiHang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,8 +71,7 @@ namespace quanLyKho
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvMain;
-        private System.Windows.Forms.Button btnIn;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label lblThongKeLoaiHang;
     }
 }

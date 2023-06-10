@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsNhapKho" targetNamespace="http://tempuri.org/dsNhapKho.xsd" xmlns:mstns="http://tempuri.org/dsNhapKho.xsd" xmlns="http://tempuri.org/dsNhapKho.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsNhapKho" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsNhapKho" msprop:Generator_DataSetName="dsNhapKho">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="nhapKho" msprop:Generator_RowEvHandlerName="nhapKhoRowChangeEventHandler" msprop:Generator_RowDeletedName="nhapKhoRowDeleted" msprop:Generator_RowDeletingName="nhapKhoRowDeleting" msprop:Generator_RowEvArgName="nhapKhoRowChangeEvent" msprop:Generator_TablePropName="nhapKho" msprop:Generator_RowChangedName="nhapKhoRowChanged" msprop:Generator_RowChangingName="nhapKhoRowChanging" msprop:Generator_TableClassName="nhapKhoDataTable" msprop:Generator_RowClassName="nhapKhoRow" msprop:Generator_TableVarName="tablenhapKho" msprop:Generator_UserTableName="nhapKho">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tenNhaCungCap" msprop:Generator_ColumnPropNameInRow="tenNhaCungCap" msprop:Generator_ColumnPropNameInTable="tenNhaCungCapColumn" msprop:Generator_ColumnVarNameInTable="columntenNhaCungCap" msprop:Generator_UserColumnName="tenNhaCungCap" type="xs:string" minOccurs="0" />
+              <xs:element name="tenHanghoa" msprop:Generator_ColumnPropNameInRow="tenHanghoa" msprop:Generator_ColumnPropNameInTable="tenHanghoaColumn" msprop:Generator_ColumnVarNameInTable="columntenHanghoa" msprop:Generator_UserColumnName="tenHanghoa" type="xs:string" minOccurs="0" />
+              <xs:element name="donViTinh" msprop:Generator_ColumnPropNameInRow="donViTinh" msprop:Generator_ColumnPropNameInTable="donViTinhColumn" msprop:Generator_ColumnVarNameInTable="columndonViTinh" msprop:Generator_UserColumnName="donViTinh" type="xs:string" minOccurs="0" />
+              <xs:element name="soLuongNhap" msprop:Generator_ColumnPropNameInRow="soLuongNhap" msprop:Generator_ColumnPropNameInTable="soLuongNhapColumn" msprop:Generator_ColumnVarNameInTable="columnsoLuongNhap" msprop:Generator_UserColumnName="soLuongNhap" type="xs:int" minOccurs="0" />
+              <xs:element name="donGiaNhap" msprop:Generator_ColumnPropNameInRow="donGiaNhap" msprop:Generator_ColumnPropNameInTable="donGiaNhapColumn" msprop:Generator_ColumnVarNameInTable="columndonGiaNhap" msprop:Generator_UserColumnName="donGiaNhap" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ngayLap_Nhap" msprop:Generator_ColumnPropNameInRow="ngayLap_Nhap" msprop:Generator_ColumnPropNameInTable="ngayLap_NhapColumn" msprop:Generator_ColumnVarNameInTable="columnngayLap_Nhap" msprop:Generator_UserColumnName="ngayLap_Nhap" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

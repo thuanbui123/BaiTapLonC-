@@ -29,6 +29,7 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DM_ChiTietHoaDonXuat));
             this.label17 = new System.Windows.Forms.Label();
             this.lbl_DM_CTPX_SoHoaDon = new System.Windows.Forms.Label();
@@ -63,15 +64,17 @@ namespace quanLyKho
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_DM_InDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_HuyDonXuat = new System.Windows.Forms.Button();
-            this.bnt_DM_LuuDonXuat = new System.Windows.Forms.Button();
+            this.btn_DM_LuuDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_XoaDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_SuaDonXuat = new System.Windows.Forms.Button();
             this.btn_DM_ThemDonXuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4.SuspendLayout();
             this.grbChiTietDonXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_DonXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -147,6 +150,7 @@ namespace quanLyKho
             // 
             // txt_SoLuongKho
             // 
+            this.txt_SoLuongKho.Enabled = false;
             this.txt_SoLuongKho.Location = new System.Drawing.Point(156, 61);
             this.txt_SoLuongKho.Name = "txt_SoLuongKho";
             this.txt_SoLuongKho.Size = new System.Drawing.Size(227, 26);
@@ -154,6 +158,7 @@ namespace quanLyKho
             // 
             // cbo_HangHoa
             // 
+            this.cbo_HangHoa.Enabled = false;
             this.cbo_HangHoa.FormattingEnabled = true;
             this.cbo_HangHoa.Items.AddRange(new object[] {
             ""});
@@ -161,6 +166,7 @@ namespace quanLyKho
             this.cbo_HangHoa.Name = "cbo_HangHoa";
             this.cbo_HangHoa.Size = new System.Drawing.Size(227, 27);
             this.cbo_HangHoa.TabIndex = 67;
+            this.cbo_HangHoa.SelectedIndexChanged += new System.EventHandler(this.cbo_HangHoa_SelectedIndexChanged);
             // 
             // lbl_SoDienThoai
             // 
@@ -197,6 +203,7 @@ namespace quanLyKho
             // 
             // txt_SoLuong
             // 
+            this.txt_SoLuong.Enabled = false;
             this.txt_SoLuong.Location = new System.Drawing.Point(156, 100);
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(227, 26);
@@ -213,6 +220,7 @@ namespace quanLyKho
             // 
             // txt_DonGia
             // 
+            this.txt_DonGia.Enabled = false;
             this.txt_DonGia.Location = new System.Drawing.Point(523, 65);
             this.txt_DonGia.Name = "txt_DonGia";
             this.txt_DonGia.Size = new System.Drawing.Size(327, 26);
@@ -220,6 +228,7 @@ namespace quanLyKho
             // 
             // txt_GiaGoc
             // 
+            this.txt_GiaGoc.Enabled = false;
             this.txt_GiaGoc.Location = new System.Drawing.Point(523, 19);
             this.txt_GiaGoc.Name = "txt_GiaGoc";
             this.txt_GiaGoc.Size = new System.Drawing.Size(327, 26);
@@ -360,13 +369,14 @@ namespace quanLyKho
             this.dgv_Main_DonXuat.Name = "dgv_Main_DonXuat";
             this.dgv_Main_DonXuat.Size = new System.Drawing.Size(933, 233);
             this.dgv_Main_DonXuat.TabIndex = 71;
+            this.dgv_Main_DonXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Main_DonXuat_CellContentClick);
             this.dgv_Main_DonXuat.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Main_DonXuat_CellMouseClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_DM_InDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_HuyDonXuat);
-            this.groupBox1.Controls.Add(this.bnt_DM_LuuDonXuat);
+            this.groupBox1.Controls.Add(this.btn_DM_LuuDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_XoaDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_SuaDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_ThemDonXuat);
@@ -388,6 +398,7 @@ namespace quanLyKho
             this.btn_DM_InDonXuat.TabIndex = 59;
             this.btn_DM_InDonXuat.Text = "In";
             this.btn_DM_InDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_InDonXuat.Click += new System.EventHandler(this.btn_DM_InDonXuat_Click_1);
             // 
             // btn_DM_HuyDonXuat
             // 
@@ -400,19 +411,20 @@ namespace quanLyKho
             this.btn_DM_HuyDonXuat.TabIndex = 58;
             this.btn_DM_HuyDonXuat.Text = "Hủy";
             this.btn_DM_HuyDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_HuyDonXuat.Click += new System.EventHandler(this.btn_DM_HuyDonXuat_Click);
             // 
-            // bnt_DM_LuuDonXuat
+            // btn_DM_LuuDonXuat
             // 
-            this.bnt_DM_LuuDonXuat.Enabled = false;
-            this.bnt_DM_LuuDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("bnt_DM_LuuDonXuat.Image")));
-            this.bnt_DM_LuuDonXuat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bnt_DM_LuuDonXuat.Location = new System.Drawing.Point(30, 188);
-            this.bnt_DM_LuuDonXuat.Name = "bnt_DM_LuuDonXuat";
-            this.bnt_DM_LuuDonXuat.Size = new System.Drawing.Size(124, 39);
-            this.bnt_DM_LuuDonXuat.TabIndex = 57;
-            this.bnt_DM_LuuDonXuat.Text = "Lưu";
-            this.bnt_DM_LuuDonXuat.UseVisualStyleBackColor = true;
-            this.bnt_DM_LuuDonXuat.Click += new System.EventHandler(this.bnt_DM_LuuDonXuat_Click);
+            this.btn_DM_LuuDonXuat.Enabled = false;
+            this.btn_DM_LuuDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_LuuDonXuat.Image")));
+            this.btn_DM_LuuDonXuat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_DM_LuuDonXuat.Location = new System.Drawing.Point(30, 188);
+            this.btn_DM_LuuDonXuat.Name = "btn_DM_LuuDonXuat";
+            this.btn_DM_LuuDonXuat.Size = new System.Drawing.Size(124, 39);
+            this.btn_DM_LuuDonXuat.TabIndex = 57;
+            this.btn_DM_LuuDonXuat.Text = "Lưu";
+            this.btn_DM_LuuDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_LuuDonXuat.Click += new System.EventHandler(this.btn_DM_LuuDonXuat_Click);
             // 
             // btn_DM_XoaDonXuat
             // 
@@ -424,6 +436,7 @@ namespace quanLyKho
             this.btn_DM_XoaDonXuat.TabIndex = 56;
             this.btn_DM_XoaDonXuat.Text = "Xóa";
             this.btn_DM_XoaDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_XoaDonXuat.Click += new System.EventHandler(this.btn_DM_XoaDonXuat_Click);
             // 
             // btn_DM_SuaDonXuat
             // 
@@ -465,6 +478,10 @@ namespace quanLyKho
             this.label2.Text = "CHI TIẾT HÓA ĐƠN XUẤT ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_DM_ChiTietHoaDonXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -487,6 +504,7 @@ namespace quanLyKho
             this.grbChiTietDonXuat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_DonXuat)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,10 +544,11 @@ namespace quanLyKho
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_DM_InDonXuat;
         private System.Windows.Forms.Button btn_DM_HuyDonXuat;
-        private System.Windows.Forms.Button bnt_DM_LuuDonXuat;
+        private System.Windows.Forms.Button btn_DM_LuuDonXuat;
         private System.Windows.Forms.Button btn_DM_XoaDonXuat;
         private System.Windows.Forms.Button btn_DM_SuaDonXuat;
         private System.Windows.Forms.Button btn_DM_ThemDonXuat;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

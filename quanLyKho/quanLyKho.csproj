@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +66,14 @@
   <ItemGroup>
     <Compile Include="anHienMatKhau.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="dsBCTK_NCC.cs">
+      <DependentUpon>dsBCTK_NCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsBCTK_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBCTK_NCC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\Account.cs" />
     <Compile Include="frmDM_NCC.cs">
       <SubType>Form</SubType>
@@ -85,6 +111,12 @@
     </Compile>
     <Compile Include="frmTrangChu.Designer.cs">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BCK_BCGiaXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BCK_BCGiaXuat.Designer.cs">
+      <DependentUpon>frm_BCK_BCGiaXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_BCTK_BaoCaoKho.cs">
       <SubType>Form</SubType>
@@ -178,6 +210,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rp_BCTK_NCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rp_BCTK_NCC.Designer.cs">
+      <DependentUpon>rp_BCTK_NCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmDM_NCC.resx">
       <DependentUpon>frmDM_NCC.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BCK_BCGiaXuat.resx">
+      <DependentUpon>frm_BCK_BCGiaXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_BCTK_BaoCaoKho.resx">
       <DependentUpon>frm_BCTK_BaoCaoKho.cs</DependentUpon>
@@ -250,6 +292,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportBCTK_NCC.rdlc" />
+    <EmbeddedResource Include="rp_BCTK_NCC.resx">
+      <DependentUpon>rp_BCTK_NCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsBCTK_NCC.xsc">
+      <DependentUpon>dsBCTK_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="dsBCTK_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBCTK_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsBCTK_NCC.xss">
+      <DependentUpon>dsBCTK_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -263,6 +321,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

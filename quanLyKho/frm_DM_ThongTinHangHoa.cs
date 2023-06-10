@@ -46,7 +46,14 @@ namespace quanLyKho
             {
                 string query = "Select hh.id, hh.tenHangHoa, lh.tenLoai, hh.donViTinh, hh.XuatXu from hangHoa as hh, loaiHang as lh where hh.idLoaiHang = lh.id";
                 DataTable data = DataProvider.Instance.executeQuery(query);
-                dgvMain.DataSource = data;
+                if (data != null && data.Rows.Count > 0)
+                {
+                    dgvMain.DataSource = data;
+                }
+                else
+                {
+                    dgvMain.DataSource = null;
+                }
                 dinhDangLuoi();
             }catch(Exception ex)
             {
@@ -309,26 +316,16 @@ namespace quanLyKho
 
             try
             {
-                object kiemTraTonTai = DataProvider.Instance.executeScalar("select COUNT(*) from hangHoa as hh where tenHangHoa = N'" + txtTenHangHoa.Text + "'");
-
-                if (Convert.ToInt32(kiemTraTonTai) <= 0)
+                string query = "Update hangHoa set tenHangHoa = N'" + txtTenHangHoa.Text + "', donViTinh = N'" + txtDonViTinh.Text + "', idLoaiHang = '" + cboMaLoai.SelectedValue.ToString() + "', xuatXu = N'" + txtXuatXu.Text + "' where id = '" + txtMaHangHoa.Text + "'";
+                int i = DataProvider.Instance.executeNonQuery(query);
+                if (i > 0)
                 {
-                    string query = "Update hangHoa set tenHangHoa = N'" + txtTenHangHoa.Text + "', donViTinh = N'" + txtDonViTinh.Text + "', idLoaiHang = '" + cboMaLoai.SelectedValue.ToString() + "', xuatXu = N'" + txtXuatXu.Text + "' where id = '" + txtMaHangHoa.Text + "'";
-                    int i = DataProvider.Instance.executeNonQuery(query);
-                    if (i > 0)
-                    {
-                        MessageBox.Show("Update success");
-                        status = true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Update error");
-                        status = false;
-                    }
+                    MessageBox.Show("Update success");
+                    status = true;
                 }
                 else
                 {
-                    MessageBox.Show("Mặt hàng " + txtTenHangHoa.Text + " đã tồn tại!");
+                    MessageBox.Show("Update error");
                     status = false;
                 }
             }

@@ -54,7 +54,7 @@ namespace quanLyKho
             this.dgv_Main_ThongKeKhachHang.Location = new System.Drawing.Point(4, 116);
             this.dgv_Main_ThongKeKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Main_ThongKeKhachHang.Name = "dgv_Main_ThongKeKhachHang";
-            this.dgv_Main_ThongKeKhachHang.Size = new System.Drawing.Size(988, 462);
+            this.dgv_Main_ThongKeKhachHang.Size = new System.Drawing.Size(988, 357);
             this.dgv_Main_ThongKeKhachHang.TabIndex = 8;
             // 
             // btn_BC_In
@@ -68,6 +68,7 @@ namespace quanLyKho
             this.btn_BC_In.TabIndex = 7;
             this.btn_BC_In.Text = "In";
             this.btn_BC_In.UseVisualStyleBackColor = true;
+            this.btn_BC_In.Click += new System.EventHandler(this.btn_BC_In_Click);
             // 
             // frm_BC_ThongKeKhachHang
             // 
@@ -82,6 +83,7 @@ namespace quanLyKho
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_BC_ThongKeKhachHang";
             this.Text = "frm_BC_ThongKeKhachHang";
+            this.Load += new System.EventHandler(this.frm_BC_ThongKeKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_ThongKeKhachHang)).EndInit();
             this.ResumeLayout(false);
 

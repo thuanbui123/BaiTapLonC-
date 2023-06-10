@@ -24,7 +24,13 @@ namespace quanLyKho
             string query = "Select * from KhachHang";
             DataTable data = DataProvider.Instance.executeQuery(query);
 
-            dgvDM_Main_KhachHang.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgvDM_Main_KhachHang.DataSource = data;
+            } else
+            {
+                dgvDM_Main_KhachHang.DataSource = null;
+            }
 
             dinhDangLuoi();
         }
@@ -73,9 +79,7 @@ namespace quanLyKho
         {
             try
             {
-                string query = "insert KhachHang" + " values ( '" + txt_DM_MaKhachHang.Text.Trim() + "', N'" + txt_DM_TenKhachHang.Text.Trim() + "',  N'" + txt_DM_DiaChi.Text.Trim() + "',  " + txt_DM_DIenThoai.Text.Trim() + ")";
-
-
+                string query = "insert into KhachHang values ('" + txt_DM_MaKhachHang.Text.Trim() + "','" + txt_DM_TenKhachHang.Text.Trim() + "', N'" + txt_DM_DiaChi.Text.Trim() + "', N'" + txt_DM_DIenThoai.Text.Trim() + "')";
                 var result = DataProvider.Instance.executeNonQuery(query);
 
                 if (result > 0)
@@ -304,16 +308,22 @@ namespace quanLyKho
         {
             
             LoadData();
+            int sdt;
+            txt_DM_MaKhachHang.Text = dgvDM_Main_KhachHang.Rows[0].Cells[0].Value.ToString();
+            txt_DM_TenKhachHang.Text = dgvDM_Main_KhachHang.Rows[0].Cells[1].Value.ToString();
+            txt_DM_DiaChi.Text = dgvDM_Main_KhachHang.Rows[0].Cells[2].Value.ToString();
+            if (int.TryParse(dgvDM_Main_KhachHang.Rows[0].Cells[3].Value.ToString(), out sdt))
+            {
+                txt_DM_DIenThoai.Text = sdt.ToString();
+
+            }
         }
 
         private void txt_DM_TimKiem_TextChanged_1(object sender, EventArgs e)
         {
             if (rdo_DM_TheoMa.Checked == false && rdo_DM_TheoTen.Checked == false)
             {
-                BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = dgvDM_Main_KhachHang.DataSource;
-                bindingSource.Filter = string.Format("id LIKE '%{0}%' OR [tenKhachHang] LIKE '%{0}%'", txt_DM_TimKiem.Text);
-                dgvDM_Main_KhachHang.DataSource = bindingSource;
+                MessageBox.Show("Bạn chưa chọn tiêu chí tìm kiếm");
             }
             if (rdo_DM_TheoMa.Checked == true)
             {

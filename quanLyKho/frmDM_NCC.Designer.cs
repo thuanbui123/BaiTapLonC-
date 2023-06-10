@@ -63,11 +63,11 @@ namespace quanLyKho
             // dgv_DM_NCC
             // 
             this.dgv_DM_NCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DM_NCC.Location = new System.Drawing.Point(64, 477);
+            this.dgv_DM_NCC.Location = new System.Drawing.Point(64, 443);
             this.dgv_DM_NCC.Name = "dgv_DM_NCC";
             this.dgv_DM_NCC.RowHeadersWidth = 51;
             this.dgv_DM_NCC.RowTemplate.Height = 24;
-            this.dgv_DM_NCC.Size = new System.Drawing.Size(1072, 201);
+            this.dgv_DM_NCC.Size = new System.Drawing.Size(1072, 281);
             this.dgv_DM_NCC.TabIndex = 7;
             this.dgv_DM_NCC.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_DM_NCC_CellMouseClick);
             // 
@@ -75,7 +75,7 @@ namespace quanLyKho
             // 
             this.txt_DM_NCC_TimKiem.Location = new System.Drawing.Point(301, 31);
             this.txt_DM_NCC_TimKiem.Name = "txt_DM_NCC_TimKiem";
-            this.txt_DM_NCC_TimKiem.Size = new System.Drawing.Size(280, 26);
+            this.txt_DM_NCC_TimKiem.Size = new System.Drawing.Size(280, 30);
             this.txt_DM_NCC_TimKiem.TabIndex = 1;
             // 
             // groupBox1
@@ -99,28 +99,28 @@ namespace quanLyKho
             // 
             this.txt_DM_NCC_DienThoai.Location = new System.Drawing.Point(227, 192);
             this.txt_DM_NCC_DienThoai.Name = "txt_DM_NCC_DienThoai";
-            this.txt_DM_NCC_DienThoai.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_NCC_DienThoai.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_NCC_DienThoai.TabIndex = 7;
             // 
             // txt_DM_NCC_DiaChi
             // 
             this.txt_DM_NCC_DiaChi.Location = new System.Drawing.Point(227, 150);
             this.txt_DM_NCC_DiaChi.Name = "txt_DM_NCC_DiaChi";
-            this.txt_DM_NCC_DiaChi.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_NCC_DiaChi.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_NCC_DiaChi.TabIndex = 6;
             // 
             // txt_DM_TenNCC
             // 
             this.txt_DM_TenNCC.Location = new System.Drawing.Point(227, 102);
             this.txt_DM_TenNCC.Name = "txt_DM_TenNCC";
-            this.txt_DM_TenNCC.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_TenNCC.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_TenNCC.TabIndex = 5;
             // 
             // txt_DM_MaNCC
             // 
             this.txt_DM_MaNCC.Location = new System.Drawing.Point(227, 60);
             this.txt_DM_MaNCC.Name = "txt_DM_MaNCC";
-            this.txt_DM_MaNCC.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_MaNCC.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_MaNCC.TabIndex = 4;
             // 
             // label4
@@ -128,7 +128,7 @@ namespace quanLyKho
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 19);
+            this.label4.Size = new System.Drawing.Size(92, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Điện thoại";
             // 
@@ -137,7 +137,7 @@ namespace quanLyKho
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 19);
+            this.label5.Size = new System.Drawing.Size(68, 22);
             this.label5.TabIndex = 2;
             this.label5.Text = "Địa chỉ";
             // 
@@ -146,7 +146,7 @@ namespace quanLyKho
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 19);
+            this.label3.Size = new System.Drawing.Size(151, 22);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên Nhà cung cấp";
             // 
@@ -155,7 +155,7 @@ namespace quanLyKho
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 19);
+            this.label2.Size = new System.Drawing.Size(147, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Nhà cung cấp";
             // 
@@ -164,7 +164,7 @@ namespace quanLyKho
             this.rdb_DM_NCC_TheoTen.AutoSize = true;
             this.rdb_DM_NCC_TheoTen.Location = new System.Drawing.Point(763, 31);
             this.rdb_DM_NCC_TheoTen.Name = "rdb_DM_NCC_TheoTen";
-            this.rdb_DM_NCC_TheoTen.Size = new System.Drawing.Size(85, 23);
+            this.rdb_DM_NCC_TheoTen.Size = new System.Drawing.Size(106, 26);
             this.rdb_DM_NCC_TheoTen.TabIndex = 3;
             this.rdb_DM_NCC_TheoTen.TabStop = true;
             this.rdb_DM_NCC_TheoTen.Text = "Theo Tên";
@@ -175,7 +175,7 @@ namespace quanLyKho
             this.rdb_DM_NCC_TheoMa.AutoSize = true;
             this.rdb_DM_NCC_TheoMa.Location = new System.Drawing.Point(614, 31);
             this.rdb_DM_NCC_TheoMa.Name = "rdb_DM_NCC_TheoMa";
-            this.rdb_DM_NCC_TheoMa.Size = new System.Drawing.Size(83, 23);
+            this.rdb_DM_NCC_TheoMa.Size = new System.Drawing.Size(102, 26);
             this.rdb_DM_NCC_TheoMa.TabIndex = 2;
             this.rdb_DM_NCC_TheoMa.TabStop = true;
             this.rdb_DM_NCC_TheoMa.Text = "Theo Mã";
@@ -265,7 +265,7 @@ namespace quanLyKho
             this.groupBox2.Controls.Add(this.btn_DM_NCC_Them);
             this.groupBox2.Location = new System.Drawing.Point(910, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(226, 374);
+            this.groupBox2.Size = new System.Drawing.Size(226, 340);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -273,9 +273,11 @@ namespace quanLyKho
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 25);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(177, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 19);
+            this.label1.Size = new System.Drawing.Size(466, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN NHÀ CUNG CẤP";
             // 
@@ -285,7 +287,7 @@ namespace quanLyKho
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(64, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 374);
+            this.panel1.Size = new System.Drawing.Size(756, 340);
             this.panel1.TabIndex = 4;
             // 
             // btn_DM_NCC_TimKiem
@@ -308,14 +310,14 @@ namespace quanLyKho
             this.panel2.Controls.Add(this.rdb_DM_NCC_TheoMa);
             this.panel2.Controls.Add(this.txt_DM_NCC_TimKiem);
             this.panel2.Controls.Add(this.btn_DM_NCC_TimKiem);
-            this.panel2.Location = new System.Drawing.Point(64, 404);
+            this.panel2.Location = new System.Drawing.Point(64, 370);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1072, 86);
             this.panel2.TabIndex = 6;
             // 
             // frm_DM_NCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1200, 703);

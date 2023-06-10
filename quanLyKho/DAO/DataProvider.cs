@@ -11,7 +11,7 @@ namespace quanLyKho.DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectSTR = @"Data Source=THUANBUI\SQLEXPRESS;DATABASE=quanLyKho;User ID=sa; password =1";
+        private string connectSTR = @"Data Source=DESKTOP-5NOB1SS\SQLEXPRESS;Initial Catalog=quanLyKho;Integrated Security=True";
 
         public static DataProvider Instance 
         {

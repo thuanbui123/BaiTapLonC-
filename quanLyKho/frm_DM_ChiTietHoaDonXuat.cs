@@ -136,40 +136,40 @@ namespace quanLyKho
 
         private void getDongThuI(int i)
         {
-            try
-            {
-                string tenHH = dgv_Main_DonXuat.Rows[i].Cells[0].Value.ToString();
-                Object idHH = DataProvider.Instance.executeScalar("Select id from hangHoa where tenHangHoa = N'" + tenHH + "'");
-                cbo_HangHoa.SelectedValue = idHH;
-                object data = DataProvider.Instance.executeScalar("Select donViTinh from hangHoa where tenHangHoa = N'" + tenHH + "'");
-                lbl_DonVi.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select k.soLuong from hangHoa as hh, kho as k where hh.tenHangHoa = N'" + tenHH + "' and k.idHangHoa = hh.id");
-                txt_SoLuongKho.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select xuatXu from hangHoa where tenHangHoa = N'" + tenHH + "'");
-                lbl_XuatXu.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select ctpn.donGiaNhap from hangHoa as hh, chiTietPhieuNhap as ctpn where hh.tenHangHoa = N'" + tenHH + "' and ctpn.idHangHoa = hh.id");
-                txt_GiaGoc.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select ctpx.soLuongXuat * ctpx.donGiaXuat from hangHoa as hh, chiTietPhieuXuat as ctpx, kho as k where tenHangHoa = N'" + tenHH + "' and ctpx.idKho = k.id and k.idHangHoa = hh.id");
-                lbl_ThanhTien.Text = Convert.ToString(data);
-                txt_SoLuong.Text = dgv_Main_DonXuat.Rows[i].Cells[2].Value.ToString();
-                txt_DonGia.Text = dgv_Main_DonXuat.Rows[i].Cells[3].Value.ToString();
-                int soLuongXuat = Convert.ToInt32(txt_SoLuong.Text.ToString());
-                object idChiTietPhieuXuat = DataProvider.Instance.executeScalar("select ctpx.idXuat from chiTietPhieuXuat as ctpx, hangHoa as hh, kho as k where hh.id = '"+idHH+"' and hh.id = k.idHangHoa and k.id = ctpx.idKho");
-                object idPhieuXuat = DataProvider.Instance.executeScalar("Select px.soPhieuXuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '"+idChiTietPhieuXuat+ "' and px.soPhieuXuat = ctpx.idPhieuXuat");
-                lbl_DM_CTPX_SoHoaDon.Text = idPhieuXuat.ToString();
-                data = DataProvider.Instance.executeScalar("Select px.ngayLap_Xuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '" + idChiTietPhieuXuat + "' and px.soPhieuXuat = ctpx.idPhieuXuat");
-                lbl_NgayLapHD.Text = Convert.ToDateTime(data).ToString("dd/MM/yyyy");
-                data = DataProvider.Instance.executeScalar("Select kh.tenKhachHang from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text+"'");
-                lbl_KhachHang.Text = data.ToString();
-                data = DataProvider.Instance.executeScalar("Select kh.soDienThoai from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "'");
-                lbl_SoDienThoai.Text = data.ToString();
-                data = DataProvider.Instance.executeScalar("Select kh.diaChi from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "'");
-                lbl_DiaChi.Text = data.ToString();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            //try
+            //{
+            //    string tenHH = dgv_Main_DonXuat.Rows[i].Cells[0].Value.ToString();
+            //    Object idHH = DataProvider.Instance.executeScalar("Select id from hangHoa where tenHangHoa = N'" + tenHH + "'");
+            //    cbo_HangHoa.SelectedValue = idHH;
+            //    object data = DataProvider.Instance.executeScalar("Select donViTinh from hangHoa where tenHangHoa = N'" + tenHH + "'");
+            //    lbl_DonVi.Text = Convert.ToString(data);
+            //    data = DataProvider.Instance.executeScalar("Select k.soLuong from hangHoa as hh, kho as k where hh.tenHangHoa = N'" + tenHH + "' and k.idHangHoa = hh.id");
+            //    txt_SoLuongKho.Text = Convert.ToString(data);
+            //    data = DataProvider.Instance.executeScalar("Select xuatXu from hangHoa where tenHangHoa = N'" + tenHH + "'");
+            //    lbl_XuatXu.Text = Convert.ToString(data);
+            //    data = DataProvider.Instance.executeScalar("Select ctpn.donGiaNhap from hangHoa as hh, chiTietPhieuNhap as ctpn where hh.tenHangHoa = N'" + tenHH + "' and ctpn.idHangHoa = hh.id");
+            //    txt_GiaGoc.Text = Convert.ToString(data);
+            //    data = DataProvider.Instance.executeScalar("Select ctpx.soLuongXuat * ctpx.donGiaXuat from hangHoa as hh, chiTietPhieuXuat as ctpx, kho as k where tenHangHoa = N'" + tenHH + "' and ctpx.idKho = k.id and k.idHangHoa = hh.id");
+            //    lbl_ThanhTien.Text = Convert.ToString(data);
+            //    txt_SoLuong.Text = dgv_Main_DonXuat.Rows[i].Cells[2].Value.ToString();
+            //    txt_DonGia.Text = dgv_Main_DonXuat.Rows[i].Cells[3].Value.ToString();
+            //    int soLuongXuat = Convert.ToInt32(txt_SoLuong.Text.ToString());
+            //    object idChiTietPhieuXuat = DataProvider.Instance.executeScalar("select ctpx.idXuat from chiTietPhieuXuat as ctpx, hangHoa as hh, kho as k where hh.id = '"+idHH+"' and hh.id = k.idHangHoa and k.id = ctpx.idKho");
+            //    object idPhieuXuat = DataProvider.Instance.executeScalar("Select px.soPhieuXuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '"+idChiTietPhieuXuat+ "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+            //    lbl_DM_CTPX_SoHoaDon.Text = idPhieuXuat.ToString();
+            //    data = DataProvider.Instance.executeScalar("Select px.ngayLap_Xuat from phieuXuat as px, chiTietPhieuXuat as ctpx where ctpx.idXuat = '" + idChiTietPhieuXuat + "' and px.soPhieuXuat = ctpx.idPhieuXuat");
+            //    lbl_NgayLapHD.Text = Convert.ToDateTime(data).ToString("dd/MM/yyyy");
+            //    data = DataProvider.Instance.executeScalar("Select kh.tenKhachHang from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text+"'");
+            //    lbl_KhachHang.Text = data.ToString();
+            //    data = DataProvider.Instance.executeScalar("Select kh.soDienThoai from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "'");
+            //    lbl_SoDienThoai.Text = data.ToString();
+            //    data = DataProvider.Instance.executeScalar("Select kh.diaChi from khachHang as kh, phieuXuat as px where kh.id = px.idKhachHang and px.soPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "'");
+            //    lbl_DiaChi.Text = data.ToString();
+            //}
+            //catch (Exception e)
+            //{
+            //    MessageBox.Show(e.Message);
+            //}
         }
 
         private void dgv_Main_DonXuat_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

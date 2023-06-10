@@ -27,7 +27,14 @@ namespace quanLyKho
             string query = "Select phieuXuat.soPhieuXuat,khachHang.tenKhachHang,phieuXuat.ngayLap_Xuat from phieuXuat, khachHang where phieuXuat.idKhachHang=khachHang.id ";
 
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgvDM_Main_DonXuat.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgvDM_Main_DonXuat.DataSource = data;
+            }
+            else
+            {
+                dgvDM_Main_DonXuat.DataSource = null;
+            }
 
             dinhDangLuoi();
         }
@@ -162,9 +169,16 @@ namespace quanLyKho
             if (i >= 0)
             {
                 txt_DM_SoHoaDon.Text = dgvDM_Main_DonXuat.Rows[i].Cells[0].Value.ToString();
-                object id = DataProvider.Instance.executeScalar("Select id from khachHang where tenKhachHang = N'" + dgvDM_Main_DonXuat.Rows[0].Cells[1].Value.ToString() + "'");
+                GlobalDataChiTietHoaDonXuat.soHoaDon = dgvDM_Main_DonXuat.Rows[i].Cells[0].Value.ToString();
+                object id = DataProvider.Instance.executeScalar("Select id from khachHang where tenKhachHang = N'" + dgvDM_Main_DonXuat.Rows[i].Cells[1].Value.ToString() + "'");
                 cbo_DM_KhachHang.SelectedValue = id.ToString();
+                GlobalDataChiTietHoaDonXuat.tenKhachHang = dgvDM_Main_DonXuat.Rows[i].Cells[1].Value.ToString();
                 dtp_DM_NgayTaoHD.Value = Convert.ToDateTime(dgvDM_Main_DonXuat.Rows[i].Cells[2].Value.ToString());
+                GlobalDataChiTietHoaDonXuat.NgayLapHD = dgvDM_Main_DonXuat.Rows[i].Cells[2].Value.ToString();
+                object sdt = DataProvider.Instance.executeScalar("Select soDienThoai from khachHang where tenKhachHang = N'" + dgvDM_Main_DonXuat.Rows[i].Cells[1].Value.ToString() + "'");
+                GlobalDataChiTietHoaDonXuat.soDienThoai = sdt.ToString();
+                object diaChi = DataProvider.Instance.executeScalar("Select DiaChi from khachHang where tenKhachHang = N'" + dgvDM_Main_DonXuat.Rows[0].Cells[1].Value.ToString() + "'");
+                GlobalDataChiTietHoaDonXuat.diaChi = diaChi.ToString();
             }
         }
 
@@ -184,7 +198,7 @@ namespace quanLyKho
                     {
                         btn_DM_LuuDonXuat.Enabled = false;
                         btn_DM_HuyDonXuat.Enabled = false;
-                        btn_DM_XuatHoaDon.Enabled = false;
+                        btn_DM_XuatHoaDon.Enabled = true;
                         btn_DM_ThemDonXuat.Enabled = true;
                         btn_DM_SuaDonXuat.Enabled = true;
                         btn_DM_XoaDonXuat.Enabled = true;
@@ -280,7 +294,9 @@ namespace quanLyKho
         private void btn_DM_XuatHoaDon_Click(object sender, EventArgs e)
         {
             frm_DM_ChiTietHoaDonXuat f = new frm_DM_ChiTietHoaDonXuat();
+            
             f.ShowDialog();
+          
         }
     }
 }

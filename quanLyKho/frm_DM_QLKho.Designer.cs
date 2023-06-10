@@ -69,14 +69,16 @@ namespace quanLyKho
             this.btn_DM_Kho_LamMoi.TabIndex = 2;
             this.btn_DM_Kho_LamMoi.Text = "Làm mới";
             this.btn_DM_Kho_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_DM_Kho_LamMoi.Click += new System.EventHandler(this.btn_DM_Kho_LamMoi_Click);
             // 
             // cbo_DM_Kho_HangHoa
             // 
             this.cbo_DM_Kho_HangHoa.FormattingEnabled = true;
             this.cbo_DM_Kho_HangHoa.Location = new System.Drawing.Point(230, 33);
             this.cbo_DM_Kho_HangHoa.Name = "cbo_DM_Kho_HangHoa";
-            this.cbo_DM_Kho_HangHoa.Size = new System.Drawing.Size(227, 27);
+            this.cbo_DM_Kho_HangHoa.Size = new System.Drawing.Size(227, 30);
             this.cbo_DM_Kho_HangHoa.TabIndex = 1;
+            this.cbo_DM_Kho_HangHoa.SelectedValueChanged += new System.EventHandler(this.cbo_DM_Kho_HangHoa_SelectedValueChanged);
             // 
             // label1
             // 
@@ -84,13 +86,13 @@ namespace quanLyKho
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(60, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại Hàng hóa";
             // 
             // frm_DM_QLKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 606);
@@ -100,6 +102,7 @@ namespace quanLyKho
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_DM_QLKho";
             this.Text = "frm_DM_QLKho";
+            this.Load += new System.EventHandler(this.frm_DM_QLKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DM_Kho)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

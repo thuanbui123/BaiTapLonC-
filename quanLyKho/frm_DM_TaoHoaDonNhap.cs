@@ -34,7 +34,14 @@ namespace quanLyKho
         {
             string query = "Select pn.soPhieuNhap, ncc.tenNhaCungCap, pn.ngayLap_Nhap from phieuNhap as pn, nhaCungCap as ncc where pn.idNhaCungCap = ncc.id";
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgvMain.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgvMain.DataSource = data;
+            }
+            else
+            {
+                dgvMain.DataSource = null;
+            }
             dinhDangluoi();
         }
 
@@ -217,8 +224,11 @@ namespace quanLyKho
         private void getDong (int i)
         {
             txtSoHoaDon.Text = dgvMain.Rows[i].Cells[0].Value.ToString();
+            class_ChiTietHoaDonNhap.SelectedIdSoPhieuNhap = dgvMain.Rows[i].Cells[0].Value.ToString();
             dtpNgayLap.Value = Convert.ToDateTime(dgvMain.Rows[i].Cells[2].Value);
-            object id = DataProvider.Instance.executeScalar("Select id from nhaCungCap where tenNhaCungCap = N'"+dgvMain.Rows[i].Cells[1].Value.ToString()+"'");
+            class_ChiTietHoaDonNhap.SelectedNgayLap = Convert.ToDateTime(dgvMain.Rows[i].Cells[2].Value);
+            object id = DataProvider.Instance.executeScalar("Select id from nhaCungCap where tenNhaCungCap = N'" + dgvMain.Rows[i].Cells[1].Value.ToString() + "'");
+            class_ChiTietHoaDonNhap.SelectedIdNhaCungCap = dgvMain.Rows[i].Cells[1].Value.ToString();
             cboNhaCungCap.SelectedValue = id.ToString();
         }
 

@@ -33,13 +33,25 @@ namespace quanLyKho
         {
             string query = "select ncc.id, ncc.tenNhaCungCap, ncc.diaChi, ncc.soDienThoai from nhaCungCap as ncc";
             DataTable data = DataProvider.Instance.executeQuery(query);
-            dgv_BCTK_NCC.DataSource = data;
+            if (data != null && data.Rows.Count > 0)
+            {
+                dgv_BCTK_NCC.DataSource = data;
+            } else
+            {
+                dgv_BCTK_NCC.DataSource = null;
+            }
             dinhDangLuoi();
         }
 
         private void frm_BCTK_NCC_Load_1(object sender, EventArgs e)
         {
             loadDuLieuLenLuoi();
+        }
+
+        private void btn_BCTK_NCC_In_Click(object sender, EventArgs e)
+        {
+            frm_rp_BCTK_NCC f = new frm_rp_BCTK_NCC();
+            f.Show();
         }
     }
 }

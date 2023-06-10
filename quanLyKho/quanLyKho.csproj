@@ -108,13 +108,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsXuatHang.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Ds_Ctpx.cs">
-      <DependentUpon>Ds_Ctpx.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Ds_Ctpx.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Ds_Ctpx.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ds_IN_ThongKeKhachHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_IN_ThongKeKhachHang.xsd</DependentUpon>
     </Compile>
     <Compile Include="DTO\Account.cs" />
     <Compile Include="frmDM_NCC.cs">
@@ -214,11 +216,11 @@
     <Compile Include="frm_DM_ChiTietHoaDonXuat.Designer.cs">
       <DependentUpon>frm_DM_ChiTietHoaDonXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DM_IN.cs">
+    <Compile Include="frm_DM_IN_CTPX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DM_IN.Designer.cs">
-      <DependentUpon>frm_DM_IN.cs</DependentUpon>
+    <Compile Include="frm_DM_IN_CTPX.Designer.cs">
+      <DependentUpon>frm_DM_IN_CTPX.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DM_KhachHang.cs">
       <SubType>Form</SubType>
@@ -267,6 +269,12 @@
     </Compile>
     <Compile Include="frm_InChiTietPhieuNhap.Designer.cs">
       <DependentUpon>frm_InChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_IN_ThongKeKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_IN_ThongKeKhachHang.Designer.cs">
+      <DependentUpon>Frm_IN_ThongKeKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_In_ThongKeXuatHang.cs">
       <SubType>Form</SubType>
@@ -331,8 +339,8 @@
     <EmbeddedResource Include="frm_DM_ChiTietHoaDonXuat.resx">
       <DependentUpon>frm_DM_ChiTietHoaDonXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DM_IN.resx">
-      <DependentUpon>frm_DM_IN.cs</DependentUpon>
+    <EmbeddedResource Include="frm_DM_IN_CTPX.resx">
+      <DependentUpon>frm_DM_IN_CTPX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DM_KhachHang.resx">
       <DependentUpon>frm_DM_KhachHang.cs</DependentUpon>
@@ -358,6 +366,9 @@
     <EmbeddedResource Include="frm_InChiTietPhieuNhap.resx">
       <DependentUpon>frm_InChiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_IN_ThongKeKhachHang.resx">
+      <DependentUpon>Frm_IN_ThongKeKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_In_ThongKeXuatHang.resx">
       <DependentUpon>frm_In_ThongKeXuatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +391,7 @@
     <EmbeddedResource Include="ReportLoaiHang.rdlc" />
     <EmbeddedResource Include="ReportNhapKho.rdlc" />
     <EmbeddedResource Include="Report_Ctpx.rdlc" />
+    <EmbeddedResource Include="Report_IN_ThongKeKhachHang.rdlc" />
     <None Include="dsChiTietPhieuNhap.xsc">
       <DependentUpon>dsChiTietPhieuNhap.xsd</DependentUpon>
     </None>
@@ -456,6 +468,17 @@
     </None>
     <None Include="Ds_Ctpx.xss">
       <DependentUpon>Ds_Ctpx.xsd</DependentUpon>
+    </None>
+    <None Include="Ds_IN_ThongKeKhachHang.xsc">
+      <DependentUpon>Ds_IN_ThongKeKhachHang.xsd</DependentUpon>
+    </None>
+    <None Include="Ds_IN_ThongKeKhachHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_IN_ThongKeKhachHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Ds_IN_ThongKeKhachHang.xss">
+      <DependentUpon>Ds_IN_ThongKeKhachHang.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

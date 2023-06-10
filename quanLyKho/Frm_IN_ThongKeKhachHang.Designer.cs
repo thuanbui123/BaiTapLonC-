@@ -1,7 +1,7 @@
 ﻿
 namespace quanLyKho
 {
-    partial class frm_DM_IN
+    partial class Frm_IN_ThongKeKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,8 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -44,20 +42,24 @@ namespace quanLyKho
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // errorProvider1
+            // reportViewer2
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.reportViewer2.Location = new System.Drawing.Point(483, 182);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(8, 25);
+            this.reportViewer2.TabIndex = 1;
             // 
-            // frm_DM_IN
+            // Frm_IN_ThongKeKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frm_DM_IN";
-            this.Text = "frm_DM_IN";
-            this.Load += new System.EventHandler(this.frm_DM_IN_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.Name = "Frm_IN_ThongKeKhachHang";
+            this.Text = "Frm_IN_ThongKeKhachHang";
+            this.Load += new System.EventHandler(this.Frm_IN_ThongKeKhachHang_Load);
             this.ResumeLayout(false);
 
         }
@@ -65,6 +67,6 @@ namespace quanLyKho
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }

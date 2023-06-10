@@ -48,5 +48,11 @@ namespace quanLyKho
         {
             loadDuLieuLenLuoi();
         }
+
+        private void btn_BC_In_Click(object sender, EventArgs e)
+        {
+            Frm_IN_ThongKeKhachHang f = new Frm_IN_ThongKeKhachHang();
+            f.ShowDialog();
+        }
     }
 }

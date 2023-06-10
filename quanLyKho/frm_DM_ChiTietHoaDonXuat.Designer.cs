@@ -369,6 +369,7 @@ namespace quanLyKho
             this.dgv_Main_DonXuat.Name = "dgv_Main_DonXuat";
             this.dgv_Main_DonXuat.Size = new System.Drawing.Size(933, 233);
             this.dgv_Main_DonXuat.TabIndex = 71;
+            this.dgv_Main_DonXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Main_DonXuat_CellContentClick);
             this.dgv_Main_DonXuat.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Main_DonXuat_CellMouseClick);
             // 
             // groupBox1
@@ -397,6 +398,7 @@ namespace quanLyKho
             this.btn_DM_InDonXuat.TabIndex = 59;
             this.btn_DM_InDonXuat.Text = "In";
             this.btn_DM_InDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_InDonXuat.Click += new System.EventHandler(this.btn_DM_InDonXuat_Click_1);
             // 
             // btn_DM_HuyDonXuat
             // 
@@ -422,7 +424,7 @@ namespace quanLyKho
             this.btn_DM_LuuDonXuat.TabIndex = 57;
             this.btn_DM_LuuDonXuat.Text = "Lưu";
             this.btn_DM_LuuDonXuat.UseVisualStyleBackColor = true;
-            this.btn_DM_LuuDonXuat.Click += new System.EventHandler(this.btn_DM_LuuDonXuat_Click_1);
+            this.btn_DM_LuuDonXuat.Click += new System.EventHandler(this.btn_DM_LuuDonXuat_Click);
             // 
             // btn_DM_XoaDonXuat
             // 
@@ -434,6 +436,7 @@ namespace quanLyKho
             this.btn_DM_XoaDonXuat.TabIndex = 56;
             this.btn_DM_XoaDonXuat.Text = "Xóa";
             this.btn_DM_XoaDonXuat.UseVisualStyleBackColor = true;
+            this.btn_DM_XoaDonXuat.Click += new System.EventHandler(this.btn_DM_XoaDonXuat_Click);
             // 
             // btn_DM_SuaDonXuat
             // 

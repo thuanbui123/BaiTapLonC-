@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace quanLyKho
 {
-    public partial class frm_DM_IN : Form
+    public partial class frm_DM_IN_CTPX : Form
     {
-        public frm_DM_IN()
+        public frm_DM_IN_CTPX()
         {
             InitializeComponent();
         }
@@ -29,9 +29,9 @@ namespace quanLyKho
 
 
 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.Report_ctpx.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.Report_Ctpx.rdlc";
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSet1";
+            rds.Name = "DataSet_In_Ctpx";
             rds.Value = dt;
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();

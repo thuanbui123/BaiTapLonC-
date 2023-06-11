@@ -32,8 +32,8 @@ namespace quanLyKho
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BCTK_BaoCaoNhapKho));
             this.dgvMain = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnIn = new System.Windows.Forms.Button();
-            this.btnThucHien = new System.Windows.Forms.Button();
+            this.txtTheoHoaDon = new System.Windows.Forms.TextBox();
+            this.txtTheoNhaCungCap = new System.Windows.Forms.TextBox();
             this.chkTheoHoaDon = new System.Windows.Forms.CheckBox();
             this.chkTheoNhaCungCap = new System.Windows.Forms.CheckBox();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
@@ -41,8 +41,8 @@ namespace quanLyKho
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.lblTuNgay = new System.Windows.Forms.Label();
             this.lblBaoCaoNhapKho = new System.Windows.Forms.Label();
-            this.txtTheoHoaDon = new System.Windows.Forms.TextBox();
-            this.txtTheoNhaCungCap = new System.Windows.Forms.TextBox();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnThucHien = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,100 @@ namespace quanLyKho
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // txtTheoHoaDon
+            // 
+            this.txtTheoHoaDon.Location = new System.Drawing.Point(4, 253);
+            this.txtTheoHoaDon.Name = "txtTheoHoaDon";
+            this.txtTheoHoaDon.Size = new System.Drawing.Size(198, 35);
+            this.txtTheoHoaDon.TabIndex = 17;
+            // 
+            // txtTheoNhaCungCap
+            // 
+            this.txtTheoNhaCungCap.Location = new System.Drawing.Point(4, 186);
+            this.txtTheoNhaCungCap.Name = "txtTheoNhaCungCap";
+            this.txtTheoNhaCungCap.Size = new System.Drawing.Size(198, 35);
+            this.txtTheoNhaCungCap.TabIndex = 16;
+            // 
+            // chkTheoHoaDon
+            // 
+            this.chkTheoHoaDon.AutoSize = true;
+            this.chkTheoHoaDon.Checked = true;
+            this.chkTheoHoaDon.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTheoHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTheoHoaDon.Location = new System.Drawing.Point(4, 221);
+            this.chkTheoHoaDon.Margin = new System.Windows.Forms.Padding(2);
+            this.chkTheoHoaDon.Name = "chkTheoHoaDon";
+            this.chkTheoHoaDon.Size = new System.Drawing.Size(171, 31);
+            this.chkTheoHoaDon.TabIndex = 2;
+            this.chkTheoHoaDon.Text = "Theo hóa đơn";
+            this.chkTheoHoaDon.UseVisualStyleBackColor = true;
+            this.chkTheoHoaDon.CheckedChanged += new System.EventHandler(this.chkTheoHoaDon_CheckedChanged);
+            // 
+            // chkTheoNhaCungCap
+            // 
+            this.chkTheoNhaCungCap.AutoSize = true;
+            this.chkTheoNhaCungCap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTheoNhaCungCap.Location = new System.Drawing.Point(4, 158);
+            this.chkTheoNhaCungCap.Margin = new System.Windows.Forms.Padding(2);
+            this.chkTheoNhaCungCap.Name = "chkTheoNhaCungCap";
+            this.chkTheoNhaCungCap.Size = new System.Drawing.Size(220, 31);
+            this.chkTheoNhaCungCap.TabIndex = 2;
+            this.chkTheoNhaCungCap.Text = "Theo nhà cung cấp";
+            this.chkTheoNhaCungCap.UseVisualStyleBackColor = true;
+            this.chkTheoNhaCungCap.CheckedChanged += new System.EventHandler(this.chkTheoNhaCungCap_CheckedChanged);
+            // 
+            // dtpDenNgay
+            // 
+            this.dtpDenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDenNgay.Location = new System.Drawing.Point(4, 124);
+            this.dtpDenNgay.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(198, 35);
+            this.dtpDenNgay.TabIndex = 1;
+            // 
+            // dtpTuNgay
+            // 
+            this.dtpTuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTuNgay.Location = new System.Drawing.Point(4, 56);
+            this.dtpTuNgay.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(198, 35);
+            this.dtpTuNgay.TabIndex = 1;
+            // 
+            // lblDenNgay
+            // 
+            this.lblDenNgay.AutoSize = true;
+            this.lblDenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDenNgay.Location = new System.Drawing.Point(4, 95);
+            this.lblDenNgay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDenNgay.Name = "lblDenNgay";
+            this.lblDenNgay.Size = new System.Drawing.Size(104, 27);
+            this.lblDenNgay.TabIndex = 0;
+            this.lblDenNgay.Text = "Đến ngày";
+            // 
+            // lblTuNgay
+            // 
+            this.lblTuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTuNgay.Location = new System.Drawing.Point(4, 25);
+            this.lblTuNgay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTuNgay.Name = "lblTuNgay";
+            this.lblTuNgay.Size = new System.Drawing.Size(77, 23);
+            this.lblTuNgay.TabIndex = 0;
+            this.lblTuNgay.Text = "Từ ngày";
+            // 
+            // lblBaoCaoNhapKho
+            // 
+            this.lblBaoCaoNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblBaoCaoNhapKho.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaoCaoNhapKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblBaoCaoNhapKho.Location = new System.Drawing.Point(0, 0);
+            this.lblBaoCaoNhapKho.Name = "lblBaoCaoNhapKho";
+            this.lblBaoCaoNhapKho.Size = new System.Drawing.Size(1091, 37);
+            this.lblBaoCaoNhapKho.TabIndex = 16;
+            this.lblBaoCaoNhapKho.Text = "BÁO CÁO NHẬP KHO";
+            this.lblBaoCaoNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBaoCaoNhapKho.Click += new System.EventHandler(this.lblBaoCaoNhapKho_Click);
+            // 
             // btnIn
             // 
             this.btnIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,102 +202,9 @@ namespace quanLyKho
             this.btnThucHien.UseVisualStyleBackColor = true;
             this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
             // 
-            // chkTheoHoaDon
-            // 
-            this.chkTheoHoaDon.AutoSize = true;
-            this.chkTheoHoaDon.Checked = true;
-            this.chkTheoHoaDon.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTheoHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTheoHoaDon.Location = new System.Drawing.Point(4, 221);
-            this.chkTheoHoaDon.Margin = new System.Windows.Forms.Padding(2);
-            this.chkTheoHoaDon.Name = "chkTheoHoaDon";
-            this.chkTheoHoaDon.Size = new System.Drawing.Size(112, 23);
-            this.chkTheoHoaDon.TabIndex = 2;
-            this.chkTheoHoaDon.Text = "Theo hóa đơn";
-            this.chkTheoHoaDon.UseVisualStyleBackColor = true;
-            this.chkTheoHoaDon.CheckedChanged += new System.EventHandler(this.chkTheoHoaDon_CheckedChanged);
-            // 
-            // chkTheoNhaCungCap
-            // 
-            this.chkTheoNhaCungCap.AutoSize = true;
-            this.chkTheoNhaCungCap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTheoNhaCungCap.Location = new System.Drawing.Point(4, 158);
-            this.chkTheoNhaCungCap.Margin = new System.Windows.Forms.Padding(2);
-            this.chkTheoNhaCungCap.Name = "chkTheoNhaCungCap";
-            this.chkTheoNhaCungCap.Size = new System.Drawing.Size(142, 23);
-            this.chkTheoNhaCungCap.TabIndex = 2;
-            this.chkTheoNhaCungCap.Text = "Theo nhà cung cấp";
-            this.chkTheoNhaCungCap.UseVisualStyleBackColor = true;
-            this.chkTheoNhaCungCap.CheckedChanged += new System.EventHandler(this.chkTheoNhaCungCap_CheckedChanged);
-            // 
-            // dtpDenNgay
-            // 
-            this.dtpDenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDenNgay.Location = new System.Drawing.Point(4, 124);
-            this.dtpDenNgay.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(198, 26);
-            this.dtpDenNgay.TabIndex = 1;
-            // 
-            // dtpTuNgay
-            // 
-            this.dtpTuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTuNgay.Location = new System.Drawing.Point(4, 56);
-            this.dtpTuNgay.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(198, 26);
-            this.dtpTuNgay.TabIndex = 1;
-            // 
-            // lblDenNgay
-            // 
-            this.lblDenNgay.AutoSize = true;
-            this.lblDenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDenNgay.Location = new System.Drawing.Point(4, 95);
-            this.lblDenNgay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDenNgay.Name = "lblDenNgay";
-            this.lblDenNgay.Size = new System.Drawing.Size(66, 19);
-            this.lblDenNgay.TabIndex = 0;
-            this.lblDenNgay.Text = "Đến ngày";
-            // 
-            // lblTuNgay
-            // 
-            this.lblTuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTuNgay.Location = new System.Drawing.Point(4, 25);
-            this.lblTuNgay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTuNgay.Name = "lblTuNgay";
-            this.lblTuNgay.Size = new System.Drawing.Size(77, 23);
-            this.lblTuNgay.TabIndex = 0;
-            this.lblTuNgay.Text = "Từ ngày";
-            // 
-            // lblBaoCaoNhapKho
-            // 
-            this.lblBaoCaoNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBaoCaoNhapKho.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaoCaoNhapKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblBaoCaoNhapKho.Location = new System.Drawing.Point(0, 0);
-            this.lblBaoCaoNhapKho.Name = "lblBaoCaoNhapKho";
-            this.lblBaoCaoNhapKho.Size = new System.Drawing.Size(1091, 37);
-            this.lblBaoCaoNhapKho.TabIndex = 16;
-            this.lblBaoCaoNhapKho.Text = "BÁO CÁO NHẬP KHO";
-            this.lblBaoCaoNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTheoHoaDon
-            // 
-            this.txtTheoHoaDon.Location = new System.Drawing.Point(-3, 253);
-            this.txtTheoHoaDon.Name = "txtTheoHoaDon";
-            this.txtTheoHoaDon.Size = new System.Drawing.Size(209, 26);
-            this.txtTheoHoaDon.TabIndex = 17;
-            // 
-            // txtTheoNhaCungCap
-            // 
-            this.txtTheoNhaCungCap.Location = new System.Drawing.Point(-3, 186);
-            this.txtTheoNhaCungCap.Name = "txtTheoNhaCungCap";
-            this.txtTheoNhaCungCap.Size = new System.Drawing.Size(209, 26);
-            this.txtTheoNhaCungCap.TabIndex = 16;
-            // 
             // frm_BCTK_BaoCaoNhapKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1091, 504);

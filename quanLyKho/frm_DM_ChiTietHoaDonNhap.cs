@@ -37,14 +37,7 @@ namespace quanLyKho
         {
             string query = "select ctpn.idNhap, pn.soPhieuNhap, hh.tenHangHoa, ctpn.soLuongNhap, ctpn.donGiaNhap from chiTietPhieuNhap as ctpn, NhaCungCap as ncc, hangHoa as hh, phieuNhap as pn where ctpn.idSoPhieuNhap = pn.soPhieuNhap and pn.idNhaCungCap = ncc.id and ctpn.idHangHoa = hh.id and pn.soPhieuNhap = '" + class_ChiTietHoaDonNhap.SelectedIdSoPhieuNhap + "'";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            if (dt != null)
-            {
-                dgvMain.DataSource = dt;
-            }
-            else
-            {
-                dgvMain = null;
-            }
+            dgvMain.DataSource = dt;
             dinhDangLuoi();
         }
         public void loadComBo()
@@ -94,7 +87,7 @@ namespace quanLyKho
                     txtSoLuong.Enabled = true;
                     txtDonGia.Enabled = true;
                     cboHangHoa.Enabled = true;
-                    lblDonVi.Text = "";
+                    lbl_DonVi.Text = "";
                     lblThanhTien.Text = "";
                     txtSoLuong.Text = "";
                     cboHangHoa.Text = "";
@@ -174,7 +167,7 @@ namespace quanLyKho
                 Object idHH = DataProvider.Instance.executeScalar("Select id from hangHoa where tenHangHoa = N'" + tenHH + "'");
                 cboHangHoa.SelectedValue = idHH;
                 object data = DataProvider.Instance.executeScalar("Select donViTinh from hangHoa where tenHangHoa = N'" + tenHH + "'");
-                lblDonVi.Text = Convert.ToString(data);
+                lbl_DonVi.Text = Convert.ToString(data);
                 data = DataProvider.Instance.executeScalar("Select k.soLuong from hangHoa as hh, kho as k where hh.tenHangHoa = N'" + tenHH + "' and k.idHangHoa = hh.id");
                 txtSoLuong.Text = Convert.ToString(data);
                 data = DataProvider.Instance.executeScalar("Select ctpn.soLuongNhap * ctpn.donGiaNhap from  chiTietPhieuNhap as ctpn, hangHoa as hh where ctpn.idHangHoa = '" + idHH + "'");
@@ -218,6 +211,7 @@ namespace quanLyKho
                 if (result > 0)
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo");
+                  
                     loadLenLuoi();
                 }
                 else

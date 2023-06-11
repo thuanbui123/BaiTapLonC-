@@ -225,5 +225,11 @@ namespace quanLyKho
                 isClose = false;
             }
         }
+
+        private void btn_HD_HoTro_Click(object sender, EventArgs e)
+        {
+            frm_HoTro f = new frm_HoTro();
+            f.ShowDialog();
+        }
     }
 }

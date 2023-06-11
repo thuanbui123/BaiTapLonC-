@@ -61,6 +61,8 @@ namespace quanLyKho
             txtTheoHoaDon.Enabled = false;
             txtTheoNhaCungCap.Enabled = false;
             dgvMain.Show();
+            chkTheoHoaDon.Checked = false;
+            chkTheoNhaCungCap.Checked = false;
         }
 
         private void chkTheoNhaCungCap_CheckedChanged(object sender, EventArgs e)
@@ -117,6 +119,17 @@ namespace quanLyKho
         {
             frm_InBCTK_NhapKho a = new frm_InBCTK_NhapKho();
             a.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_BieuDoThongKeDoanhThu f = new frm_BieuDoThongKeDoanhThu();
+            f.ShowDialog();
+        }
+
+        private void lblBaoCaoNhapKho_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

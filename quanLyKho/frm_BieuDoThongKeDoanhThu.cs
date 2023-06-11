@@ -32,14 +32,11 @@ namespace quanLyKho
             chart_BieuDoDoanhThu.ChartAreas[0].AxisX.Title = "Tuần";
             chart_BieuDoDoanhThu.ChartAreas[0].AxisY.Title = "Doanh thu (VNĐ)";
 
-            // Tạo database để chứa dữ liệu
-            DataTable dt = new DataTable();
-
             // setup câu truy vấn để lấy dữ liệu
             string query = "SELECT DATEPART(WEEK, px.NgayLap_Xuat) AS Tuan, SUM(ctpx.soLuongXuat * ctpx.donGiaXuat) AS DoanhThu " +
                "FROM phieuXuat as px join chiTietPhieuXuat as ctpx on px.soPhieuXuat = ctpx.idPhieuXuat " +
                "GROUP BY DATEPART(WEEK, px.NgayLap_Xuat)";
-            dt = DataProvider.Instance.executeQuery(query);
+            DataTable data = DataProvider.Instance.executeQuery(query);
             Series series = new Series("Doanh thu");
             series.ChartType = SeriesChartType.Column;
             series.XValueMember = "Tuan";
@@ -47,12 +44,12 @@ namespace quanLyKho
             series.IsValueShownAsLabel = true;
             chart_BieuDoDoanhThu.Series.Add(series);
             // vẽ biểu đồ
-            chart_BieuDoDoanhThu.DataSource = dt;
+            chart_BieuDoDoanhThu.DataSource = data;
             chart_BieuDoDoanhThu.DataBind();
             // sắp xếp database theo từng tuần
-            DataView dv = dt.DefaultView;
+            DataView dv = data.DefaultView;
             dv.Sort = "Tuan ASC";
-            dt = dv.ToTable();
+            data = dv.ToTable();
             chart_BieuDoDoanhThu.DataBind();
         }
         private void theoThang()
@@ -62,12 +59,10 @@ namespace quanLyKho
             chart_BieuDoDoanhThu.Titles.Add("Doanh thu theo tháng");
             chart_BieuDoDoanhThu.ChartAreas[0].AxisX.Title = "Tháng";
             chart_BieuDoDoanhThu.ChartAreas[0].AxisY.Title = "Doanh thu (VNĐ)";
-            DataTable dt = new DataTable();
             string query = "select month(px.ngayLap_Xuat) as Thang, sum(ctpx.soLuongXuat * ctpx.donGiaXuat) as DoanhThu " +
                    "from phieuXuat as px join chiTietPhieuXuat as ctpx on px.soPhieuXuat = ctpx.idPhieuXuat " +
                    "group by month(px.ngayLap_Xuat)";
-            // kết nối
-            dt = DataProvider.Instance.executeQuery(query);
+            DataTable data = DataProvider.Instance.executeQuery(query);
             Series series = new Series("Doanh thu");
             series.ChartType = SeriesChartType.Column;
             series.XValueMember = "Thang";
@@ -75,7 +70,7 @@ namespace quanLyKho
             series.IsValueShownAsLabel = true;
             chart_BieuDoDoanhThu.Series.Add(series);
             // vẽ biểu đồ
-            chart_BieuDoDoanhThu.DataSource = dt;
+            chart_BieuDoDoanhThu.DataSource = data;
             chart_BieuDoDoanhThu.DataBind();
         }
         private void theoQuy()
@@ -90,8 +85,7 @@ namespace quanLyKho
             chart_BieuDoDoanhThu.ChartAreas[0].AxisX.Title = "Quý";
             chart_BieuDoDoanhThu.ChartAreas[0].AxisY.Title = "Doanh thu (VNĐ)";
 
-            // Tạo DataTable để chứa dữ liệu
-            DataTable dt = new DataTable();
+
 
             // Set up câu truy vấn SQL để lấy dữ liệu
             string query = "SELECT CONCAT(YEAR(px.ngayLap_Xuat), 'Q', (MONTH(px.ngayLap_Xuat) - 1) / 3 + 1) AS Quarter, SUM(ctpx.soLuongXuat * ctpx.donGiaXuat) AS DoanhThu " +
@@ -99,25 +93,24 @@ namespace quanLyKho
                            "WHERE px.ngayLap_Xuat BETWEEN DATEADD(MONTH, -9, GETDATE()) AND GETDATE() " +
                            "GROUP BY CONCAT(YEAR(px.ngayLap_Xuat), 'Q', (MONTH(px.ngayLap_Xuat) - 1) / 3 + 1)";
 
+            DataTable data = DataProvider.Instance.executeQuery(query);
 
-            dt = DataProvider.Instance.executeQuery(query);
             // Thêm các quý còn thiếu vào DataTable với giá trị doanh thu bằng 0
-            
             DateTime now = DateTime.Now;
             int currentQuarter = (now.Month - 1) / 3 + 1;
             int currentYear = now.Year;
             for (int i = currentQuarter + 1; i <= 4; i++)
             {
-                DataRow newRow = dt.NewRow();
+                DataRow newRow = data.NewRow();
                 newRow["Quarter"] = string.Format("{0}Q{1}", currentYear, i);
                 newRow["DoanhThu"] = 0;
-                dt.Rows.Add(newRow);
+                data.Rows.Add(newRow);
             }
 
             // Sắp xếp lại DataTable theo thứ tự quý
-            DataView dv = dt.DefaultView;
+            DataView dv = data.DefaultView;
             dv.Sort = "Quarter ASC";
-            dt = dv.ToTable();
+            data = dv.ToTable();
 
             // Tạo series mới cho biểu đồ
             Series series = new Series("Doanh thu");
@@ -127,7 +120,7 @@ namespace quanLyKho
             series.IsValueShownAsLabel = true;
             chart_BieuDoDoanhThu.Series.Add(series);
             // vẽ biểu đồ
-            chart_BieuDoDoanhThu.DataSource = dt;
+            chart_BieuDoDoanhThu.DataSource = data;
             chart_BieuDoDoanhThu.DataBind();
         }
 
@@ -151,6 +144,39 @@ namespace quanLyKho
 
                 theoQuy();
             }
+        }
+
+        private void chart_BieuDoDoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThucHien_Click_1(object sender, EventArgs e)
+        {
+
+            if (rdoTheoTuan.Checked == true)
+            {
+
+                theoTuan();
+
+            }
+            else
+               if (rdoTheoThang.Checked == true)
+            {
+
+                theoThang();
+            }
+            else
+               if (rdoTheoQuy.Checked == true)
+            {
+
+                theoQuy();
+            }
+        }
+
+        private void rdoTheoTuan_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace quanLyKho
 {
     public partial class frmMain : Form
     {
+
+        private static bool isClose = true;
         public string userName;
         public frmMain()
         {
@@ -44,7 +47,7 @@ namespace quanLyKho
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
@@ -113,13 +116,7 @@ namespace quanLyKho
             }
         }
 
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-        }
+        
 
         private void btn_DM_KhachHang_Click(object sender, EventArgs e)
         {
@@ -203,6 +200,30 @@ namespace quanLyKho
             frm_TopMatHangBanChay f = new frm_TopMatHangBanChay();
             formManager fm = new formManager();
             fm.showForm(pnlContainer, f);
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isClose)
+            {
+                if (Debugger.IsAttached)
+                {
+                    Environment.Exit(0); // Tắt ứng dụng ngay cả trong chế độ debug
+                }
+                else
+                {
+                    Application.Exit(); // Tắt ứng dụng trong chế độ release
+                }
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if ( MessageBox.Show("Bạn có muốn thoát chương trình!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+                isClose = false;
+            }
         }
     }
 }

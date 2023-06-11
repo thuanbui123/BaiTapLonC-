@@ -9,15 +9,15 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsLoaiHang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsLoaiHang" msprop:Generator_DataSetName="dsLoaiHang">
+  <xs:element name="dsLoaiHang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLoaiHang" msprop:Generator_UserDSName="dsLoaiHang">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="loaiHang" msprop:Generator_RowEvHandlerName="loaiHangRowChangeEventHandler" msprop:Generator_RowDeletedName="loaiHangRowDeleted" msprop:Generator_RowDeletingName="loaiHangRowDeleting" msprop:Generator_RowEvArgName="loaiHangRowChangeEvent" msprop:Generator_TablePropName="loaiHang" msprop:Generator_RowChangedName="loaiHangRowChanged" msprop:Generator_RowChangingName="loaiHangRowChanging" msprop:Generator_TableClassName="loaiHangDataTable" msprop:Generator_RowClassName="loaiHangRow" msprop:Generator_TableVarName="tableloaiHang" msprop:Generator_UserTableName="loaiHang">
+        <xs:element name="loaiHang" msprop:Generator_TableClassName="loaiHangDataTable" msprop:Generator_TableVarName="tableloaiHang" msprop:Generator_TablePropName="loaiHang" msprop:Generator_RowDeletingName="loaiHangRowDeleting" msprop:Generator_RowChangingName="loaiHangRowChanging" msprop:Generator_RowEvHandlerName="loaiHangRowChangeEventHandler" msprop:Generator_RowDeletedName="loaiHangRowDeleted" msprop:Generator_UserTableName="loaiHang" msprop:Generator_RowChangedName="loaiHangRowChanged" msprop:Generator_RowEvArgName="loaiHangRowChangeEvent" msprop:Generator_RowClassName="loaiHangRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
-              <xs:element name="tenLoai" msprop:Generator_ColumnPropNameInRow="tenLoai" msprop:Generator_ColumnPropNameInTable="tenLoaiColumn" msprop:Generator_ColumnVarNameInTable="columntenLoai" msprop:Generator_UserColumnName="tenLoai" type="xs:string" minOccurs="0" />
-              <xs:element name="dienGiai" msprop:Generator_ColumnPropNameInRow="dienGiai" msprop:Generator_ColumnPropNameInTable="dienGiaiColumn" msprop:Generator_ColumnVarNameInTable="columndienGiai" msprop:Generator_UserColumnName="dienGiai" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="tenLoai" msprop:Generator_ColumnVarNameInTable="columntenLoai" msprop:Generator_ColumnPropNameInRow="tenLoai" msprop:Generator_ColumnPropNameInTable="tenLoaiColumn" msprop:Generator_UserColumnName="tenLoai" type="xs:string" minOccurs="0" />
+              <xs:element name="dienGiai" msprop:Generator_ColumnVarNameInTable="columndienGiai" msprop:Generator_ColumnPropNameInRow="dienGiai" msprop:Generator_ColumnPropNameInTable="dienGiaiColumn" msprop:Generator_UserColumnName="dienGiai" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

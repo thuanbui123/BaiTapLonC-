@@ -32,23 +32,23 @@ namespace quanLyKho
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DM_ChiTietHoaDonNhap));
             this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.lbl_NgayLap = new System.Windows.Forms.Label();
+            this.lblNgayLapHD = new System.Windows.Forms.Label();
             this.lblNhaCungCap = new System.Windows.Forms.Label();
             this.lblSoHoaDon = new System.Windows.Forms.Label();
             this.lblNgayLap = new System.Windows.Forms.Label();
-            this.lbl_NhaCungCap = new System.Windows.Forms.Label();
+            this.lblNhaCungCap1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_SoHoaDon = new System.Windows.Forms.Label();
+            this.lblSoHoaDon1 = new System.Windows.Forms.Label();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.cboHangHoa = new System.Windows.Forms.ComboBox();
             this.lblThanhTien = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbl_ThanhTien = new System.Windows.Forms.Label();
+            this.lblThanhTien1 = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
+            this.lblTam = new System.Windows.Forms.Label();
             this.lblDonVi = new System.Windows.Forms.Label();
-            this.lbl_DonVi = new System.Windows.Forms.Label();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.lblHangHoa = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,15 +80,15 @@ namespace quanLyKho
             this.dgvMain.TabIndex = 14;
             this.dgvMain.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMain_CellMouseClick);
             // 
-            // lbl_NgayLap
+            // lblNgayLapHD
             // 
-            this.lbl_NgayLap.AutoSize = true;
-            this.lbl_NgayLap.Location = new System.Drawing.Point(317, 35);
-            this.lbl_NgayLap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_NgayLap.Name = "lbl_NgayLap";
-            this.lbl_NgayLap.Size = new System.Drawing.Size(140, 27);
-            this.lbl_NgayLap.TabIndex = 0;
-            this.lbl_NgayLap.Text = "Ngày lập HĐ";
+            this.lblNgayLapHD.AutoSize = true;
+            this.lblNgayLapHD.Location = new System.Drawing.Point(317, 35);
+            this.lblNgayLapHD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNgayLapHD.Name = "lblNgayLapHD";
+            this.lblNgayLapHD.Size = new System.Drawing.Size(94, 19);
+            this.lblNgayLapHD.TabIndex = 0;
+            this.lblNgayLapHD.Text = "Ngày lập HĐ";
             // 
             // lblNhaCungCap
             // 
@@ -96,9 +96,9 @@ namespace quanLyKho
             this.lblNhaCungCap.Location = new System.Drawing.Point(101, 67);
             this.lblNhaCungCap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhaCungCap.Name = "lblNhaCungCap";
-            this.lblNhaCungCap.Size = new System.Drawing.Size(30, 27);
+            this.lblNhaCungCap.Size = new System.Drawing.Size(92, 19);
             this.lblNhaCungCap.TabIndex = 0;
-            this.lblNhaCungCap.Text = "...";
+            this.lblNhaCungCap.Text = "Tôn Hoa Sen";
             // 
             // lblSoHoaDon
             // 
@@ -106,9 +106,9 @@ namespace quanLyKho
             this.lblSoHoaDon.Location = new System.Drawing.Point(101, 35);
             this.lblSoHoaDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon.Name = "lblSoHoaDon";
-            this.lblSoHoaDon.Size = new System.Drawing.Size(30, 27);
+            this.lblSoHoaDon.Size = new System.Drawing.Size(82, 19);
             this.lblSoHoaDon.TabIndex = 0;
-            this.lblSoHoaDon.Text = "...";
+            this.lblSoHoaDon.Text = "HDN00001";
             // 
             // lblNgayLap
             // 
@@ -116,28 +116,28 @@ namespace quanLyKho
             this.lblNgayLap.Location = new System.Drawing.Point(411, 35);
             this.lblNgayLap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayLap.Name = "lblNgayLap";
-            this.lblNgayLap.Size = new System.Drawing.Size(30, 27);
+            this.lblNgayLap.Size = new System.Drawing.Size(67, 19);
             this.lblNgayLap.TabIndex = 0;
-            this.lblNgayLap.Text = "...";
+            this.lblNgayLap.Text = "5-1-2017";
             // 
-            // lbl_NhaCungCap
+            // lblNhaCungCap1
             // 
-            this.lbl_NhaCungCap.AutoSize = true;
-            this.lbl_NhaCungCap.Location = new System.Drawing.Point(4, 67);
-            this.lbl_NhaCungCap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_NhaCungCap.Name = "lbl_NhaCungCap";
-            this.lbl_NhaCungCap.Size = new System.Drawing.Size(146, 27);
-            this.lbl_NhaCungCap.TabIndex = 0;
-            this.lbl_NhaCungCap.Text = "Nhà cung cấp";
+            this.lblNhaCungCap1.AutoSize = true;
+            this.lblNhaCungCap1.Location = new System.Drawing.Point(4, 67);
+            this.lblNhaCungCap1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNhaCungCap1.Name = "lblNhaCungCap1";
+            this.lblNhaCungCap1.Size = new System.Drawing.Size(98, 19);
+            this.lblNhaCungCap1.TabIndex = 0;
+            this.lblNhaCungCap1.Text = "Nhà cung cấp";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lbl_NgayLap);
+            this.groupBox1.Controls.Add(this.lblNgayLapHD);
             this.groupBox1.Controls.Add(this.lblNhaCungCap);
             this.groupBox1.Controls.Add(this.lblSoHoaDon);
             this.groupBox1.Controls.Add(this.lblNgayLap);
-            this.groupBox1.Controls.Add(this.lbl_NhaCungCap);
-            this.groupBox1.Controls.Add(this.lbl_SoHoaDon);
+            this.groupBox1.Controls.Add(this.lblNhaCungCap1);
+            this.groupBox1.Controls.Add(this.lblSoHoaDon1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -149,22 +149,22 @@ namespace quanLyKho
             this.groupBox1.Text = "Cập nhật Chi tiết Hóa đơn nhập";
             this.groupBox1.UseCompatibleTextRendering = true;
             // 
-            // lbl_SoHoaDon
+            // lblSoHoaDon1
             // 
-            this.lbl_SoHoaDon.AutoSize = true;
-            this.lbl_SoHoaDon.Location = new System.Drawing.Point(4, 35);
-            this.lbl_SoHoaDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_SoHoaDon.Name = "lbl_SoHoaDon";
-            this.lbl_SoHoaDon.Size = new System.Drawing.Size(121, 27);
-            this.lbl_SoHoaDon.TabIndex = 0;
-            this.lbl_SoHoaDon.Text = "Số hóa đơn";
+            this.lblSoHoaDon1.AutoSize = true;
+            this.lblSoHoaDon1.Location = new System.Drawing.Point(4, 35);
+            this.lblSoHoaDon1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSoHoaDon1.Name = "lblSoHoaDon1";
+            this.lblSoHoaDon1.Size = new System.Drawing.Size(82, 19);
+            this.lblSoHoaDon1.TabIndex = 0;
+            this.lblSoHoaDon1.Text = "Số hóa đơn";
             // 
             // txtDonGia
             // 
             this.txtDonGia.Location = new System.Drawing.Point(413, 26);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(161, 35);
+            this.txtDonGia.Size = new System.Drawing.Size(161, 26);
             this.txtDonGia.TabIndex = 2;
             // 
             // txtSoLuong
@@ -172,7 +172,7 @@ namespace quanLyKho
             this.txtSoLuong.Location = new System.Drawing.Point(103, 65);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(161, 35);
+            this.txtSoLuong.Size = new System.Drawing.Size(161, 26);
             this.txtSoLuong.TabIndex = 2;
             // 
             // cboHangHoa
@@ -181,7 +181,7 @@ namespace quanLyKho
             this.cboHangHoa.Location = new System.Drawing.Point(103, 26);
             this.cboHangHoa.Margin = new System.Windows.Forms.Padding(2);
             this.cboHangHoa.Name = "cboHangHoa";
-            this.cboHangHoa.Size = new System.Drawing.Size(161, 34);
+            this.cboHangHoa.Size = new System.Drawing.Size(161, 27);
             this.cboHangHoa.TabIndex = 1;
             // 
             // lblThanhTien
@@ -190,9 +190,9 @@ namespace quanLyKho
             this.lblThanhTien.Location = new System.Drawing.Point(411, 69);
             this.lblThanhTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThanhTien.Name = "lblThanhTien";
-            this.lblThanhTien.Size = new System.Drawing.Size(30, 26);
+            this.lblThanhTien.Size = new System.Drawing.Size(89, 19);
             this.lblThanhTien.TabIndex = 0;
-            this.lblThanhTien.Text = "...";
+            this.lblThanhTien.Text = "2040000000";
             // 
             // groupBox3
             // 
@@ -214,10 +214,10 @@ namespace quanLyKho
             this.groupBox4.Controls.Add(this.txtSoLuong);
             this.groupBox4.Controls.Add(this.cboHangHoa);
             this.groupBox4.Controls.Add(this.lblThanhTien);
-            this.groupBox4.Controls.Add(this.lbl_ThanhTien);
+            this.groupBox4.Controls.Add(this.lblThanhTien1);
             this.groupBox4.Controls.Add(this.lblDonGia);
+            this.groupBox4.Controls.Add(this.lblTam);
             this.groupBox4.Controls.Add(this.lblDonVi);
-            this.groupBox4.Controls.Add(this.lbl_DonVi);
             this.groupBox4.Controls.Add(this.lblSoLuong);
             this.groupBox4.Controls.Add(this.lblHangHoa);
             this.groupBox4.Location = new System.Drawing.Point(5, 139);
@@ -228,15 +228,15 @@ namespace quanLyKho
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             // 
-            // lbl_ThanhTien
+            // lblThanhTien1
             // 
-            this.lbl_ThanhTien.AutoSize = true;
-            this.lbl_ThanhTien.Location = new System.Drawing.Point(317, 69);
-            this.lbl_ThanhTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ThanhTien.Name = "lbl_ThanhTien";
-            this.lbl_ThanhTien.Size = new System.Drawing.Size(123, 26);
-            this.lbl_ThanhTien.TabIndex = 0;
-            this.lbl_ThanhTien.Text = "Thành tiền";
+            this.lblThanhTien1.AutoSize = true;
+            this.lblThanhTien1.Location = new System.Drawing.Point(317, 69);
+            this.lblThanhTien1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblThanhTien1.Name = "lblThanhTien1";
+            this.lblThanhTien1.Size = new System.Drawing.Size(80, 19);
+            this.lblThanhTien1.TabIndex = 0;
+            this.lblThanhTien1.Text = "Thành tiền";
             // 
             // lblDonGia
             // 
@@ -244,29 +244,29 @@ namespace quanLyKho
             this.lblDonGia.Location = new System.Drawing.Point(317, 31);
             this.lblDonGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonGia.Name = "lblDonGia";
-            this.lblDonGia.Size = new System.Drawing.Size(92, 26);
+            this.lblDonGia.Size = new System.Drawing.Size(62, 19);
             this.lblDonGia.TabIndex = 0;
             this.lblDonGia.Text = "Đơn giá";
+            // 
+            // lblTam
+            // 
+            this.lblTam.AutoSize = true;
+            this.lblTam.Location = new System.Drawing.Point(101, 108);
+            this.lblTam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTam.Name = "lblTam";
+            this.lblTam.Size = new System.Drawing.Size(39, 19);
+            this.lblTam.TabIndex = 0;
+            this.lblTam.Text = "Tấm";
             // 
             // lblDonVi
             // 
             this.lblDonVi.AutoSize = true;
-            this.lblDonVi.Location = new System.Drawing.Point(101, 108);
+            this.lblDonVi.Location = new System.Drawing.Point(22, 108);
             this.lblDonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonVi.Name = "lblDonVi";
-            this.lblDonVi.Size = new System.Drawing.Size(30, 26);
+            this.lblDonVi.Size = new System.Drawing.Size(54, 19);
             this.lblDonVi.TabIndex = 0;
-            this.lblDonVi.Text = "...";
-            // 
-            // lbl_DonVi
-            // 
-            this.lbl_DonVi.AutoSize = true;
-            this.lbl_DonVi.Location = new System.Drawing.Point(22, 108);
-            this.lbl_DonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_DonVi.Name = "lbl_DonVi";
-            this.lbl_DonVi.Size = new System.Drawing.Size(79, 26);
-            this.lbl_DonVi.TabIndex = 0;
-            this.lbl_DonVi.Text = "Đơn vị";
+            this.lblDonVi.Text = "Đơn vị";
             // 
             // lblSoLuong
             // 
@@ -274,7 +274,7 @@ namespace quanLyKho
             this.lblSoLuong.Location = new System.Drawing.Point(22, 69);
             this.lblSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(102, 26);
+            this.lblSoLuong.Size = new System.Drawing.Size(69, 19);
             this.lblSoLuong.TabIndex = 0;
             this.lblSoLuong.Text = "Số lượng";
             // 
@@ -284,7 +284,7 @@ namespace quanLyKho
             this.lblHangHoa.Location = new System.Drawing.Point(22, 33);
             this.lblHangHoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHangHoa.Name = "lblHangHoa";
-            this.lblHangHoa.Size = new System.Drawing.Size(111, 26);
+            this.lblHangHoa.Size = new System.Drawing.Size(73, 19);
             this.lblHangHoa.TabIndex = 0;
             this.lblHangHoa.Text = "Hàng hóa";
             // 
@@ -295,7 +295,7 @@ namespace quanLyKho
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(223, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 32);
+            this.label1.Size = new System.Drawing.Size(248, 22);
             this.label1.TabIndex = 6;
             this.label1.Text = "CHI TIẾT HÓA ĐƠN NHẬP";
             // 
@@ -401,7 +401,7 @@ namespace quanLyKho
             // 
             // frm_DM_ChiTietHoaDonNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(803, 465);
@@ -430,23 +430,23 @@ namespace quanLyKho
         #endregion
 
         private System.Windows.Forms.DataGridView dgvMain;
-        private System.Windows.Forms.Label lbl_NgayLap;
+        private System.Windows.Forms.Label lblNgayLapHD;
         private System.Windows.Forms.Label lblNhaCungCap;
         private System.Windows.Forms.Label lblSoHoaDon;
         private System.Windows.Forms.Label lblNgayLap;
-        private System.Windows.Forms.Label lbl_NhaCungCap;
+        private System.Windows.Forms.Label lblNhaCungCap1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl_SoHoaDon;
+        private System.Windows.Forms.Label lblSoHoaDon1;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.ComboBox cboHangHoa;
         private System.Windows.Forms.Label lblThanhTien;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lbl_ThanhTien;
+        private System.Windows.Forms.Label lblThanhTien1;
         private System.Windows.Forms.Label lblDonGia;
+        private System.Windows.Forms.Label lblTam;
         private System.Windows.Forms.Label lblDonVi;
-        private System.Windows.Forms.Label lbl_DonVi;
         private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Label lblHangHoa;
         private System.Windows.Forms.Label label1;

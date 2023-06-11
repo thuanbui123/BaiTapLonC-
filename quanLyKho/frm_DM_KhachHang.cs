@@ -27,7 +27,8 @@ namespace quanLyKho
             if (data != null && data.Rows.Count > 0)
             {
                 dgvDM_Main_KhachHang.DataSource = data;
-            } else
+            }
+            else
             {
                 dgvDM_Main_KhachHang.DataSource = null;
             }
@@ -306,7 +307,7 @@ namespace quanLyKho
 
         private void frm_DM_KhachHang_Load(object sender, EventArgs e)
         {
-            
+
             LoadData();
             int sdt;
             txt_DM_MaKhachHang.Text = dgvDM_Main_KhachHang.Rows[0].Cells[0].Value.ToString();
@@ -337,6 +338,6 @@ namespace quanLyKho
             }
         }
 
-        
+
     }
 }

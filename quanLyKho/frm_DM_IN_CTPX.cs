@@ -19,9 +19,8 @@ namespace quanLyKho
             InitializeComponent();
         }
 
-        private void frm_DM_IN_Load(object sender, EventArgs e)
+        private void frm_DM_IN_CTPX_Load(object sender, EventArgs e)
         {
-
             string query = "Select * from chiTietPhieuXuat ";
 
 
@@ -31,11 +30,10 @@ namespace quanLyKho
 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.Report_Ctpx.rdlc";
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSet_In_Ctpx";
+            rds.Name = "DataSet1";
             rds.Value = dt;
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();
-          
         }
     }
 }

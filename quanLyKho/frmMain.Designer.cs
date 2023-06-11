@@ -97,17 +97,17 @@ namespace quanLyKho
             this.tpHeThong.Controls.Add(this.btnDoiMatKhau);
             this.tpHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.tpHeThong.Controls.Add(this.btnTrangChu);
-            this.tpHeThong.Location = new System.Drawing.Point(4, 38);
+            this.tpHeThong.Location = new System.Drawing.Point(4, 28);
             this.tpHeThong.Name = "tpHeThong";
             this.tpHeThong.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHeThong.Size = new System.Drawing.Size(792, 105);
+            this.tpHeThong.Size = new System.Drawing.Size(792, 115);
             this.tpHeThong.TabIndex = 0;
             this.tpHeThong.Text = "Hệ thống";
             this.tpHeThong.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(691, 6);
+            this.button1.Location = new System.Drawing.Point(718, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -194,9 +194,9 @@ namespace quanLyKho
             this.tpDanhMuc.Controls.Add(this.btn_DM_HangHoa);
             this.tpDanhMuc.Controls.Add(this.btn_DM_NhaCungCap);
             this.tpDanhMuc.Controls.Add(this.btn_DM_KhachHang);
-            this.tpDanhMuc.Location = new System.Drawing.Point(4, 38);
+            this.tpDanhMuc.Location = new System.Drawing.Point(4, 28);
             this.tpDanhMuc.Name = "tpDanhMuc";
-            this.tpDanhMuc.Size = new System.Drawing.Size(792, 105);
+            this.tpDanhMuc.Size = new System.Drawing.Size(792, 115);
             this.tpDanhMuc.TabIndex = 1;
             this.tpDanhMuc.Text = "Danh mục";
             this.tpDanhMuc.UseVisualStyleBackColor = true;
@@ -301,9 +301,9 @@ namespace quanLyKho
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_HangHoa);
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_NhaCungCap);
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_KhachHang);
-            this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 38);
+            this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 28);
             this.tpBaoCaoThongKe.Name = "tpBaoCaoThongKe";
-            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(792, 105);
+            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(792, 115);
             this.tpBaoCaoThongKe.TabIndex = 2;
             this.tpBaoCaoThongKe.Text = "Báo cáo - Thống kê";
             this.tpBaoCaoThongKe.UseVisualStyleBackColor = true;
@@ -402,9 +402,9 @@ namespace quanLyKho
             // tpHuongDan
             // 
             this.tpHuongDan.Controls.Add(this.btn_HD_HoTro);
-            this.tpHuongDan.Location = new System.Drawing.Point(4, 38);
+            this.tpHuongDan.Location = new System.Drawing.Point(4, 28);
             this.tpHuongDan.Name = "tpHuongDan";
-            this.tpHuongDan.Size = new System.Drawing.Size(792, 105);
+            this.tpHuongDan.Size = new System.Drawing.Size(792, 115);
             this.tpHuongDan.TabIndex = 3;
             this.tpHuongDan.Text = "Hướng dẫn";
             this.tpHuongDan.UseVisualStyleBackColor = true;
@@ -423,7 +423,7 @@ namespace quanLyKho
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 470);
@@ -436,6 +436,7 @@ namespace quanLyKho
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý kho vật liệu xây dựng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tcThanhDieuHuong.ResumeLayout(false);
             this.tpHeThong.ResumeLayout(false);

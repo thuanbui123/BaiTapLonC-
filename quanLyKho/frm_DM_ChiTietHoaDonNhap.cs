@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,8 +13,10 @@ namespace quanLyKho
 {
     public partial class frm_DM_ChiTietHoaDonNhap : Form
     {
-        public static string connectionString =
-         " data source = DESKTOP-A5FUL33\\SQLEXPRESS ; database = quanLyKho; user = sa; password = 1 ";
+        public frm_DM_ChiTietHoaDonNhap()
+        {
+            InitializeComponent();
+        }
         bool isAddNew = false;
         bool isEdit = false;
         public void dinhDangLuoi()
@@ -34,11 +35,6 @@ namespace quanLyKho
         }
         private void loadLenLuoi()
         {
-            SqlConnection conn = new SqlConnection(connectionString);
-            if (conn.State == ConnectionState.Closed)
-            {
-                conn.Open();
-            }
             string query = "select ctpn.idNhap, pn.soPhieuNhap, hh.tenHangHoa, ctpn.soLuongNhap, ctpn.donGiaNhap from chiTietPhieuNhap as ctpn, NhaCungCap as ncc, hangHoa as hh, phieuNhap as pn where ctpn.idSoPhieuNhap = pn.soPhieuNhap and pn.idNhaCungCap = ncc.id and ctpn.idHangHoa = hh.id and pn.soPhieuNhap = '" + class_ChiTietHoaDonNhap.SelectedIdSoPhieuNhap + "'";
             DataTable dt = DataProvider.Instance.executeQuery(query);
             if (dt != null)
@@ -49,10 +45,8 @@ namespace quanLyKho
             {
                 dgvMain = null;
             }
-            conn.Close();
             dinhDangLuoi();
         }
-
         public void loadComBo()
         {
             DataTable dt = DataProvider.Instance.executeQuery("Select id, tenHangHoa from hangHoa");
@@ -60,11 +54,11 @@ namespace quanLyKho
             cboHangHoa.ValueMember = "ID";
             cboHangHoa.DisplayMember = "tenHangHoa";
         }
-        public frm_DM_ChiTietHoaDonNhap()
+        private void btnIn_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            frm_InChiTietPhieuNhap a = new frm_InChiTietPhieuNhap();
+            a.Show();
         }
-
 
         private void frm_DM_ChiTietHoaDonNhap_Load(object sender, EventArgs e)
         {
@@ -75,6 +69,7 @@ namespace quanLyKho
             setState("Reset");
             loadComBo();
         }
+
         private void setState(string state)
         {
             switch (state)
@@ -120,13 +115,6 @@ namespace quanLyKho
                 default:
                     break;
             }
-        }
-
-        private void dgvMain_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int i = dgvMain.CurrentRow.Index;
-
-            getDongThuI(i);
         }
         private bool error()
         {
@@ -178,6 +166,36 @@ namespace quanLyKho
             //}
             return true;
         }
+        private void getDongThuI(int i)
+        {
+            try
+            {
+                string tenHH = dgvMain.Rows[i].Cells[2].Value.ToString();
+                Object idHH = DataProvider.Instance.executeScalar("Select id from hangHoa where tenHangHoa = N'" + tenHH + "'");
+                cboHangHoa.SelectedValue = idHH;
+                object data = DataProvider.Instance.executeScalar("Select donViTinh from hangHoa where tenHangHoa = N'" + tenHH + "'");
+                lblDonVi.Text = Convert.ToString(data);
+                data = DataProvider.Instance.executeScalar("Select k.soLuong from hangHoa as hh, kho as k where hh.tenHangHoa = N'" + tenHH + "' and k.idHangHoa = hh.id");
+                txtSoLuong.Text = Convert.ToString(data);
+                data = DataProvider.Instance.executeScalar("Select ctpn.soLuongNhap * ctpn.donGiaNhap from  chiTietPhieuNhap as ctpn, hangHoa as hh where ctpn.idHangHoa = '" + idHH + "'");
+                lblThanhTien.Text = Convert.ToString(data);
+                txtSoLuong.Text = dgvMain.Rows[i].Cells[3].Value.ToString();
+                txtDonGia.Text = dgvMain.Rows[i].Cells[4].Value.ToString();
+                int soLuongNhap = Convert.ToInt32(txtSoLuong.Text.ToString());
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void dgvMain_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int i = dgvMain.CurrentRow.Index;
+
+            getDongThuI(i);
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -190,18 +208,13 @@ namespace quanLyKho
             setState("Editing");
             isEdit = true;
         }
+
         public void luuThem()
         {
             //  if (error() == true)
             {
-                SqlConnection conn = new SqlConnection(connectionString);
-                if (conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-                string query = @"INSERT INTO chiTietPhieuNhap VALUES ('" + lblSoHoaDon.Text + "','" + cboHangHoa.SelectedValue + "','" + txtSoLuong.Text.Trim() + "','" + Convert.ToDecimal(txtDonGia.Text) + "')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                var result = cmd.ExecuteNonQuery();
+                string query = @"INSERT INTO chiTietPhieuNhap VALUES ('" + lblSoHoaDon.Text + "','" + cboHangHoa.SelectedValue + "'," + txtSoLuong.Text.Trim() + "," + Convert.ToDecimal(txtDonGia.Text) + ")";
+                var result = DataProvider.Instance.executeNonQuery(query);
                 if (result > 0)
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo");
@@ -211,7 +224,6 @@ namespace quanLyKho
                 {
                     MessageBox.Show("Thêm thất bại", "Thông báo");
                 }
-                conn.Dispose();
             }
         }
         public string id()
@@ -229,18 +241,11 @@ namespace quanLyKho
         {
             //if (error() == true)
             {
-                SqlConnection conn = new SqlConnection(connectionString);
-                if (conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-
-                string query = @"update chiTietPhieuNhap set idSoPhieuNhap = N'" + lblSoHoaDon.Text + @"', idHangHoa = N'" + id() + @"', soLuongNhap = N'" + txtSoLuong.Text + @"', donGiaNhap = N'" + Convert.ToDecimal(txtDonGia.Text) + @"' where (idNhap = '" + idnhap() + @"')";
+                int i = dgvMain.CurrentRow.Index;
+                string query = @"update chiTietPhieuNhap set idSoPhieuNhap = '" + lblSoHoaDon.Text + @"', idHangHoa = '" + id() + @"', soLuongNhap = " + txtSoLuong.Text + @", donGiaNhap = " + Convert.ToDecimal(txtDonGia.Text) + @" where (idNhap = '" + dgvMain.Rows[i].Cells[0].Value.ToString() + @"')";
 
                 //string query = @"update chiTietPhieuNhap set idHangHoa = N'" + cboHangHoa.SelectedValue + @"', soLuongNhap = N'" + txtSoLuong.Text + @"', donGiaNhap = N'" + Convert.ToDecimal(txtDonGia.Text) + @"' where (idHangHoa = '" + cboHangHoa.SelectedValue + @"')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                var result = cmd.ExecuteNonQuery();
-
+                int result = DataProvider.Instance.executeNonQuery(query);
                 if (result > 0)
                 {
                     MessageBox.Show("Sửa thành công");
@@ -251,9 +256,9 @@ namespace quanLyKho
                     MessageBox.Show("Sửa thất bại");
                 }
 
-                conn.Dispose();
             }
         }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -284,30 +289,6 @@ namespace quanLyKho
         private void btnHuy_Click(object sender, EventArgs e)
         {
             setState("Reset");
-        }
-        private void getDongThuI(int i)
-        {
-            try
-            {
-                string tenHH = dgvMain.Rows[i].Cells[2].Value.ToString();
-                Object idHH = DataProvider.Instance.executeScalar("Select id from hangHoa where tenHangHoa = N'" + tenHH + "'");
-                cboHangHoa.SelectedValue = idHH;
-                object data = DataProvider.Instance.executeScalar("Select donViTinh from hangHoa where tenHangHoa = N'" + tenHH + "'");
-                lblDonVi.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select k.soLuong from hangHoa as hh, kho as k where hh.tenHangHoa = N'" + tenHH + "' and k.idHangHoa = hh.id");
-                txtSoLuong.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select ctpn.soLuongNhap * ctpn.donGiaNhap from  chiTietPhieuNhap as ctpn, hangHoa as hh where ctpn.idHangHoa = '" + idHH + "'");
-                lblThanhTien.Text = Convert.ToString(data);
-                txtSoLuong.Text = dgvMain.Rows[i].Cells[3].Value.ToString();
-                txtDonGia.Text = dgvMain.Rows[i].Cells[4].Value.ToString();
-                int soLuongNhap = Convert.ToInt32(txtSoLuong.Text.ToString());
-
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -342,12 +323,6 @@ namespace quanLyKho
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-            frm_InChiTietPhieuNhap a = new frm_InChiTietPhieuNhap();
-            a.Show();
         }
     }
 }

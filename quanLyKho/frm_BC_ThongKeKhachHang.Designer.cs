@@ -54,7 +54,7 @@ namespace quanLyKho
             this.dgv_Main_ThongKeKhachHang.Location = new System.Drawing.Point(4, 116);
             this.dgv_Main_ThongKeKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Main_ThongKeKhachHang.Name = "dgv_Main_ThongKeKhachHang";
-            this.dgv_Main_ThongKeKhachHang.Size = new System.Drawing.Size(988, 357);
+            this.dgv_Main_ThongKeKhachHang.Size = new System.Drawing.Size(988, 462);
             this.dgv_Main_ThongKeKhachHang.TabIndex = 8;
             // 
             // btn_BC_In

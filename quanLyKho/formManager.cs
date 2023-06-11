@@ -56,10 +56,5 @@ namespace quanLyKho
             childForm.BringToFront();
             childForm.Show();
         }
-
-        internal void showForm(object pnlContainer, frm_rp_BCTK_NCC f)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

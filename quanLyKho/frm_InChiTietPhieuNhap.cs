@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 namespace quanLyKho
 {
     public partial class frm_InChiTietPhieuNhap : Form
@@ -28,7 +28,7 @@ namespace quanLyKho
             DataTable dt = DataProvider.Instance.executeQuery(query);
             this.rpvChiTietPhieuNhap.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportChiTietPhieuNhap.rdlc";
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSetChiTietPhieuNhap";
+            rds.Name = "DataSet1";
             //rds.Name = "DataSetThanhTienCTPN";
             rds.Value = dt;
             this.rpvChiTietPhieuNhap.LocalReport.DataSources.Add(rds);

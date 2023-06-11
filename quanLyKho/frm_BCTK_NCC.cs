@@ -47,11 +47,5 @@ namespace quanLyKho
         {
             loadDuLieuLenLuoi();
         }
-
-        private void btn_BCTK_NCC_In_Click(object sender, EventArgs e)
-        {
-            frm_rp_BCTK_NCC f = new frm_rp_BCTK_NCC();
-            f.Show();
-        }
     }
 }

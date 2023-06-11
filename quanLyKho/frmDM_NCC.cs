@@ -94,7 +94,7 @@ namespace quanLyKho
                     btn_DM_NCC_Luu.Enabled = true;
                     btn_DM_NCC_Huy.Enabled = true;
 
-                    txt_DM_MaNCC.Enabled = false;
+                    txt_DM_MaNCC.Enabled = true;
                     txt_DM_NCC_DiaChi.Enabled = true;
                     txt_DM_TenNCC.Enabled = true;
                     txt_DM_NCC_DienThoai.Enabled = true;
@@ -189,7 +189,6 @@ namespace quanLyKho
         private bool isValidData()
         {
             bool stt = true;
-            
             if (txt_DM_MaNCC.Text == "")
             {
                 MessageBox.Show("Vui long nhap ma nha cung cap", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -219,42 +218,34 @@ namespace quanLyKho
             {
                 if (isAdd)
                 {
-                    string query1 = "select count(*) from nhaCungCap where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
-                    int kt1 = (int)DataProvider.Instance.executeScalar(query1);
-                    if(kt1 > 0)
+                    try
                     {
-                        MessageBox.Show("Ma nha cung cap da co. Vui long nhap lai!", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        try
-                        {
-                            string query = "insert into nhaCungCap values('" + txt_DM_MaNCC.Text.Trim() + "', N'" + txt_DM_TenNCC.Text.Trim() + "', N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', '" + txt_DM_NCC_DienThoai.Text.Trim() + "')";
 
-                            int kt = DataProvider.Instance.executeNonQuery(query);
-                            if (kt > 0)
-                            {
-                                MessageBox.Show("Them thanh cong !");
-                                setState("Reset");
-                                bindingData();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Them that bai !");
-                            }
-                        }
-                        catch (Exception ex)
+                        string query = "insert into nhaCungCap values('" + txt_DM_MaNCC.Text.Trim() + "', N'" + txt_DM_TenNCC.Text.Trim() + "', N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', '" + txt_DM_NCC_DienThoai.Text.Trim() + "')";
+
+                        int kt = DataProvider.Instance.executeNonQuery(query);
+                        if (kt > 0)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show("Them thanh cong !");
+                            setState("Reset");
+                            bindingData();
                         }
+                        else
+                        {
+                            MessageBox.Show("Them that bai !");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                     isAdd = false;
                 }
                 if (isEdit)
                 {
-                    
                     try
                     {
+
                         string query = "update nhaCungCap set tenNhaCungCap = N'" + txt_DM_TenNCC.Text.Trim() + "', diaChi = N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', soDienThoai = '" + txt_DM_NCC_DienThoai.Text.Trim() + "' where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
 
                         int kt = DataProvider.Instance.executeNonQuery(query);
@@ -295,18 +286,15 @@ namespace quanLyKho
                 try
                 {
 
-                    string query = "select * from nhaCungCap where id like '%" + txt_DM_NCC_TimKiem.Text + "%'";
+                    string query = "select * from nhaCungCap where id like '%" + txt_DM_NCC_TimKiem.Text.Trim() + "%'";
 
                     DataTable data = DataProvider.Instance.executeQuery(query);
 
                     dgv_DM_NCC.DataSource = data;
-                    if(data.Rows.Count > 0)
-                    {
-                        txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                        txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                        txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                        txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
-                    }
+                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
+                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
+                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
+                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
                 }
                 catch (Exception ex)
                 {
@@ -318,19 +306,15 @@ namespace quanLyKho
                 try
                 {
 
-                    string query = "select * from nhaCungCap where tenNhaCungCap like '%" + txt_DM_NCC_TimKiem.Text + "%'";
+                    string query = "select * from nhaCungCap where tenNhaCungCap like '%" + txt_DM_NCC_TimKiem.Text.Trim() + "%'";
 
                     DataTable data = DataProvider.Instance.executeQuery(query);
 
                     dgv_DM_NCC.DataSource = data;
-
-                    if (data.Rows.Count > 0)
-                    {
-                        txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                        txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                        txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                        txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
-                    }
+                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
+                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
+                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
+                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
                 }
                 catch (Exception ex)
                 {

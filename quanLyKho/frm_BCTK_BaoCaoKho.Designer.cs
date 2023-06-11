@@ -29,35 +29,34 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblBaoCaoKho = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.lblBaoCaoKho = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(46, 37);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(582, 526);
+            this.reportViewer1.TabIndex = 13;
             // 
             // lblBaoCaoKho
             // 
             this.lblBaoCaoKho.AutoSize = true;
             this.lblBaoCaoKho.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaoCaoKho.Location = new System.Drawing.Point(217, 9);
+            this.lblBaoCaoKho.Location = new System.Drawing.Point(239, 9);
             this.lblBaoCaoKho.Name = "lblBaoCaoKho";
-            this.lblBaoCaoKho.Size = new System.Drawing.Size(161, 32);
-            this.lblBaoCaoKho.TabIndex = 10;
+            this.lblBaoCaoKho.Size = new System.Drawing.Size(128, 25);
+            this.lblBaoCaoKho.TabIndex = 12;
             this.lblBaoCaoKho.Text = "Báo cáo kho";
-            this.lblBaoCaoKho.Click += new System.EventHandler(this.lblBaoCaoKho_Click);
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(26, 65);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(582, 526);
-            this.reportViewer1.TabIndex = 11;
             // 
             // frm_BCTK_BaoCaoKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(620, 616);
+            this.ClientSize = new System.Drawing.Size(687, 587);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.lblBaoCaoKho);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,7 +70,8 @@ namespace quanLyKho
         }
 
         #endregion
-        private System.Windows.Forms.Label lblBaoCaoKho;
+
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Label lblBaoCaoKho;
     }
 }

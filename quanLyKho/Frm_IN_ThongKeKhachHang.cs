@@ -21,7 +21,6 @@ namespace quanLyKho
 
         private void Frm_IN_ThongKeKhachHang_Load(object sender, EventArgs e)
         {
-
             string query = "Select * from khachHang ";
 
 
@@ -31,12 +30,11 @@ namespace quanLyKho
 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.Report_IN_ThongKeKhachHang.rdlc";
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSet_IN_ThongKeKhachHang";
+            rds.Name = "DataSet1";
             rds.Value = dt;
             this.reportViewer1.LocalReport.DataSources.Add(rds);
-           
+
             this.reportViewer1.RefreshReport();
-            
         }
     }
 }

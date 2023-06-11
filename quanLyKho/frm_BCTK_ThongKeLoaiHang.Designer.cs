@@ -29,34 +29,34 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblThongKeLoaiHang = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(21, 80);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(588, 558);
-            this.reportViewer1.TabIndex = 8;
             // 
             // lblThongKeLoaiHang
             // 
             this.lblThongKeLoaiHang.AutoSize = true;
             this.lblThongKeLoaiHang.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongKeLoaiHang.Location = new System.Drawing.Point(177, 26);
+            this.lblThongKeLoaiHang.Location = new System.Drawing.Point(182, 9);
             this.lblThongKeLoaiHang.Name = "lblThongKeLoaiHang";
-            this.lblThongKeLoaiHang.Size = new System.Drawing.Size(244, 32);
-            this.lblThongKeLoaiHang.TabIndex = 7;
+            this.lblThongKeLoaiHang.Size = new System.Drawing.Size(193, 25);
+            this.lblThongKeLoaiHang.TabIndex = 3;
             this.lblThongKeLoaiHang.Text = "Thống kê loại hàng";
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(12, 48);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(624, 385);
+            this.reportViewer1.TabIndex = 9;
             // 
             // frm_BCTK_ThongKeLoaiHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(633, 674);
+            this.ClientSize = new System.Drawing.Size(648, 445);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.lblThongKeLoaiHang);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,8 +70,7 @@ namespace quanLyKho
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label lblThongKeLoaiHang;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

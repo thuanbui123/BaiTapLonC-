@@ -294,9 +294,7 @@ namespace quanLyKho
         private void btn_DM_XuatHoaDon_Click(object sender, EventArgs e)
         {
             frm_DM_ChiTietHoaDonXuat f = new frm_DM_ChiTietHoaDonXuat();
-            
             f.ShowDialog();
-          
         }
     }
 }

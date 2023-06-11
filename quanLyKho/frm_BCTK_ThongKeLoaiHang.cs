@@ -9,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using Microsoft.Reporting.WinForms;
 
 namespace quanLyKho
 {
@@ -27,7 +25,7 @@ namespace quanLyKho
             DataTable dt = DataProvider.Instance.executeQuery(query);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportLoaiHang.rdlc";
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSetLoaiHang";
+            rds.Name = "DataSet1";
             rds.Value = dt;
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();

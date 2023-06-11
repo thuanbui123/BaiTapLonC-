@@ -1,8 +1,8 @@
-﻿using System;
+﻿using quanLyKho.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,14 +18,7 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
-        public static string connectionString =
-        " data source = DESKTOP-A5FUL33\\SQLEXPRESS ; database = quanLyKho; user = sa; password = 1 ";
 
-
-        private void chart_BieuDoDoanhThu_Click(object sender, EventArgs e)
-        {
-
-        }
         private void theoTuan()
         {
             // Xóa các series cũ trong chart
@@ -46,31 +39,21 @@ namespace quanLyKho
             string query = "SELECT DATEPART(WEEK, px.NgayLap_Xuat) AS Tuan, SUM(ctpx.soLuongXuat * ctpx.donGiaXuat) AS DoanhThu " +
                "FROM phieuXuat as px join chiTietPhieuXuat as ctpx on px.soPhieuXuat = ctpx.idPhieuXuat " +
                "GROUP BY DATEPART(WEEK, px.NgayLap_Xuat)";
-
-            // Kết nối dữu liệu và thực hiện câu truy vấn
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    adapter.Fill(dt);
-                }
-
-                Series series = new Series("Doanh thu");
-                series.ChartType = SeriesChartType.Column;
-                series.XValueMember = "Tuan";
-                series.YValueMembers = "DoanhThu";
-                series.IsValueShownAsLabel = true;
-                chart_BieuDoDoanhThu.Series.Add(series);
-                // vẽ biểu đồ
-                chart_BieuDoDoanhThu.DataSource = dt;
-                chart_BieuDoDoanhThu.DataBind();
-                // sắp xếp database theo từng tuần
-                DataView dv = dt.DefaultView;
-                dv.Sort = "Tuan ASC";
-                dt = dv.ToTable();
-                chart_BieuDoDoanhThu.DataBind();
-            }
+            dt = DataProvider.Instance.executeQuery(query);
+            Series series = new Series("Doanh thu");
+            series.ChartType = SeriesChartType.Column;
+            series.XValueMember = "Tuan";
+            series.YValueMembers = "DoanhThu";
+            series.IsValueShownAsLabel = true;
+            chart_BieuDoDoanhThu.Series.Add(series);
+            // vẽ biểu đồ
+            chart_BieuDoDoanhThu.DataSource = dt;
+            chart_BieuDoDoanhThu.DataBind();
+            // sắp xếp database theo từng tuần
+            DataView dv = dt.DefaultView;
+            dv.Sort = "Tuan ASC";
+            dt = dv.ToTable();
+            chart_BieuDoDoanhThu.DataBind();
         }
         private void theoThang()
         {
@@ -84,14 +67,7 @@ namespace quanLyKho
                    "from phieuXuat as px join chiTietPhieuXuat as ctpx on px.soPhieuXuat = ctpx.idPhieuXuat " +
                    "group by month(px.ngayLap_Xuat)";
             // kết nối
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    adapter.Fill(dt);
-                }
-            }
+            dt = DataProvider.Instance.executeQuery(query);
             Series series = new Series("Doanh thu");
             series.ChartType = SeriesChartType.Column;
             series.XValueMember = "Thang";
@@ -123,17 +99,10 @@ namespace quanLyKho
                            "WHERE px.ngayLap_Xuat BETWEEN DATEADD(MONTH, -9, GETDATE()) AND GETDATE() " +
                            "GROUP BY CONCAT(YEAR(px.ngayLap_Xuat), 'Q', (MONTH(px.ngayLap_Xuat) - 1) / 3 + 1)";
 
-            // Kết nối đến cơ sở dữ liệu và thực hiện câu truy vấn
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    adapter.Fill(dt);
-                }
-            }
 
+            dt = DataProvider.Instance.executeQuery(query);
             // Thêm các quý còn thiếu vào DataTable với giá trị doanh thu bằng 0
+            
             DateTime now = DateTime.Now;
             int currentQuarter = (now.Month - 1) / 3 + 1;
             int currentYear = now.Year;
@@ -166,32 +135,22 @@ namespace quanLyKho
         {
             if (rdoTheoTuan.Checked == true)
             {
-               
+
                 theoTuan();
 
             }
             else
                if (rdoTheoThang.Checked == true)
             {
-               
+
                 theoThang();
             }
             else
                if (rdoTheoQuy.Checked == true)
             {
-               
+
                 theoQuy();
             }
-        }
-
-        private void rdoTheoTuan_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdoTheoQuy_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

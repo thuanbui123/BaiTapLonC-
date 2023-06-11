@@ -1,4 +1,5 @@
-﻿namespace quanLyKho
+﻿
+namespace quanLyKho
 {
     partial class frm_InChiTietPhieuNhap
     {
@@ -33,17 +34,18 @@
             // 
             // rpvChiTietPhieuNhap
             // 
-            this.rpvChiTietPhieuNhap.Location = new System.Drawing.Point(-1, -1);
+            this.rpvChiTietPhieuNhap.Location = new System.Drawing.Point(11, 11);
+            this.rpvChiTietPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.rpvChiTietPhieuNhap.Name = "rpvChiTietPhieuNhap";
             this.rpvChiTietPhieuNhap.ServerReport.BearerToken = null;
-            this.rpvChiTietPhieuNhap.Size = new System.Drawing.Size(1092, 504);
-            this.rpvChiTietPhieuNhap.TabIndex = 0;
+            this.rpvChiTietPhieuNhap.Size = new System.Drawing.Size(778, 428);
+            this.rpvChiTietPhieuNhap.TabIndex = 1;
             // 
             // frm_InChiTietPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 504);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpvChiTietPhieuNhap);
             this.Name = "frm_InChiTietPhieuNhap";
             this.Text = "frm_InChiTietPhieuNhap";

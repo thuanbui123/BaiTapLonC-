@@ -13,8 +13,10 @@ namespace quanLyKho
 {
     public partial class frm_BCTK_BaoCaoNhapKho : Form
     {
-        public static string connectionString =
-         " data source = DESKTOP-A5FUL33\\SQLEXPRESS ; database = quanLyKho; user = sa; password = 1 ";
+        public frm_BCTK_BaoCaoNhapKho()
+        {
+            InitializeComponent();
+        }
         public class GlobaldataNhapKho
         {
             public static string SelectedIdSoPhieuNhap { get; set; }
@@ -40,6 +42,7 @@ namespace quanLyKho
             dgvMain.Columns[6].Visible = false;
 
         }
+
         private void LoadLenLuoi()
         {
             string query = "Select ncc.tenNhaCungCap, hh.tenHangHoa, hh.donViTinh, ctpn.soLuongNhap, ctpn.donGiaNhap, pn.ngayLap_Nhap, pn.soPhieuNhap" +
@@ -49,21 +52,6 @@ namespace quanLyKho
             DataTable data = DataProvider.Instance.executeQuery(query);
             dgvMain.DataSource = data;
             dinhDangLuoi();
-
-        }
-
-        public frm_BCTK_BaoCaoNhapKho()
-        {
-            InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBaoCaoNhapKho_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -77,7 +65,6 @@ namespace quanLyKho
 
         private void chkTheoNhaCungCap_CheckedChanged(object sender, EventArgs e)
         {
-
             if (chkTheoNhaCungCap.Checked)
             {
                 txtTheoNhaCungCap.Enabled = true;
@@ -92,7 +79,6 @@ namespace quanLyKho
 
         private void chkTheoHoaDon_CheckedChanged(object sender, EventArgs e)
         {
-
             if (chkTheoHoaDon.Checked)
             {
                 txtTheoHoaDon.Enabled = true;
@@ -131,17 +117,6 @@ namespace quanLyKho
         {
             frm_InBCTK_NhapKho a = new frm_InBCTK_NhapKho();
             a.Show();
-        }
-
-        private void dgvMain_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int i = dgvMain.CurrentRow.Index;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frm_BieuDoThongKeDoanhThu f = new frm_BieuDoThongKeDoanhThu();
-            f.ShowDialog();
         }
     }
 }

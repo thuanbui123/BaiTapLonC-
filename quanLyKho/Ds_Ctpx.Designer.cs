@@ -399,7 +399,7 @@ namespace quanLyKho {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public chiTietPhieuXuatRow AddchiTietPhieuXuatRow(int idXuat, string idKho, string idPhieuXuat, uint soLuongXuat, decimal donGiaXuat) {
+            public chiTietPhieuXuatRow AddchiTietPhieuXuatRow(string idXuat, string idKho, string idPhieuXuat, string soLuongXuat, string donGiaXuat) {
                 chiTietPhieuXuatRow rowchiTietPhieuXuatRow = ((chiTietPhieuXuatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idXuat,
@@ -439,15 +439,15 @@ namespace quanLyKho {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidXuat = new global::System.Data.DataColumn("idXuat", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnidXuat = new global::System.Data.DataColumn("idXuat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidXuat);
                 this.columnidKho = new global::System.Data.DataColumn("idKho", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidKho);
                 this.columnidPhieuXuat = new global::System.Data.DataColumn("idPhieuXuat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidPhieuXuat);
-                this.columnsoLuongXuat = new global::System.Data.DataColumn("soLuongXuat", typeof(uint), null, global::System.Data.MappingType.Element);
+                this.columnsoLuongXuat = new global::System.Data.DataColumn("soLuongXuat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsoLuongXuat);
-                this.columndonGiaXuat = new global::System.Data.DataColumn("donGiaXuat", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columndonGiaXuat = new global::System.Data.DataColumn("donGiaXuat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndonGiaXuat);
             }
             
@@ -591,10 +591,10 @@ namespace quanLyKho {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idXuat {
+            public string idXuat {
                 get {
                     try {
-                        return ((int)(this[this.tablechiTietPhieuXuat.idXuatColumn]));
+                        return ((string)(this[this.tablechiTietPhieuXuat.idXuatColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'idXuat\' in table \'chiTietPhieuXuat\' is DBNull.", e);
@@ -639,10 +639,10 @@ namespace quanLyKho {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public uint soLuongXuat {
+            public string soLuongXuat {
                 get {
                     try {
-                        return ((uint)(this[this.tablechiTietPhieuXuat.soLuongXuatColumn]));
+                        return ((string)(this[this.tablechiTietPhieuXuat.soLuongXuatColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'soLuongXuat\' in table \'chiTietPhieuXuat\' is DBNull.", e);
@@ -655,10 +655,10 @@ namespace quanLyKho {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal donGiaXuat {
+            public string donGiaXuat {
                 get {
                     try {
-                        return ((decimal)(this[this.tablechiTietPhieuXuat.donGiaXuatColumn]));
+                        return ((string)(this[this.tablechiTietPhieuXuat.donGiaXuatColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'donGiaXuat\' in table \'chiTietPhieuXuat\' is DBNull.", e);

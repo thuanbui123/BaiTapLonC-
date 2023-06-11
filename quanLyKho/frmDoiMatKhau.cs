@@ -237,6 +237,9 @@ namespace quanLyKho
             bool status = doiMatKhau();
             if (status)
             {
+                txtMatKhauCu.Text = "";
+                txtMatKhauMoi.Text = "";
+                txtNhapLaiMatKhauMoi.Text = "";
                 MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo");
             }
             else

@@ -70,7 +70,9 @@ namespace quanLyKho
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmDangNhap f = this.FindForm() as frmDangNhap;
+            f.FormClosed += frmDangNhap_FormClosed;
+            f.Close();
         }
 
         private bool dangNhap (string userName, string password) 
@@ -87,17 +89,27 @@ namespace quanLyKho
             txtMatKhau.Text = "";
         }
 
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhau, btnXem);
+        }
+
+        private static bool isClose = true;
+        private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isClose)
+            {
+                Application.Exit();
+            }
+        }
+
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát chương trình!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
+                isClose = false;
             }
-        }
-
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhau, btnXem);
         }
     }
 }

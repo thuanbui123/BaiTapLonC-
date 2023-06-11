@@ -82,11 +82,10 @@ namespace quanLyKho
             this.btn_BCTK_NCC_In.Text = "In";
             this.btn_BCTK_NCC_In.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_BCTK_NCC_In.UseVisualStyleBackColor = false;
-            this.btn_BCTK_NCC_In.Click += new System.EventHandler(this.btn_BCTK_NCC_In_Click);
             // 
             // frm_BCTK_NCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 540);
             this.Controls.Add(this.dgv_BCTK_NCC);

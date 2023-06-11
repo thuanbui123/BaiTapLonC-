@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace quanLyKho
 {
-    internal class class_ChiTietHoaDonNhap
+    public class class_ChiTietHoaDonNhap
     {
         public static string SelectedIdSoPhieuNhap { get; set; }
         public static string SelectedIdNhaCungCap { get; set; }

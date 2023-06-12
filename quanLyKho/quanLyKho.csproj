@@ -149,6 +149,12 @@
     <Compile Include="frmTrangChu.Designer.cs">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_BBG_NCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BBG_NCC.Designer.cs">
+      <DependentUpon>Frm_BBG_NCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_BCK_HangTonKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BBG_NCC.resx">
+      <DependentUpon>Frm_BBG_NCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_BCK_HangTonKho.resx">
       <DependentUpon>frm_BCK_HangTonKho.cs</DependentUpon>

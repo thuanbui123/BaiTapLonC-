@@ -29,35 +29,38 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangChu));
+            this.pcbMain = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // pcbMain
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(884, 312);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PHẦN MỀM QUẢN LÝ KHO VẬT TƯ XÂY DỤNG";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pcbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcbMain.Image = ((System.Drawing.Image)(resources.GetObject("pcbMain.Image")));
+            this.pcbMain.Location = new System.Drawing.Point(0, 0);
+            this.pcbMain.Name = "pcbMain";
+            this.pcbMain.Size = new System.Drawing.Size(808, 312);
+            this.pcbMain.TabIndex = 0;
+            this.pcbMain.TabStop = false;
             // 
             // frmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 312);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(808, 312);
+            this.Controls.Add(this.pcbMain);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTrangChu";
             this.Text = "Trang chủ";
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMain)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pcbMain;
     }
 }

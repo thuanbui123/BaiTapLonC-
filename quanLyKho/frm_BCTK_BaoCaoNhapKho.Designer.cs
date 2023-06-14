@@ -32,6 +32,8 @@ namespace quanLyKho
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BCTK_BaoCaoNhapKho));
             this.dgvMain = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThucHien = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             this.txtTheoHoaDon = new System.Windows.Forms.TextBox();
             this.txtTheoNhaCungCap = new System.Windows.Forms.TextBox();
             this.chkTheoHoaDon = new System.Windows.Forms.CheckBox();
@@ -41,8 +43,6 @@ namespace quanLyKho
             this.lblDenNgay = new System.Windows.Forms.Label();
             this.lblTuNgay = new System.Windows.Forms.Label();
             this.lblBaoCaoNhapKho = new System.Windows.Forms.Label();
-            this.btnIn = new System.Windows.Forms.Button();
-            this.btnThucHien = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,10 +60,10 @@ namespace quanLyKho
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnThucHien);
+            this.groupBox1.Controls.Add(this.btnIn);
             this.groupBox1.Controls.Add(this.txtTheoHoaDon);
             this.groupBox1.Controls.Add(this.txtTheoNhaCungCap);
-            this.groupBox1.Controls.Add(this.btnIn);
-            this.groupBox1.Controls.Add(this.btnThucHien);
             this.groupBox1.Controls.Add(this.chkTheoHoaDon);
             this.groupBox1.Controls.Add(this.chkTheoNhaCungCap);
             this.groupBox1.Controls.Add(this.dtpDenNgay);
@@ -80,18 +80,43 @@ namespace quanLyKho
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // btnThucHien
+            // 
+            this.btnThucHien.Image = ((System.Drawing.Image)(resources.GetObject("btnThucHien.Image")));
+            this.btnThucHien.Location = new System.Drawing.Point(42, 312);
+            this.btnThucHien.Name = "btnThucHien";
+            this.btnThucHien.Size = new System.Drawing.Size(127, 50);
+            this.btnThucHien.TabIndex = 19;
+            this.btnThucHien.Text = "Thực hiện";
+            this.btnThucHien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThucHien.UseVisualStyleBackColor = true;
+            this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click_1);
+            // 
+            // btnIn
+            // 
+            this.btnIn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.Location = new System.Drawing.Point(42, 368);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(127, 50);
+            this.btnIn.TabIndex = 18;
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click_1);
+            // 
             // txtTheoHoaDon
             // 
-            this.txtTheoHoaDon.Location = new System.Drawing.Point(4, 253);
+            this.txtTheoHoaDon.Location = new System.Drawing.Point(-3, 253);
             this.txtTheoHoaDon.Name = "txtTheoHoaDon";
-            this.txtTheoHoaDon.Size = new System.Drawing.Size(198, 35);
+            this.txtTheoHoaDon.Size = new System.Drawing.Size(209, 26);
             this.txtTheoHoaDon.TabIndex = 17;
             // 
             // txtTheoNhaCungCap
             // 
-            this.txtTheoNhaCungCap.Location = new System.Drawing.Point(4, 186);
+            this.txtTheoNhaCungCap.Location = new System.Drawing.Point(-3, 186);
             this.txtTheoNhaCungCap.Name = "txtTheoNhaCungCap";
-            this.txtTheoNhaCungCap.Size = new System.Drawing.Size(198, 35);
+            this.txtTheoNhaCungCap.Size = new System.Drawing.Size(209, 26);
             this.txtTheoNhaCungCap.TabIndex = 16;
             // 
             // chkTheoHoaDon
@@ -103,7 +128,7 @@ namespace quanLyKho
             this.chkTheoHoaDon.Location = new System.Drawing.Point(4, 221);
             this.chkTheoHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.chkTheoHoaDon.Name = "chkTheoHoaDon";
-            this.chkTheoHoaDon.Size = new System.Drawing.Size(171, 31);
+            this.chkTheoHoaDon.Size = new System.Drawing.Size(112, 23);
             this.chkTheoHoaDon.TabIndex = 2;
             this.chkTheoHoaDon.Text = "Theo hóa đơn";
             this.chkTheoHoaDon.UseVisualStyleBackColor = true;
@@ -116,7 +141,7 @@ namespace quanLyKho
             this.chkTheoNhaCungCap.Location = new System.Drawing.Point(4, 158);
             this.chkTheoNhaCungCap.Margin = new System.Windows.Forms.Padding(2);
             this.chkTheoNhaCungCap.Name = "chkTheoNhaCungCap";
-            this.chkTheoNhaCungCap.Size = new System.Drawing.Size(220, 31);
+            this.chkTheoNhaCungCap.Size = new System.Drawing.Size(142, 23);
             this.chkTheoNhaCungCap.TabIndex = 2;
             this.chkTheoNhaCungCap.Text = "Theo nhà cung cấp";
             this.chkTheoNhaCungCap.UseVisualStyleBackColor = true;
@@ -128,7 +153,7 @@ namespace quanLyKho
             this.dtpDenNgay.Location = new System.Drawing.Point(4, 124);
             this.dtpDenNgay.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(198, 35);
+            this.dtpDenNgay.Size = new System.Drawing.Size(198, 26);
             this.dtpDenNgay.TabIndex = 1;
             // 
             // dtpTuNgay
@@ -137,7 +162,7 @@ namespace quanLyKho
             this.dtpTuNgay.Location = new System.Drawing.Point(4, 56);
             this.dtpTuNgay.Margin = new System.Windows.Forms.Padding(2);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(198, 35);
+            this.dtpTuNgay.Size = new System.Drawing.Size(198, 26);
             this.dtpTuNgay.TabIndex = 1;
             // 
             // lblDenNgay
@@ -147,7 +172,7 @@ namespace quanLyKho
             this.lblDenNgay.Location = new System.Drawing.Point(4, 95);
             this.lblDenNgay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDenNgay.Name = "lblDenNgay";
-            this.lblDenNgay.Size = new System.Drawing.Size(104, 27);
+            this.lblDenNgay.Size = new System.Drawing.Size(66, 19);
             this.lblDenNgay.TabIndex = 0;
             this.lblDenNgay.Text = "Đến ngày";
             // 
@@ -172,39 +197,10 @@ namespace quanLyKho
             this.lblBaoCaoNhapKho.TabIndex = 16;
             this.lblBaoCaoNhapKho.Text = "BÁO CÁO NHẬP KHO";
             this.lblBaoCaoNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBaoCaoNhapKho.Click += new System.EventHandler(this.lblBaoCaoNhapKho_Click);
-            // 
-            // btnIn
-            // 
-            this.btnIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(42, 369);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(109, 47);
-            this.btnIn.TabIndex = 12;
-            this.btnIn.Text = "In";
-            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIn.UseVisualStyleBackColor = true;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
-            // btnThucHien
-            // 
-            this.btnThucHien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThucHien.Image = ((System.Drawing.Image)(resources.GetObject("btnThucHien.Image")));
-            this.btnThucHien.Location = new System.Drawing.Point(42, 302);
-            this.btnThucHien.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThucHien.Name = "btnThucHien";
-            this.btnThucHien.Size = new System.Drawing.Size(109, 47);
-            this.btnThucHien.TabIndex = 11;
-            this.btnThucHien.Text = "Thực hiện";
-            this.btnThucHien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThucHien.UseVisualStyleBackColor = true;
-            this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
             // 
             // frm_BCTK_BaoCaoNhapKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1091, 504);
@@ -227,8 +223,6 @@ namespace quanLyKho
 
         private System.Windows.Forms.DataGridView dgvMain;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnIn;
-        private System.Windows.Forms.Button btnThucHien;
         private System.Windows.Forms.CheckBox chkTheoHoaDon;
         private System.Windows.Forms.CheckBox chkTheoNhaCungCap;
         private System.Windows.Forms.DateTimePicker dtpDenNgay;
@@ -238,5 +232,7 @@ namespace quanLyKho
         private System.Windows.Forms.Label lblBaoCaoNhapKho;
         private System.Windows.Forms.TextBox txtTheoHoaDon;
         private System.Windows.Forms.TextBox txtTheoNhaCungCap;
+        private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Button btnThucHien;
     }
 }

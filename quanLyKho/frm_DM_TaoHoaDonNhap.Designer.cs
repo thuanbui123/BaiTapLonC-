@@ -157,10 +157,10 @@ namespace quanLyKho
             // btnThem
             // 
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(11, 22);
+            this.btnThem.Location = new System.Drawing.Point(4, 23);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(97, 40);
+            this.btnThem.Size = new System.Drawing.Size(105, 50);
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,10 +170,10 @@ namespace quanLyKho
             // btnLuu
             // 
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(11, 157);
+            this.btnLuu.Location = new System.Drawing.Point(4, 184);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(97, 40);
+            this.btnLuu.Size = new System.Drawing.Size(105, 50);
             this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -183,10 +183,10 @@ namespace quanLyKho
             // btnXoa
             // 
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(11, 112);
+            this.btnXoa.Location = new System.Drawing.Point(4, 130);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(97, 40);
+            this.btnXoa.Size = new System.Drawing.Size(105, 50);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,10 +196,10 @@ namespace quanLyKho
             // btnHuy
             // 
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(11, 201);
+            this.btnHuy.Location = new System.Drawing.Point(4, 238);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(97, 40);
+            this.btnHuy.Size = new System.Drawing.Size(105, 50);
             this.btnHuy.TabIndex = 10;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -219,17 +219,17 @@ namespace quanLyKho
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(112, 282);
+            this.groupBox2.Size = new System.Drawing.Size(122, 359);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
             // btnNhapHang
             // 
-            this.btnNhapHang.Location = new System.Drawing.Point(11, 245);
+            this.btnNhapHang.Location = new System.Drawing.Point(4, 292);
             this.btnNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Size = new System.Drawing.Size(97, 33);
+            this.btnNhapHang.Size = new System.Drawing.Size(105, 50);
             this.btnNhapHang.TabIndex = 10;
             this.btnNhapHang.Text = "Nhập hàng";
             this.btnNhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,10 +239,10 @@ namespace quanLyKho
             // btnSua
             // 
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(11, 66);
+            this.btnSua.Location = new System.Drawing.Point(4, 77);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(97, 40);
+            this.btnSua.Size = new System.Drawing.Size(105, 50);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -254,7 +254,7 @@ namespace quanLyKho
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(828, 473);
+            this.ClientSize = new System.Drawing.Size(840, 473);
             this.Controls.Add(this.dgvMain);
             this.Controls.Add(this.lblTaoHoaDonDanhMuc);
             this.Controls.Add(this.groupBox1);
@@ -262,7 +262,7 @@ namespace quanLyKho
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_DM_TaoHoaDonNhap";
-            this.Text = "frm_DM_TaoHoaDonNhap";
+            this.Text = "S";
             this.Load += new System.EventHandler(this.frm_DM_TaoHoaDonNhap_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

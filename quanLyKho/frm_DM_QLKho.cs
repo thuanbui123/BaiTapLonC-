@@ -45,14 +45,50 @@ namespace quanLyKho
             dinhDangLuoi();
         }
 
-        private void frm_DM_QLKho_Load(object sender, EventArgs e)
+        
+        private void load_cbo_HangHoa()
         {
-            loadDuLieuLenLuoi();
+            try
+            {
+                string query = "Select lh.id, lh.tenLoai from loaiHang as lh";
+                DataTable data = DataProvider.Instance.executeQuery(query);
+                DataRow row = data.NewRow();
+                row["tenLoai"] = "Chọn loại hàng hóa";
+                data.Rows.InsertAt(row, 0);
+                cbo_DM_Kho_HangHoa.DataSource = data;
+                cbo_DM_Kho_HangHoa.ValueMember = "id";
+                cbo_DM_Kho_HangHoa.DisplayMember = "tenLoai";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
+
+        private void cbo_DM_Kho_HangHoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int viTri = cbo_DM_Kho_HangHoa.SelectedIndex;
+            string layGiaTri = cbo_DM_Kho_HangHoa.Text;
+            if (viTri != 0)
+            {
+                string query1 = "select hangHoa.tenHangHoa, hangHoa.donViTinh, kho.soLuong, hangHoa.xuatXu from (kho inner join hangHoa on kho.idHangHoa = hangHoa.id) inner join loaiHang on hangHoa.idLoaiHang = loaiHang.id where loaiHang.tenLoai = N'" + layGiaTri + "'";
+                DataTable data = DataProvider.Instance.executeQuery(query1);
+                dgv_DM_Kho.DataSource = data;
+                dinhDangLuoi();
+            }
         }
 
-        private void btn_DM_Kho_LamMoi_Click(object sender, EventArgs e)
+        private void frm_DM_QLKho_Load_1(object sender, EventArgs e)
         {
+            loadDuLieuLenLuoi();
+            load_cbo_HangHoa();
+        }
 
+        private void btn_DM_Kho_LamMoi_Click_1(object sender, EventArgs e)
+        {
+            loadDuLieuLenLuoi();
+            load_cbo_HangHoa();
         }
     }
 }

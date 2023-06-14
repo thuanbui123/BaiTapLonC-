@@ -17,6 +17,7 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
+
         private void dinhDangLuoi()
         {
             dgv_BangThongTin.Columns[0].HeaderText = "Mã NCC ";
@@ -66,7 +67,7 @@ namespace quanLyKho
             }
         }
 
-        private void cboBCK_LoaiHang_SelectedValueChanged(object sender, EventArgs e)
+        private void cbo_NCC_SelectedIndexChanged(object sender, EventArgs e)
         {
             int viTri = cbo_NCC.SelectedIndex;
             string layGiaTri = cbo_NCC.Text;
@@ -80,33 +81,11 @@ namespace quanLyKho
             }
         }
 
-       
-
-      
         private void Frm_BBG_NCC_Load(object sender, EventArgs e)
         {
             loadDuLieuLenLuoi();
             rdo_loaihang.Checked = true;
             load_cbo_HangHoa();
         }
-
-        private void cbo_NCC_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            int viTri = cbo_NCC.SelectedIndex;
-            string layGiaTri = cbo_NCC.Text;
-
-            if (viTri != 0)
-            {
-                string query = "Select ncc.id,ncc.tenNhaCungCap,hh.id,hh.tenHangHoa,hh.donViTinh,ctpn.donGiaNhap from phieuNhap as pn, chiTietPhieuNhap as ctpn, hangHoa as hh ,nhaCungCap as ncc where ncc.id=pn.idNhaCungCap and ctpn.idSoPhieuNhap = pn.soPhieuNhap and ctpn.idHangHoa = hh.id and ncc.tenNhaCungCap = N'" + layGiaTri + "'";
-                DataTable data = DataProvider.Instance.executeQuery(query);
-                dgv_BangThongTin.DataSource = data;
-                dinhDangLuoi();
-            }
-        }
-
-      
     }
-
-    }
-
-
+}

@@ -112,7 +112,15 @@ namespace quanLyKho
                 fm.showForm(pnlContainer, f);
             } else if (tcThanhDieuHuong.SelectedIndex == 3)
             {
-
+                frm_TopMatHangBanChay f = new frm_TopMatHangBanChay();
+                formManager fm = new formManager();
+                fm.showForm(pnlContainer, f);
+            }
+            else if (tcThanhDieuHuong.SelectedIndex == 4)
+            {
+                frm_HoTro f = new frm_HoTro();
+                formManager fm = new formManager();
+                fm.showForm(pnlContainer, f);
             }
         }
 
@@ -195,20 +203,15 @@ namespace quanLyKho
             fm.showForm(pnlContainer, f);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frm_TopMatHangBanChay f = new frm_TopMatHangBanChay();
-            formManager fm = new formManager();
-            fm.showForm(pnlContainer, f);
-        }
-
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (isClose)
             {
+                // Kiểm tra ứng dụng có đang chạy trong chế độ debug hay không
                 if (Debugger.IsAttached)
                 {
-               /*     Environment.Exit(0); */// Tắt ứng dụng ngay cả trong chế độ debug
+                    /*Environment.Exit(0);*/ // Tắt ứng dụng ngay cả trong chế độ debug
+                    System.Windows.Forms.Application.ExitThread(); //thoát khỏi ứng dụng và dừng tất cả các vòng lặp chạy trong ứng dụng
                 }
                 else
                 {
@@ -229,7 +232,43 @@ namespace quanLyKho
         private void btn_HD_HoTro_Click(object sender, EventArgs e)
         {
             frm_HoTro f = new frm_HoTro();
-            f.ShowDialog();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
+        }
+
+        private void btnHangBanChay_Click(object sender, EventArgs e)
+        {
+            frm_TopMatHangBanChay f = new frm_TopMatHangBanChay();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
+        }
+
+        private void btnBaoCaoDoanhThu_Click(object sender, EventArgs e)
+        {
+            frm_BieuDoThongKeDoanhThu f = new frm_BieuDoThongKeDoanhThu();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
+        }
+
+        private void btnBaoCaoHangTonKho_Click(object sender, EventArgs e)
+        {
+            frm_BCK_HangTonKho f = new frm_BCK_HangTonKho();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
+        }
+
+        private void btnBaoGiaNCC_Click(object sender, EventArgs e)
+        {
+            Frm_BBG_NCC f = new Frm_BBG_NCC();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
+        }
+
+        private void btnBaoGiaXuat_Click(object sender, EventArgs e)
+        {
+            frm_BCK_BCGiaXuat f = new frm_BCK_BCGiaXuat();
+            formManager fm = new formManager();
+            fm.showForm(pnlContainer, f);
         }
     }
 }

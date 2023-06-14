@@ -11,7 +11,7 @@ namespace quanLyKho
     public class anHienMatKhau
     {
         private static anHienMatKhau instance;
-        private int count = 0;
+        private int count = 1;
 
         public static anHienMatKhau Instance
         {
@@ -24,16 +24,16 @@ namespace quanLyKho
         public void anHoacHienMatKhau(TextBox txt, Button btn)
         {
             count++;
-            if (count % 2 != 0)
+            if (count % 2 == 0)
             {
                 txt.UseSystemPasswordChar = false;
-                Bitmap bm = new Bitmap("E:\\Quản lý kho\\không được xem.png");
+                Bitmap bm = new Bitmap("E:\\Quản lý kho\\xem.png");
                 btn.Image = bm;
             }
             else
             {
                 txt.UseSystemPasswordChar = true;
-                Bitmap bm = new Bitmap("E:\\Quản lý kho\\được xem.png");
+                Bitmap bm = new Bitmap("E:\\Quản lý kho\\Không xem.png");
                 btn.Image = bm;
             }
         }

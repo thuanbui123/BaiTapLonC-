@@ -29,8 +29,11 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BCTK_HangHoa));
             this.lblThongKeHangHoa = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dgvMain = new System.Windows.Forms.DataGridView();
+            this.btnIn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.SuspendLayout();
             // 
             // lblThongKeHangHoa
@@ -39,26 +42,39 @@ namespace quanLyKho
             this.lblThongKeHangHoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblThongKeHangHoa.Location = new System.Drawing.Point(4, 0);
             this.lblThongKeHangHoa.Name = "lblThongKeHangHoa";
-            this.lblThongKeHangHoa.Size = new System.Drawing.Size(860, 42);
+            this.lblThongKeHangHoa.Size = new System.Drawing.Size(868, 42);
             this.lblThongKeHangHoa.TabIndex = 0;
             this.lblThongKeHangHoa.Text = "THỐNG KÊ HÀNG HÓA";
             this.lblThongKeHangHoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // reportViewer1
+            // dgvMain
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(4, 45);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(860, 484);
-            this.reportViewer1.TabIndex = 1;
+            this.dgvMain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMain.Location = new System.Drawing.Point(22, 85);
+            this.dgvMain.Name = "dgvMain";
+            this.dgvMain.Size = new System.Drawing.Size(850, 324);
+            this.dgvMain.TabIndex = 2;
+            // 
+            // btnIn
+            // 
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.Location = new System.Drawing.Point(22, 29);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(115, 50);
+            this.btnIn.TabIndex = 12;
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frm_BCTK_HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(876, 541);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(890, 421);
+            this.Controls.Add(this.btnIn);
+            this.Controls.Add(this.dgvMain);
             this.Controls.Add(this.lblThongKeHangHoa);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -66,6 +82,7 @@ namespace quanLyKho
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo - Thống kê hàng hóa";
             this.Load += new System.EventHandler(this.frm_BCTK_HangHoa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -73,6 +90,7 @@ namespace quanLyKho
         #endregion
 
         private System.Windows.Forms.Label lblThongKeHangHoa;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.DataGridView dgvMain;
+        private System.Windows.Forms.Button btnIn;
     }
 }

@@ -91,7 +91,7 @@ namespace quanLyKho
             this.grbChucNang.Controls.Add(this.lblTuNgay);
             this.grbChucNang.Location = new System.Drawing.Point(12, 44);
             this.grbChucNang.Name = "grbChucNang";
-            this.grbChucNang.Size = new System.Drawing.Size(213, 487);
+            this.grbChucNang.Size = new System.Drawing.Size(213, 504);
             this.grbChucNang.TabIndex = 1;
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức năng";
@@ -99,9 +99,9 @@ namespace quanLyKho
             // btnHuy
             // 
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(42, 436);
+            this.btnHuy.Location = new System.Drawing.Point(42, 452);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(115, 40);
+            this.btnHuy.Size = new System.Drawing.Size(126, 50);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -111,9 +111,9 @@ namespace quanLyKho
             // btnIn
             // 
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(42, 386);
+            this.btnIn.Location = new System.Drawing.Point(42, 396);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(115, 40);
+            this.btnIn.Size = new System.Drawing.Size(126, 50);
             this.btnIn.TabIndex = 11;
             this.btnIn.Text = "In";
             this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -125,7 +125,7 @@ namespace quanLyKho
             this.btnThucHien.Image = ((System.Drawing.Image)(resources.GetObject("btnThucHien.Image")));
             this.btnThucHien.Location = new System.Drawing.Point(42, 340);
             this.btnThucHien.Name = "btnThucHien";
-            this.btnThucHien.Size = new System.Drawing.Size(115, 40);
+            this.btnThucHien.Size = new System.Drawing.Size(126, 50);
             this.btnThucHien.TabIndex = 10;
             this.btnThucHien.Text = "Thực hiện";
             this.btnThucHien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

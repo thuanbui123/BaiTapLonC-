@@ -33,7 +33,7 @@ namespace quanLyKho
             this.dgv_BCTK_NCC = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_BCTK_NCC_In = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BCTK_NCC)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,25 +63,24 @@ namespace quanLyKho
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.btn_BCTK_NCC_In);
+            this.panel1.Controls.Add(this.btnIn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 115);
             this.panel1.TabIndex = 5;
             // 
-            // btn_BCTK_NCC_In
+            // btnIn
             // 
-            this.btn_BCTK_NCC_In.Image = ((System.Drawing.Image)(resources.GetObject("btn_BCTK_NCC_In.Image")));
-            this.btn_BCTK_NCC_In.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BCTK_NCC_In.Location = new System.Drawing.Point(57, 40);
-            this.btn_BCTK_NCC_In.Name = "btn_BCTK_NCC_In";
-            this.btn_BCTK_NCC_In.Padding = new System.Windows.Forms.Padding(10, 0, 35, 0);
-            this.btn_BCTK_NCC_In.Size = new System.Drawing.Size(127, 64);
-            this.btn_BCTK_NCC_In.TabIndex = 2;
-            this.btn_BCTK_NCC_In.Text = "In";
-            this.btn_BCTK_NCC_In.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_BCTK_NCC_In.UseVisualStyleBackColor = false;
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.Location = new System.Drawing.Point(29, 60);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(115, 50);
+            this.btnIn.TabIndex = 12;
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frm_BCTK_NCC
             // 
@@ -106,6 +105,6 @@ namespace quanLyKho
         private System.Windows.Forms.DataGridView dgv_BCTK_NCC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_BCTK_NCC_In;
+        private System.Windows.Forms.Button btnIn;
     }
 }

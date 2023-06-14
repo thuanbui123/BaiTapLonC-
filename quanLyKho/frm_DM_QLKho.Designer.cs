@@ -69,6 +69,7 @@ namespace quanLyKho
             this.btn_DM_Kho_LamMoi.TabIndex = 2;
             this.btn_DM_Kho_LamMoi.Text = "Làm mới";
             this.btn_DM_Kho_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_DM_Kho_LamMoi.Click += new System.EventHandler(this.btn_DM_Kho_LamMoi_Click_1);
             // 
             // cbo_DM_Kho_HangHoa
             // 
@@ -77,6 +78,7 @@ namespace quanLyKho
             this.cbo_DM_Kho_HangHoa.Name = "cbo_DM_Kho_HangHoa";
             this.cbo_DM_Kho_HangHoa.Size = new System.Drawing.Size(227, 27);
             this.cbo_DM_Kho_HangHoa.TabIndex = 1;
+            this.cbo_DM_Kho_HangHoa.SelectedIndexChanged += new System.EventHandler(this.cbo_DM_Kho_HangHoa_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -100,6 +102,7 @@ namespace quanLyKho
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_DM_QLKho";
             this.Text = "frm_DM_QLKho";
+            this.Load += new System.EventHandler(this.frm_DM_QLKho_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DM_Kho)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

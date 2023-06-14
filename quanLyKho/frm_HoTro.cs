@@ -16,15 +16,5 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm_HoTro_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

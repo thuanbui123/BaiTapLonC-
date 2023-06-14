@@ -1,7 +1,7 @@
 ﻿
 namespace quanLyKho
 {
-    partial class frm_HoTro
+    partial class frm_In_BCTKHangHoa
     {
         /// <summary>
         /// Required designer variable.
@@ -29,37 +29,33 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_HoTro));
-            this.pcbMain = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbMain)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // pcbMain
+            // reportViewer1
             // 
-            this.pcbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbMain.Image = ((System.Drawing.Image)(resources.GetObject("pcbMain.Image")));
-            this.pcbMain.Location = new System.Drawing.Point(0, 0);
-            this.pcbMain.Name = "pcbMain";
-            this.pcbMain.Size = new System.Drawing.Size(808, 354);
-            this.pcbMain.TabIndex = 1;
-            this.pcbMain.TabStop = false;
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(860, 484);
+            this.reportViewer1.TabIndex = 2;
             // 
-            // frm_HoTro
+            // frm_In_BCTKHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(808, 354);
-            this.Controls.Add(this.pcbMain);
-            this.Name = "frm_HoTro";
-            this.Text = "frm_HoTro";
-            ((System.ComponentModel.ISupportInitialize)(this.pcbMain)).EndInit();
+            this.ClientSize = new System.Drawing.Size(881, 502);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "frm_In_BCTKHangHoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frm_In_BCTKHangHoa";
+            this.Load += new System.EventHandler(this.frm_In_BCTKHangHoa_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pcbMain;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

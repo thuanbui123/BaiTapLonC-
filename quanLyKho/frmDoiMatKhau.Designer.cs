@@ -124,9 +124,9 @@ namespace quanLyKho
             // btnCapNhat
             // 
             this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
-            this.btnCapNhat.Location = new System.Drawing.Point(248, 243);
+            this.btnCapNhat.Location = new System.Drawing.Point(248, 231);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(95, 40);
+            this.btnCapNhat.Size = new System.Drawing.Size(105, 50);
             this.btnCapNhat.TabIndex = 8;
             this.btnCapNhat.Text = "Lưu";
             this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -136,9 +136,9 @@ namespace quanLyKho
             // btnHuy
             // 
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(415, 243);
+            this.btnHuy.Location = new System.Drawing.Point(405, 231);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(95, 40);
+            this.btnHuy.Size = new System.Drawing.Size(105, 50);
             this.btnHuy.TabIndex = 9;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

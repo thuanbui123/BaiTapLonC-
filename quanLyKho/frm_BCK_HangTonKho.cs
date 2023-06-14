@@ -17,12 +17,6 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
-
-        private void frm_BCK_HangTonKho_Load(object sender, EventArgs e)
-        {
-            LoadComBo();
-            LoadData();
-        }
         public void LoadData()
         {
             string query = "SELECT hangHoa.id, hangHoa.tenHangHoa, chiTietPhieuNhap.soLuongNhap, phieuNhap.ngayLap_Nhap FROM hangHoa,chiTietPhieuNhap,phieuNhap WHERE hangHoa.id = chiTietPhieuNhap.idHangHoa AND chiTietPhieuNhap.idSoPhieuNhap = phieuNhap.soPhieuNhap";
@@ -89,6 +83,7 @@ namespace quanLyKho
             }
             return true;
         }
+
         private void btnThucHien_Click(object sender, EventArgs e)
         {
             if (rdoAll.Checked == true || rdoLoaiHang.Checked == true)
@@ -117,8 +112,12 @@ namespace quanLyKho
             {
                 MessageBox.Show("Chưa chọn mục tìm kiếm!", "Thông báo!");
             }
-
         }
 
+        private void frm_BCK_HangTonKho_Load(object sender, EventArgs e)
+        {
+            LoadComBo();
+            LoadData();
+        }
     }
 }

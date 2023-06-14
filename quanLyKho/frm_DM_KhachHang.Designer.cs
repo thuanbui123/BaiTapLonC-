@@ -93,11 +93,12 @@ namespace quanLyKho
             this.btn_DM_HuyKhachHang.Enabled = false;
             this.btn_DM_HuyKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_HuyKhachHang.Image")));
             this.btn_DM_HuyKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_DM_HuyKhachHang.Location = new System.Drawing.Point(30, 236);
+            this.btn_DM_HuyKhachHang.Location = new System.Drawing.Point(30, 250);
             this.btn_DM_HuyKhachHang.Name = "btn_DM_HuyKhachHang";
-            this.btn_DM_HuyKhachHang.Size = new System.Drawing.Size(124, 39);
+            this.btn_DM_HuyKhachHang.Size = new System.Drawing.Size(124, 50);
             this.btn_DM_HuyKhachHang.TabIndex = 58;
             this.btn_DM_HuyKhachHang.Text = "Hủy";
+            this.btn_DM_HuyKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_HuyKhachHang.UseVisualStyleBackColor = true;
             this.btn_DM_HuyKhachHang.Click += new System.EventHandler(this.btn_DM_HuyKhachHang_Click);
             // 
@@ -106,11 +107,12 @@ namespace quanLyKho
             this.btn_DM_LuuKhachHang.Enabled = false;
             this.btn_DM_LuuKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_LuuKhachHang.Image")));
             this.btn_DM_LuuKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_DM_LuuKhachHang.Location = new System.Drawing.Point(30, 188);
+            this.btn_DM_LuuKhachHang.Location = new System.Drawing.Point(30, 194);
             this.btn_DM_LuuKhachHang.Name = "btn_DM_LuuKhachHang";
-            this.btn_DM_LuuKhachHang.Size = new System.Drawing.Size(124, 39);
+            this.btn_DM_LuuKhachHang.Size = new System.Drawing.Size(124, 50);
             this.btn_DM_LuuKhachHang.TabIndex = 57;
             this.btn_DM_LuuKhachHang.Text = "Lưu";
+            this.btn_DM_LuuKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_LuuKhachHang.UseVisualStyleBackColor = true;
             this.btn_DM_LuuKhachHang.Click += new System.EventHandler(this.btn_DM_LuuKhachHang_Click);
             // 
@@ -118,11 +120,12 @@ namespace quanLyKho
             // 
             this.btn_DM_XoaKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_XoaKhachHang.Image")));
             this.btn_DM_XoaKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_DM_XoaKhachHang.Location = new System.Drawing.Point(30, 136);
+            this.btn_DM_XoaKhachHang.Location = new System.Drawing.Point(30, 138);
             this.btn_DM_XoaKhachHang.Name = "btn_DM_XoaKhachHang";
-            this.btn_DM_XoaKhachHang.Size = new System.Drawing.Size(124, 39);
+            this.btn_DM_XoaKhachHang.Size = new System.Drawing.Size(124, 50);
             this.btn_DM_XoaKhachHang.TabIndex = 56;
             this.btn_DM_XoaKhachHang.Text = "Xóa";
+            this.btn_DM_XoaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_XoaKhachHang.UseVisualStyleBackColor = true;
             this.btn_DM_XoaKhachHang.Click += new System.EventHandler(this.btn_DM_XoaKhachHang_Click);
             // 
@@ -132,9 +135,10 @@ namespace quanLyKho
             this.btn_DM_SuaKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_DM_SuaKhachHang.Location = new System.Drawing.Point(30, 82);
             this.btn_DM_SuaKhachHang.Name = "btn_DM_SuaKhachHang";
-            this.btn_DM_SuaKhachHang.Size = new System.Drawing.Size(124, 39);
+            this.btn_DM_SuaKhachHang.Size = new System.Drawing.Size(124, 50);
             this.btn_DM_SuaKhachHang.TabIndex = 55;
             this.btn_DM_SuaKhachHang.Text = "Sửa";
+            this.btn_DM_SuaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_SuaKhachHang.UseVisualStyleBackColor = true;
             this.btn_DM_SuaKhachHang.Click += new System.EventHandler(this.btn_DM_SuaKhachHang_Click);
             // 
@@ -147,9 +151,10 @@ namespace quanLyKho
             this.btn_DM_ThemKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DM_ThemKhachHang.Location = new System.Drawing.Point(30, 26);
             this.btn_DM_ThemKhachHang.Name = "btn_DM_ThemKhachHang";
-            this.btn_DM_ThemKhachHang.Size = new System.Drawing.Size(124, 45);
+            this.btn_DM_ThemKhachHang.Size = new System.Drawing.Size(124, 50);
             this.btn_DM_ThemKhachHang.TabIndex = 54;
             this.btn_DM_ThemKhachHang.Text = "Thêm";
+            this.btn_DM_ThemKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_ThemKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_DM_ThemKhachHang.UseVisualStyleBackColor = true;
             this.btn_DM_ThemKhachHang.Click += new System.EventHandler(this.btn_DM_ThemKhachHang_Click_1);
@@ -219,9 +224,10 @@ namespace quanLyKho
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.Location = new System.Drawing.Point(6, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 40);
+            this.button1.Size = new System.Drawing.Size(138, 50);
             this.button1.TabIndex = 70;
             this.button1.Text = "Tìm Kiếm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // rdo_DM_TheoTen

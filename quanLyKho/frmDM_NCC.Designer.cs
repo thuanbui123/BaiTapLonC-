@@ -292,10 +292,10 @@ namespace quanLyKho
             // 
             this.btn_DM_NCC_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_NCC_TimKiem.Image")));
             this.btn_DM_NCC_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DM_NCC_TimKiem.Location = new System.Drawing.Point(140, 25);
+            this.btn_DM_NCC_TimKiem.Location = new System.Drawing.Point(140, 17);
             this.btn_DM_NCC_TimKiem.Name = "btn_DM_NCC_TimKiem";
             this.btn_DM_NCC_TimKiem.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btn_DM_NCC_TimKiem.Size = new System.Drawing.Size(155, 42);
+            this.btn_DM_NCC_TimKiem.Size = new System.Drawing.Size(155, 50);
             this.btn_DM_NCC_TimKiem.TabIndex = 0;
             this.btn_DM_NCC_TimKiem.Text = "Tìm kiếm";
             this.btn_DM_NCC_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -318,7 +318,7 @@ namespace quanLyKho
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.ClientSize = new System.Drawing.Size(1143, 703);
             this.Controls.Add(this.dgv_DM_NCC);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);

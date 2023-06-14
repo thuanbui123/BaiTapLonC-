@@ -38,9 +38,9 @@ namespace quanLyKho
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnXem = new System.Windows.Forms.Button();
             this.lblDangNhap = new System.Windows.Forms.Label();
             this.pcbImg = new System.Windows.Forms.PictureBox();
+            this.btnXem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImg)).BeginInit();
             this.SuspendLayout();
@@ -106,16 +106,6 @@ namespace quanLyKho
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnXem
-            // 
-            this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
-            this.btnXem.Location = new System.Drawing.Point(652, 124);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(34, 27);
-            this.btnXem.TabIndex = 10;
-            this.btnXem.UseVisualStyleBackColor = true;
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
             // lblDangNhap
             // 
             this.lblDangNhap.Dock = System.Windows.Forms.DockStyle.Top;
@@ -131,12 +121,22 @@ namespace quanLyKho
             // pcbImg
             // 
             this.pcbImg.Image = ((System.Drawing.Image)(resources.GetObject("pcbImg.Image")));
-            this.pcbImg.Location = new System.Drawing.Point(12, 89);
+            this.pcbImg.Location = new System.Drawing.Point(12, 65);
             this.pcbImg.Name = "pcbImg";
             this.pcbImg.Size = new System.Drawing.Size(150, 150);
             this.pcbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImg.TabIndex = 12;
             this.pcbImg.TabStop = false;
+            // 
+            // btnXem
+            // 
+            this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
+            this.btnXem.Location = new System.Drawing.Point(652, 124);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(34, 27);
+            this.btnXem.TabIndex = 10;
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // frmDangNhap
             // 

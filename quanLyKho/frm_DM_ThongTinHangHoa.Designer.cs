@@ -181,7 +181,7 @@ namespace quanLyKho
             this.grbTrangThai.Controls.Add(this.btnThem);
             this.grbTrangThai.Location = new System.Drawing.Point(702, 49);
             this.grbTrangThai.Name = "grbTrangThai";
-            this.grbTrangThai.Size = new System.Drawing.Size(139, 261);
+            this.grbTrangThai.Size = new System.Drawing.Size(160, 305);
             this.grbTrangThai.TabIndex = 2;
             this.grbTrangThai.TabStop = false;
             this.grbTrangThai.Text = "Trạng thái";
@@ -189,9 +189,9 @@ namespace quanLyKho
             // btnHuy
             // 
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(28, 208);
+            this.btnHuy.Location = new System.Drawing.Point(28, 247);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(95, 40);
+            this.btnHuy.Size = new System.Drawing.Size(105, 50);
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy ";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -201,9 +201,9 @@ namespace quanLyKho
             // btnLuu
             // 
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(28, 162);
+            this.btnLuu.Location = new System.Drawing.Point(28, 191);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(95, 40);
+            this.btnLuu.Size = new System.Drawing.Size(105, 50);
             this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -213,9 +213,9 @@ namespace quanLyKho
             // btnXoa
             // 
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(28, 116);
+            this.btnXoa.Location = new System.Drawing.Point(28, 135);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 40);
+            this.btnXoa.Size = new System.Drawing.Size(105, 50);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -225,9 +225,9 @@ namespace quanLyKho
             // btnSua
             // 
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(28, 70);
+            this.btnSua.Location = new System.Drawing.Point(28, 79);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(95, 40);
+            this.btnSua.Size = new System.Drawing.Size(105, 50);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,7 +239,7 @@ namespace quanLyKho
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.Location = new System.Drawing.Point(28, 23);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(95, 40);
+            this.btnThem.Size = new System.Drawing.Size(105, 50);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -248,7 +248,7 @@ namespace quanLyKho
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(141, 275);
+            this.txtTimKiem.Location = new System.Drawing.Point(141, 299);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(170, 26);
             this.txtTimKiem.TabIndex = 4;
@@ -256,7 +256,7 @@ namespace quanLyKho
             // rdoTheoMa
             // 
             this.rdoTheoMa.AutoSize = true;
-            this.rdoTheoMa.Location = new System.Drawing.Point(374, 276);
+            this.rdoTheoMa.Location = new System.Drawing.Point(374, 300);
             this.rdoTheoMa.Name = "rdoTheoMa";
             this.rdoTheoMa.Size = new System.Drawing.Size(83, 23);
             this.rdoTheoMa.TabIndex = 6;
@@ -267,7 +267,7 @@ namespace quanLyKho
             // rdoTheoTen
             // 
             this.rdoTheoTen.AutoSize = true;
-            this.rdoTheoTen.Location = new System.Drawing.Point(533, 275);
+            this.rdoTheoTen.Location = new System.Drawing.Point(533, 299);
             this.rdoTheoTen.Name = "rdoTheoTen";
             this.rdoTheoTen.Size = new System.Drawing.Size(85, 23);
             this.rdoTheoTen.TabIndex = 7;
@@ -282,7 +282,7 @@ namespace quanLyKho
             // dgvMain
             // 
             this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Location = new System.Drawing.Point(12, 317);
+            this.dgvMain.Location = new System.Drawing.Point(12, 360);
             this.dgvMain.Name = "dgvMain";
             this.dgvMain.Size = new System.Drawing.Size(850, 281);
             this.dgvMain.TabIndex = 8;
@@ -291,9 +291,9 @@ namespace quanLyKho
             // btnTimKiem
             // 
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 261);
+            this.btnTimKiem.Location = new System.Drawing.Point(12, 285);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(111, 40);
+            this.btnTimKiem.Size = new System.Drawing.Size(123, 50);
             this.btnTimKiem.TabIndex = 9;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -305,7 +305,7 @@ namespace quanLyKho
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(874, 610);
+            this.ClientSize = new System.Drawing.Size(874, 653);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.dgvMain);
             this.Controls.Add(this.rdoTheoTen);

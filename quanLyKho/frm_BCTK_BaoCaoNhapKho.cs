@@ -61,8 +61,6 @@ namespace quanLyKho
             txtTheoHoaDon.Enabled = false;
             txtTheoNhaCungCap.Enabled = false;
             dgvMain.Show();
-            chkTheoHoaDon.Checked = false;
-            chkTheoNhaCungCap.Checked = false;
         }
 
         private void chkTheoNhaCungCap_CheckedChanged(object sender, EventArgs e)
@@ -93,7 +91,15 @@ namespace quanLyKho
             }
         }
 
-        private void btnThucHien_Click(object sender, EventArgs e)
+        
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frm_InBCTK_NhapKho a = new frm_InBCTK_NhapKho();
+            a.Show();
+        }
+
+        private void btnThucHien_Click_1(object sender, EventArgs e)
         {
             DataTable dt = DataProvider.Instance.executeQuery("Exec USP_BCTKNhapKho @tuNgay , @denNgay", new object[] { dtpTuNgay.Value.ToString("yyyy-MM-dd"), dtpDenNgay.Value.ToString("yyyy-MM-dd") });
             if (chkTheoNhaCungCap.Checked)
@@ -115,21 +121,10 @@ namespace quanLyKho
             dgvMain.DataSource = dt;
         }
 
-        private void btnIn_Click(object sender, EventArgs e)
+        private void btnIn_Click_1(object sender, EventArgs e)
         {
             frm_InBCTK_NhapKho a = new frm_InBCTK_NhapKho();
             a.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frm_BieuDoThongKeDoanhThu f = new frm_BieuDoThongKeDoanhThu();
-            f.ShowDialog();
-        }
-
-        private void lblBaoCaoNhapKho_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -46,11 +46,11 @@ namespace quanLyKho
             this.dtp_DM_NgayTaoHD = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grb_DM_Cap_Nhat_Khach_Hang = new System.Windows.Forms.GroupBox();
+            this.cbo_DM_KhachHang = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbo_DM_KhachHang = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDM_Main_DonXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -87,7 +87,7 @@ namespace quanLyKho
             // dgvDM_Main_DonXuat
             // 
             this.dgvDM_Main_DonXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDM_Main_DonXuat.Location = new System.Drawing.Point(47, 330);
+            this.dgvDM_Main_DonXuat.Location = new System.Drawing.Point(47, 393);
             this.dgvDM_Main_DonXuat.Name = "dgvDM_Main_DonXuat";
             this.dgvDM_Main_DonXuat.Size = new System.Drawing.Size(861, 168);
             this.dgvDM_Main_DonXuat.TabIndex = 66;
@@ -97,9 +97,9 @@ namespace quanLyKho
             // 
             this.btn_DM_XuatHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DM_XuatHoaDon.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_DM_XuatHoaDon.Location = new System.Drawing.Point(30, 253);
+            this.btn_DM_XuatHoaDon.Location = new System.Drawing.Point(944, 331);
             this.btn_DM_XuatHoaDon.Name = "btn_DM_XuatHoaDon";
-            this.btn_DM_XuatHoaDon.Size = new System.Drawing.Size(137, 39);
+            this.btn_DM_XuatHoaDon.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_XuatHoaDon.TabIndex = 59;
             this.btn_DM_XuatHoaDon.Text = "Xuất hóa đơn";
             this.btn_DM_XuatHoaDon.UseVisualStyleBackColor = true;
@@ -109,9 +109,9 @@ namespace quanLyKho
             // 
             this.btn_DM_HuyDonXuat.Enabled = false;
             this.btn_DM_HuyDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_HuyDonXuat.Image")));
-            this.btn_DM_HuyDonXuat.Location = new System.Drawing.Point(30, 208);
+            this.btn_DM_HuyDonXuat.Location = new System.Drawing.Point(30, 247);
             this.btn_DM_HuyDonXuat.Name = "btn_DM_HuyDonXuat";
-            this.btn_DM_HuyDonXuat.Size = new System.Drawing.Size(137, 39);
+            this.btn_DM_HuyDonXuat.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_HuyDonXuat.TabIndex = 58;
             this.btn_DM_HuyDonXuat.Text = "Hủy";
             this.btn_DM_HuyDonXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,9 +122,9 @@ namespace quanLyKho
             // 
             this.btn_DM_LuuDonXuat.Enabled = false;
             this.btn_DM_LuuDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_LuuDonXuat.Image")));
-            this.btn_DM_LuuDonXuat.Location = new System.Drawing.Point(30, 160);
+            this.btn_DM_LuuDonXuat.Location = new System.Drawing.Point(30, 191);
             this.btn_DM_LuuDonXuat.Name = "btn_DM_LuuDonXuat";
-            this.btn_DM_LuuDonXuat.Size = new System.Drawing.Size(137, 45);
+            this.btn_DM_LuuDonXuat.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_LuuDonXuat.TabIndex = 57;
             this.btn_DM_LuuDonXuat.Text = "Lưu";
             this.btn_DM_LuuDonXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,9 +134,9 @@ namespace quanLyKho
             // btn_DM_XoaDonXuat
             // 
             this.btn_DM_XoaDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_XoaDonXuat.Image")));
-            this.btn_DM_XoaDonXuat.Location = new System.Drawing.Point(30, 112);
+            this.btn_DM_XoaDonXuat.Location = new System.Drawing.Point(30, 135);
             this.btn_DM_XoaDonXuat.Name = "btn_DM_XoaDonXuat";
-            this.btn_DM_XoaDonXuat.Size = new System.Drawing.Size(137, 45);
+            this.btn_DM_XoaDonXuat.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_XoaDonXuat.TabIndex = 56;
             this.btn_DM_XoaDonXuat.Text = "Xóa";
             this.btn_DM_XoaDonXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -146,9 +146,9 @@ namespace quanLyKho
             // btn_DM_SuaDonXuat
             // 
             this.btn_DM_SuaDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_SuaDonXuat.Image")));
-            this.btn_DM_SuaDonXuat.Location = new System.Drawing.Point(30, 70);
+            this.btn_DM_SuaDonXuat.Location = new System.Drawing.Point(30, 79);
             this.btn_DM_SuaDonXuat.Name = "btn_DM_SuaDonXuat";
-            this.btn_DM_SuaDonXuat.Size = new System.Drawing.Size(137, 42);
+            this.btn_DM_SuaDonXuat.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_SuaDonXuat.TabIndex = 55;
             this.btn_DM_SuaDonXuat.Text = "Sửa";
             this.btn_DM_SuaDonXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,7 +181,7 @@ namespace quanLyKho
             this.btn_DM_ThemDonXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_ThemDonXuat.Image")));
             this.btn_DM_ThemDonXuat.Location = new System.Drawing.Point(30, 23);
             this.btn_DM_ThemDonXuat.Name = "btn_DM_ThemDonXuat";
-            this.btn_DM_ThemDonXuat.Size = new System.Drawing.Size(137, 44);
+            this.btn_DM_ThemDonXuat.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_ThemDonXuat.TabIndex = 54;
             this.btn_DM_ThemDonXuat.Text = "Thêm";
             this.btn_DM_ThemDonXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,7 +198,6 @@ namespace quanLyKho
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_DM_XuatHoaDon);
             this.groupBox1.Controls.Add(this.btn_DM_HuyDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_LuuDonXuat);
             this.groupBox1.Controls.Add(this.btn_DM_XoaDonXuat);
@@ -207,7 +206,7 @@ namespace quanLyKho
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(867, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(190, 332);
+            this.groupBox1.Size = new System.Drawing.Size(152, 366);
             this.groupBox1.TabIndex = 68;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
@@ -227,6 +226,15 @@ namespace quanLyKho
             this.grb_DM_Cap_Nhat_Khach_Hang.TabIndex = 60;
             this.grb_DM_Cap_Nhat_Khach_Hang.TabStop = false;
             this.grb_DM_Cap_Nhat_Khach_Hang.Text = "Cập nhật Hóa Đơn Xuất";
+            // 
+            // cbo_DM_KhachHang
+            // 
+            this.cbo_DM_KhachHang.Enabled = false;
+            this.cbo_DM_KhachHang.FormattingEnabled = true;
+            this.cbo_DM_KhachHang.Location = new System.Drawing.Point(150, 99);
+            this.cbo_DM_KhachHang.Name = "cbo_DM_KhachHang";
+            this.cbo_DM_KhachHang.Size = new System.Drawing.Size(346, 27);
+            this.cbo_DM_KhachHang.TabIndex = 11;
             // 
             // label5
             // 
@@ -255,25 +263,17 @@ namespace quanLyKho
             this.groupBox2.Controls.Add(this.grb_DM_Cap_Nhat_Khach_Hang);
             this.groupBox2.Location = new System.Drawing.Point(47, -4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1074, 329);
+            this.groupBox2.Size = new System.Drawing.Size(1029, 385);
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
-            // 
-            // cbo_DM_KhachHang
-            // 
-            this.cbo_DM_KhachHang.Enabled = false;
-            this.cbo_DM_KhachHang.FormattingEnabled = true;
-            this.cbo_DM_KhachHang.Location = new System.Drawing.Point(150, 99);
-            this.cbo_DM_KhachHang.Name = "cbo_DM_KhachHang";
-            this.cbo_DM_KhachHang.Size = new System.Drawing.Size(346, 27);
-            this.cbo_DM_KhachHang.TabIndex = 11;
             // 
             // frm_DM_TaoHoaDonXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1168, 505);
+            this.ClientSize = new System.Drawing.Size(1085, 573);
+            this.Controls.Add(this.btn_DM_XuatHoaDon);
             this.Controls.Add(this.dgvDM_Main_DonXuat);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

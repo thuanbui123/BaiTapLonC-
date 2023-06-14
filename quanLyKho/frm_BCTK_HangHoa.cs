@@ -8,8 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//Thêm thư viện
-using Microsoft.Reporting.WinForms;
 
 namespace quanLyKho
 {
@@ -20,16 +18,43 @@ namespace quanLyKho
             InitializeComponent();
         }
 
-        private void frm_BCTK_HangHoa_Load(object sender, EventArgs e)
+        private void dinhDangLuoi()
+        {
+            dgvMain.Columns[0].HeaderText = "Mã hàng hóa";
+            dgvMain.Columns[0].Width = 150;
+            dgvMain.Columns[1].HeaderText = "Tên hàng hóa";
+            dgvMain.Columns[1].Width = 170;
+            dgvMain.Columns[2].HeaderText = "Tên loại";
+            dgvMain.Columns[2].Width = 170;
+            dgvMain.Columns[3].HeaderText = "Đơn vị tính";
+            dgvMain.Columns[3].Width = 170;
+            dgvMain.Columns[4].HeaderText = "Xuất xứ";
+            dgvMain.Columns[4].Width = 150;
+        }
+
+        public void loadDuLieu ()
         {
             string query = "Select hh.id, hh.tenHangHoa, hh.donViTinh, lh.tenLoai, hh.xuatXu from hangHoa as hh, loaiHang as lh where hh.idLoaiHang = lh.id";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportHangHoa.rdlc";
-            ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSet1";
-            rds.Value = dt;
-            this.reportViewer1.LocalReport.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                dgvMain.DataSource = dt;
+            } else
+            {
+                dgvMain.DataSource = null;
+            }
+            dinhDangLuoi();
+        }
+
+        private void frm_BCTK_HangHoa_Load(object sender, EventArgs e)
+        {
+            loadDuLieu();   
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frm_In_BCTKHangHoa f = new frm_In_BCTKHangHoa();
+            f.Show();
         }
     }
 }

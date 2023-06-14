@@ -37,7 +37,14 @@ namespace quanLyKho
         {
             string query = "select ctpn.idNhap, pn.soPhieuNhap, hh.tenHangHoa, ctpn.soLuongNhap, ctpn.donGiaNhap from chiTietPhieuNhap as ctpn, NhaCungCap as ncc, hangHoa as hh, phieuNhap as pn where ctpn.idSoPhieuNhap = pn.soPhieuNhap and pn.idNhaCungCap = ncc.id and ctpn.idHangHoa = hh.id and pn.soPhieuNhap = '" + class_ChiTietHoaDonNhap.SelectedIdSoPhieuNhap + "'";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            dgvMain.DataSource = dt;
+            if (dt != null)
+            {
+                dgvMain.DataSource = dt;
+            }
+            else
+            {
+                dgvMain = null;
+            }
             dinhDangLuoi();
         }
         public void loadComBo()
@@ -211,7 +218,6 @@ namespace quanLyKho
                 if (result > 0)
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo");
-                  
                     loadLenLuoi();
                 }
                 else

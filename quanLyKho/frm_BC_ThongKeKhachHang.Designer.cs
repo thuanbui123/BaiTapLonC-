@@ -1,4 +1,4 @@
-﻿
+﻿using quanLyKho.Properties;
 namespace quanLyKho
 {
     partial class frm_BC_ThongKeKhachHang
@@ -32,7 +32,7 @@ namespace quanLyKho
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BC_ThongKeKhachHang));
             this.lblThongKeKhachHang = new System.Windows.Forms.Label();
             this.dgv_Main_ThongKeKhachHang = new System.Windows.Forms.DataGridView();
-            this.btn_BC_In = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Main_ThongKeKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,28 +57,29 @@ namespace quanLyKho
             this.dgv_Main_ThongKeKhachHang.Size = new System.Drawing.Size(988, 462);
             this.dgv_Main_ThongKeKhachHang.TabIndex = 8;
             // 
-            // btn_BC_In
+            // btnIn
             // 
-            this.btn_BC_In.Image = ((System.Drawing.Image)(resources.GetObject("btn_BC_In.Image")));
-            this.btn_BC_In.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_BC_In.Location = new System.Drawing.Point(5, 62);
-            this.btn_BC_In.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_BC_In.Name = "btn_BC_In";
-            this.btn_BC_In.Size = new System.Drawing.Size(108, 46);
-            this.btn_BC_In.TabIndex = 7;
-            this.btn_BC_In.Text = "In";
-            this.btn_BC_In.UseVisualStyleBackColor = true;
-            this.btn_BC_In.Click += new System.EventHandler(this.btn_BC_In_Click);
+            this.btnIn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.Location = new System.Drawing.Point(4, 61);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(115, 50);
+            this.btnIn.TabIndex = 12;
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frm_BC_ThongKeKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1001, 597);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.lblThongKeKhachHang);
             this.Controls.Add(this.dgv_Main_ThongKeKhachHang);
-            this.Controls.Add(this.btn_BC_In);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_BC_ThongKeKhachHang";
@@ -93,6 +94,6 @@ namespace quanLyKho
 
         private System.Windows.Forms.Label lblThongKeKhachHang;
         private System.Windows.Forms.DataGridView dgv_Main_ThongKeKhachHang;
-        private System.Windows.Forms.Button btn_BC_In;
+        private System.Windows.Forms.Button btnIn;
     }
 }

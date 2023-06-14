@@ -29,9 +29,10 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopMatHangBanChay));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThucHien = new System.Windows.Forms.Button();
             this.rdoTheoNam = new System.Windows.Forms.RadioButton();
@@ -51,18 +52,20 @@ namespace quanLyKho
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(690, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(130, 238);
+            this.groupBox1.Size = new System.Drawing.Size(170, 238);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tác vụ";
             // 
             // btnThucHien
             // 
+            this.btnThucHien.Image = ((System.Drawing.Image)(resources.GetObject("btnThucHien.Image")));
             this.btnThucHien.Location = new System.Drawing.Point(12, 168);
             this.btnThucHien.Name = "btnThucHien";
-            this.btnThucHien.Size = new System.Drawing.Size(108, 53);
+            this.btnThucHien.Size = new System.Drawing.Size(150, 50);
             this.btnThucHien.TabIndex = 3;
             this.btnThucHien.Text = "Thực hiện";
+            this.btnThucHien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThucHien.UseVisualStyleBackColor = true;
             this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
             // 
@@ -100,16 +103,16 @@ namespace quanLyKho
             // 
             // chartHangBanChay
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartHangBanChay.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartHangBanChay.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartHangBanChay.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartHangBanChay.Legends.Add(legend1);
             this.chartHangBanChay.Location = new System.Drawing.Point(26, 94);
             this.chartHangBanChay.Name = "chartHangBanChay";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartHangBanChay.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartHangBanChay.Series.Add(series1);
             this.chartHangBanChay.Size = new System.Drawing.Size(630, 403);
             this.chartHangBanChay.TabIndex = 2;
             this.chartHangBanChay.Text = "chart1";
@@ -118,12 +121,13 @@ namespace quanLyKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 522);
+            this.ClientSize = new System.Drawing.Size(877, 522);
             this.Controls.Add(this.chartHangBanChay);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_TopMatHangBanChay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Top mặt hàng bán chạy";
             this.Load += new System.EventHandler(this.frm_TopMatHangBanChay_Load);
             this.groupBox1.ResumeLayout(false);

@@ -70,9 +70,7 @@ namespace quanLyKho
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            frmDangNhap f = this.FindForm() as frmDangNhap;
-            f.FormClosed += frmDangNhap_FormClosed;
-            f.Close();
+            this.Close();
         }
 
         private bool dangNhap (string userName, string password) 

@@ -47,19 +47,19 @@ namespace quanLyKho
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblThanhTien1 = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
             this.lbl_DonVi = new System.Windows.Forms.Label();
+            this.lblDonVi = new System.Windows.Forms.Label();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.lblHangHoa = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnThem = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,7 +71,7 @@ namespace quanLyKho
             // dgvMain
             // 
             this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Location = new System.Drawing.Point(11, 298);
+            this.dgvMain.Location = new System.Drawing.Point(11, 358);
             this.dgvMain.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMain.Name = "dgvMain";
             this.dgvMain.RowHeadersWidth = 62;
@@ -86,7 +86,7 @@ namespace quanLyKho
             this.lblNgayLapHD.Location = new System.Drawing.Point(317, 35);
             this.lblNgayLapHD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayLapHD.Name = "lblNgayLapHD";
-            this.lblNgayLapHD.Size = new System.Drawing.Size(140, 27);
+            this.lblNgayLapHD.Size = new System.Drawing.Size(94, 19);
             this.lblNgayLapHD.TabIndex = 0;
             this.lblNgayLapHD.Text = "Ngày lập HĐ";
             // 
@@ -96,7 +96,7 @@ namespace quanLyKho
             this.lblNhaCungCap.Location = new System.Drawing.Point(101, 67);
             this.lblNhaCungCap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhaCungCap.Name = "lblNhaCungCap";
-            this.lblNhaCungCap.Size = new System.Drawing.Size(137, 27);
+            this.lblNhaCungCap.Size = new System.Drawing.Size(92, 19);
             this.lblNhaCungCap.TabIndex = 0;
             this.lblNhaCungCap.Text = "Tôn Hoa Sen";
             // 
@@ -106,7 +106,7 @@ namespace quanLyKho
             this.lblSoHoaDon.Location = new System.Drawing.Point(101, 35);
             this.lblSoHoaDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon.Name = "lblSoHoaDon";
-            this.lblSoHoaDon.Size = new System.Drawing.Size(122, 27);
+            this.lblSoHoaDon.Size = new System.Drawing.Size(82, 19);
             this.lblSoHoaDon.TabIndex = 0;
             this.lblSoHoaDon.Text = "HDN00001";
             // 
@@ -116,7 +116,7 @@ namespace quanLyKho
             this.lblNgayLap.Location = new System.Drawing.Point(411, 35);
             this.lblNgayLap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayLap.Name = "lblNgayLap";
-            this.lblNgayLap.Size = new System.Drawing.Size(100, 27);
+            this.lblNgayLap.Size = new System.Drawing.Size(67, 19);
             this.lblNgayLap.TabIndex = 0;
             this.lblNgayLap.Text = "5-1-2017";
             // 
@@ -126,7 +126,7 @@ namespace quanLyKho
             this.lblNhaCungCap1.Location = new System.Drawing.Point(4, 67);
             this.lblNhaCungCap1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhaCungCap1.Name = "lblNhaCungCap1";
-            this.lblNhaCungCap1.Size = new System.Drawing.Size(146, 27);
+            this.lblNhaCungCap1.Size = new System.Drawing.Size(98, 19);
             this.lblNhaCungCap1.TabIndex = 0;
             this.lblNhaCungCap1.Text = "Nhà cung cấp";
             // 
@@ -155,7 +155,7 @@ namespace quanLyKho
             this.lblSoHoaDon1.Location = new System.Drawing.Point(4, 35);
             this.lblSoHoaDon1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon1.Name = "lblSoHoaDon1";
-            this.lblSoHoaDon1.Size = new System.Drawing.Size(121, 27);
+            this.lblSoHoaDon1.Size = new System.Drawing.Size(82, 19);
             this.lblSoHoaDon1.TabIndex = 0;
             this.lblSoHoaDon1.Text = "Số hóa đơn";
             // 
@@ -164,7 +164,7 @@ namespace quanLyKho
             this.txtDonGia.Location = new System.Drawing.Point(413, 26);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(161, 35);
+            this.txtDonGia.Size = new System.Drawing.Size(161, 26);
             this.txtDonGia.TabIndex = 2;
             // 
             // txtSoLuong
@@ -172,7 +172,7 @@ namespace quanLyKho
             this.txtSoLuong.Location = new System.Drawing.Point(103, 65);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(161, 35);
+            this.txtSoLuong.Size = new System.Drawing.Size(161, 26);
             this.txtSoLuong.TabIndex = 2;
             // 
             // cboHangHoa
@@ -181,7 +181,7 @@ namespace quanLyKho
             this.cboHangHoa.Location = new System.Drawing.Point(103, 26);
             this.cboHangHoa.Margin = new System.Windows.Forms.Padding(2);
             this.cboHangHoa.Name = "cboHangHoa";
-            this.cboHangHoa.Size = new System.Drawing.Size(161, 34);
+            this.cboHangHoa.Size = new System.Drawing.Size(161, 27);
             this.cboHangHoa.TabIndex = 1;
             // 
             // lblThanhTien
@@ -190,7 +190,7 @@ namespace quanLyKho
             this.lblThanhTien.Location = new System.Drawing.Point(411, 69);
             this.lblThanhTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThanhTien.Name = "lblThanhTien";
-            this.lblThanhTien.Size = new System.Drawing.Size(132, 26);
+            this.lblThanhTien.Size = new System.Drawing.Size(89, 19);
             this.lblThanhTien.TabIndex = 0;
             this.lblThanhTien.Text = "2040000000";
             // 
@@ -216,8 +216,8 @@ namespace quanLyKho
             this.groupBox4.Controls.Add(this.lblThanhTien);
             this.groupBox4.Controls.Add(this.lblThanhTien1);
             this.groupBox4.Controls.Add(this.lblDonGia);
-            this.groupBox4.Controls.Add(this.lbl);
             this.groupBox4.Controls.Add(this.lbl_DonVi);
+            this.groupBox4.Controls.Add(this.lblDonVi);
             this.groupBox4.Controls.Add(this.lblSoLuong);
             this.groupBox4.Controls.Add(this.lblHangHoa);
             this.groupBox4.Location = new System.Drawing.Point(5, 139);
@@ -234,7 +234,7 @@ namespace quanLyKho
             this.lblThanhTien1.Location = new System.Drawing.Point(317, 69);
             this.lblThanhTien1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThanhTien1.Name = "lblThanhTien1";
-            this.lblThanhTien1.Size = new System.Drawing.Size(123, 26);
+            this.lblThanhTien1.Size = new System.Drawing.Size(80, 19);
             this.lblThanhTien1.TabIndex = 0;
             this.lblThanhTien1.Text = "Thành tiền";
             // 
@@ -244,19 +244,9 @@ namespace quanLyKho
             this.lblDonGia.Location = new System.Drawing.Point(317, 31);
             this.lblDonGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonGia.Name = "lblDonGia";
-            this.lblDonGia.Size = new System.Drawing.Size(92, 26);
+            this.lblDonGia.Size = new System.Drawing.Size(62, 19);
             this.lblDonGia.TabIndex = 0;
             this.lblDonGia.Text = "Đơn giá";
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(22, 108);
-            this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(79, 26);
-            this.lbl.TabIndex = 0;
-            this.lbl.Text = "Đơn vị";
             // 
             // lbl_DonVi
             // 
@@ -264,9 +254,19 @@ namespace quanLyKho
             this.lbl_DonVi.Location = new System.Drawing.Point(101, 108);
             this.lbl_DonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_DonVi.Name = "lbl_DonVi";
-            this.lbl_DonVi.Size = new System.Drawing.Size(58, 26);
+            this.lbl_DonVi.Size = new System.Drawing.Size(39, 19);
             this.lbl_DonVi.TabIndex = 0;
             this.lbl_DonVi.Text = "Tấm";
+            // 
+            // lblDonVi
+            // 
+            this.lblDonVi.AutoSize = true;
+            this.lblDonVi.Location = new System.Drawing.Point(22, 108);
+            this.lblDonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDonVi.Name = "lblDonVi";
+            this.lblDonVi.Size = new System.Drawing.Size(54, 19);
+            this.lblDonVi.TabIndex = 0;
+            this.lblDonVi.Text = "Đơn vị";
             // 
             // lblSoLuong
             // 
@@ -274,7 +274,7 @@ namespace quanLyKho
             this.lblSoLuong.Location = new System.Drawing.Point(22, 69);
             this.lblSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(102, 26);
+            this.lblSoLuong.Size = new System.Drawing.Size(69, 19);
             this.lblSoLuong.TabIndex = 0;
             this.lblSoLuong.Text = "Số lượng";
             // 
@@ -284,7 +284,7 @@ namespace quanLyKho
             this.lblHangHoa.Location = new System.Drawing.Point(22, 33);
             this.lblHangHoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHangHoa.Name = "lblHangHoa";
-            this.lblHangHoa.Size = new System.Drawing.Size(111, 26);
+            this.lblHangHoa.Size = new System.Drawing.Size(73, 19);
             this.lblHangHoa.TabIndex = 0;
             this.lblHangHoa.Text = "Hàng hóa";
             // 
@@ -295,9 +295,87 @@ namespace quanLyKho
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(223, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 32);
+            this.label1.Size = new System.Drawing.Size(248, 22);
             this.label1.TabIndex = 6;
             this.label1.Text = "CHI TIẾT HÓA ĐƠN NHẬP";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(11, 22);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(105, 50);
+            this.btnThem.TabIndex = 10;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnIn
+            // 
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.Location = new System.Drawing.Point(11, 293);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(105, 50);
+            this.btnIn.TabIndex = 10;
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(11, 239);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(105, 50);
+            this.btnHuy.TabIndex = 10;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(11, 185);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(105, 50);
+            this.btnLuu.TabIndex = 10;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(11, 131);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(105, 50);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.Location = new System.Drawing.Point(11, 77);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(105, 50);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupBox2
             // 
@@ -312,7 +390,7 @@ namespace quanLyKho
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(112, 287);
+            this.groupBox2.Size = new System.Drawing.Size(129, 347);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -321,90 +399,12 @@ namespace quanLyKho
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnIn
-            // 
-            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
-            this.btnIn.Location = new System.Drawing.Point(11, 243);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(97, 40);
-            this.btnIn.TabIndex = 10;
-            this.btnIn.Text = "In";
-            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIn.UseVisualStyleBackColor = true;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(11, 199);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(97, 40);
-            this.btnHuy.TabIndex = 10;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(11, 155);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(97, 40);
-            this.btnLuu.TabIndex = 10;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(11, 110);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(97, 40);
-            this.btnXoa.TabIndex = 10;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(11, 66);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(97, 40);
-            this.btnSua.TabIndex = 10;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(11, 22);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(97, 40);
-            this.btnThem.TabIndex = 10;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // frm_DM_ChiTietHoaDonNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(803, 465);
+            this.ClientSize = new System.Drawing.Size(819, 523);
             this.Controls.Add(this.dgvMain);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -446,6 +446,7 @@ namespace quanLyKho
         private System.Windows.Forms.Label lblThanhTien1;
         private System.Windows.Forms.Label lblDonGia;
         private System.Windows.Forms.Label lbl_DonVi;
+        private System.Windows.Forms.Label lblDonVi;
         private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Label lblHangHoa;
         private System.Windows.Forms.Label label1;
@@ -457,6 +458,5 @@ namespace quanLyKho
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lbl;
     }
 }

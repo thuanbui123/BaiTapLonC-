@@ -208,7 +208,7 @@ namespace quanLyKho
             {
                 if (Debugger.IsAttached)
                 {
-                    Environment.Exit(0); // Tắt ứng dụng ngay cả trong chế độ debug
+               /*     Environment.Exit(0); */// Tắt ứng dụng ngay cả trong chế độ debug
                 }
                 else
                 {

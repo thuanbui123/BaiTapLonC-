@@ -369,7 +369,8 @@ namespace quanLyKho
             this.dgv_Main_DonXuat.Name = "dgv_Main_DonXuat";
             this.dgv_Main_DonXuat.Size = new System.Drawing.Size(933, 233);
             this.dgv_Main_DonXuat.TabIndex = 71;
-            this.dgv_Main_DonXuat.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Main_DonXuat_CellMouseClick);
+            this.dgv_Main_DonXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Main_DonXuat_CellContentClick);
+        
             // 
             // groupBox1
             // 

@@ -231,6 +231,7 @@ namespace quanLyKho
 
         private void btn_DM_HuyKhachHang_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             txt_DM_MaKhachHang.Text = "";
             txt_DM_TenKhachHang.Text = "";
             txt_DM_DiaChi.Text = "";

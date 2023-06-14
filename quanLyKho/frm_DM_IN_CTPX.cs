@@ -21,7 +21,9 @@ namespace quanLyKho
 
         private void frm_DM_IN_CTPX_Load(object sender, EventArgs e)
         {
-            string query = "Select * from chiTietPhieuXuat ";
+            string query = "Select hh.tenHangHoa, hh.donViTinh, ctpx.soLuongXuat, ctpx.donGiaXuat,ctpx.idXuat " +
+                "from chiTietPhieuXuat as ctpx, kho as k, hangHoa as hh, phieuXuat as px" +
+                " where ctpx.idKho = k.id and ctpx.idPhieuXuat = px.soPhieuXuat and k.idHangHoa = hh.id and ctpx.idPhieuXuat = '" + GlobalDataChiTietHoaDonXuat.soHoaDon + "'";
 
 
             DataTable dt = DataProvider.Instance.executeQuery(query);

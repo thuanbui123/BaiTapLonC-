@@ -37,6 +37,7 @@ namespace quanLyKho
             this.cbo_NCC = new System.Windows.Forms.ComboBox();
             this.rdo_loaihang = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.rdo_Reset = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BangThongTin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,7 @@ namespace quanLyKho
             // 
             // cbo_NCC
             // 
+            this.cbo_NCC.Enabled = false;
             this.cbo_NCC.FormattingEnabled = true;
             this.cbo_NCC.Location = new System.Drawing.Point(168, 69);
             this.cbo_NCC.Name = "cbo_NCC";
@@ -85,6 +87,7 @@ namespace quanLyKho
             this.rdo_loaihang.TabStop = true;
             this.rdo_loaihang.Text = "loại hàng";
             this.rdo_loaihang.UseVisualStyleBackColor = true;
+            this.rdo_loaihang.CheckedChanged += new System.EventHandler(this.rdo_loaihang_CheckedChanged);
             // 
             // label3
             // 
@@ -95,11 +98,24 @@ namespace quanLyKho
             this.label3.TabIndex = 87;
             this.label3.Text = "Nhà Cung Cấp";
             // 
+            // rdo_Reset
+            // 
+            this.rdo_Reset.AutoSize = true;
+            this.rdo_Reset.Location = new System.Drawing.Point(498, 73);
+            this.rdo_Reset.Name = "rdo_Reset";
+            this.rdo_Reset.Size = new System.Drawing.Size(53, 17);
+            this.rdo_Reset.TabIndex = 89;
+            this.rdo_Reset.TabStop = true;
+            this.rdo_Reset.Text = "Reset";
+            this.rdo_Reset.UseVisualStyleBackColor = true;
+            this.rdo_Reset.CheckedChanged += new System.EventHandler(this.rdo_Reset_CheckedChanged);
+            // 
             // Frm_BBG_NCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 366);
+            this.Controls.Add(this.rdo_Reset);
             this.Controls.Add(this.dgv_BangThongTin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbo_NCC);
@@ -125,5 +141,6 @@ namespace quanLyKho
         private System.Windows.Forms.RadioButton rdo_loaihang;
         private System.Windows.Forms.Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.RadioButton rdo_Reset;
     }
 }

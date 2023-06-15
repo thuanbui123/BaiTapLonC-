@@ -117,14 +117,13 @@ namespace quanLyKho
             this.lbl_ThanhTien.AutoSize = true;
             this.lbl_ThanhTien.Location = new System.Drawing.Point(519, 142);
             this.lbl_ThanhTien.Name = "lbl_ThanhTien";
-            this.lbl_ThanhTien.Size = new System.Drawing.Size(21, 19);
+            this.lbl_ThanhTien.Size = new System.Drawing.Size(0, 19);
             this.lbl_ThanhTien.TabIndex = 87;
-            this.lbl_ThanhTien.Text = "...";
             // 
             // lbl_DonVi
             // 
             this.lbl_DonVi.AutoSize = true;
-            this.lbl_DonVi.Location = new System.Drawing.Point(756, 107);
+            this.lbl_DonVi.Location = new System.Drawing.Point(719, 107);
             this.lbl_DonVi.Name = "lbl_DonVi";
             this.lbl_DonVi.Size = new System.Drawing.Size(21, 19);
             this.lbl_DonVi.TabIndex = 86;
@@ -208,6 +207,7 @@ namespace quanLyKho
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(227, 26);
             this.txt_SoLuong.TabIndex = 85;
+            this.txt_SoLuong.TextChanged += new System.EventHandler(this.txt_SoLuong_TextChanged);
             // 
             // label16
             // 
@@ -225,6 +225,7 @@ namespace quanLyKho
             this.txt_DonGia.Name = "txt_DonGia";
             this.txt_DonGia.Size = new System.Drawing.Size(327, 26);
             this.txt_DonGia.TabIndex = 81;
+            this.txt_DonGia.TextChanged += new System.EventHandler(this.txt_DonGia_TextChanged);
             // 
             // txt_GiaGoc
             // 

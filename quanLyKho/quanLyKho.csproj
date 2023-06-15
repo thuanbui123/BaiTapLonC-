@@ -106,10 +106,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsXuatHang.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Ds_Ctpx.Designer.cs">
+    <Compile Include="Ds_CTPX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Ds_Ctpx.xsd</DependentUpon>
+      <DependentUpon>Ds_CTPX.xsd</DependentUpon>
     </Compile>
     <Compile Include="Ds_IN_ThongKeKhachHang.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -462,7 +462,7 @@
     <EmbeddedResource Include="ReportKho.rdlc" />
     <EmbeddedResource Include="ReportLoaiHang.rdlc" />
     <EmbeddedResource Include="ReportNhapKho.rdlc" />
-    <EmbeddedResource Include="Report_Ctpx.rdlc" />
+    <EmbeddedResource Include="Report_DM_CTPX.rdlc" />
     <EmbeddedResource Include="Report_IN_ThongKeKhachHang.rdlc" />
     <None Include="dsBCTK_NCC.xsc">
       <DependentUpon>dsBCTK_NCC.xsd</DependentUpon>
@@ -541,16 +541,16 @@
     <None Include="dsXuatHang.xss">
       <DependentUpon>dsXuatHang.xsd</DependentUpon>
     </None>
-    <None Include="Ds_Ctpx.xsc">
-      <DependentUpon>Ds_Ctpx.xsd</DependentUpon>
+    <None Include="Ds_CTPX.xsc">
+      <DependentUpon>Ds_CTPX.xsd</DependentUpon>
     </None>
-    <None Include="Ds_Ctpx.xsd">
+    <None Include="Ds_CTPX.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Ds_Ctpx.Designer.cs</LastGenOutput>
+      <LastGenOutput>Ds_CTPX.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Ds_Ctpx.xss">
-      <DependentUpon>Ds_Ctpx.xsd</DependentUpon>
+    <None Include="Ds_CTPX.xss">
+      <DependentUpon>Ds_CTPX.xsd</DependentUpon>
     </None>
     <None Include="Ds_IN_ThongKeKhachHang.xsc">
       <DependentUpon>Ds_IN_ThongKeKhachHang.xsd</DependentUpon>

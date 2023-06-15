@@ -84,7 +84,19 @@ namespace quanLyKho
         private void Frm_BBG_NCC_Load(object sender, EventArgs e)
         {
             loadDuLieuLenLuoi();
-            rdo_loaihang.Checked = true;
+            rdo_Reset.Checked = true;
+            load_cbo_HangHoa();
+        }
+
+        private void rdo_loaihang_CheckedChanged(object sender, EventArgs e)
+        {
+            cbo_NCC.Enabled = true;
+        }
+
+        private void rdo_Reset_CheckedChanged(object sender, EventArgs e)
+        {
+            cbo_NCC.Enabled = false;
+            loadDuLieuLenLuoi();
             load_cbo_HangHoa();
         }
     }

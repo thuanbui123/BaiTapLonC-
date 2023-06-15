@@ -40,7 +40,7 @@ namespace quanLyKho
         }
         private void dinhDangLuoi()
         {
-            dgvDM_Main_DonXuat.Columns[0].HeaderText = "Số chứng từ xuất ";
+            dgvDM_Main_DonXuat.Columns[0].HeaderText = "Số phiếu xuất ";
             dgvDM_Main_DonXuat.Columns[0].Width = 130;
             dgvDM_Main_DonXuat.Columns[1].HeaderText = "Tên Khách Hàng";
             dgvDM_Main_DonXuat.Columns[1].Width = 200;

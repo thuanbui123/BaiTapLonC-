@@ -421,7 +421,7 @@
         <Top>4.92627cm</Top>
         <Left>1.76953cm</Left>
         <Height>1.2cm</Height>
-        <Width>14.27291cm</Width>
+        <Width>14.2729cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -601,7 +601,14 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Globals!ExecutionTime</Value>
+                  <Value>Ngày: </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime.ToShortDateString</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>

@@ -255,12 +255,12 @@ namespace quanLyKho
                         int i = DataProvider.Instance.executeNonQuery(query);
                         if (i > 0)
                         {
-                            MessageBox.Show("Delete success");
+                            MessageBox.Show("Xóa thành công.");
                             loadDuLieuLenLuoi();
                         }
                         else
                         {
-                            MessageBox.Show("Delete error");
+                            MessageBox.Show("Xóa thất bại!");
                         }
                     }
                 }
@@ -287,12 +287,12 @@ namespace quanLyKho
                     int i = DataProvider.Instance.executeNonQuery(query);
                     if (i > 0)
                     {
-                        MessageBox.Show("Insert success");
+                        MessageBox.Show("Thêm thành công.");
                         status = true;
                     }
                     else
                     {
-                        MessageBox.Show("Insert error");
+                        MessageBox.Show("Thêm thất bại!");
                         status = false;
                     }
                 }
@@ -320,12 +320,12 @@ namespace quanLyKho
                 int i = DataProvider.Instance.executeNonQuery(query);
                 if (i > 0)
                 {
-                    MessageBox.Show("Update success");
+                    MessageBox.Show("Sửa thành công.");
                     status = true;
                 }
                 else
                 {
-                    MessageBox.Show("Update error");
+                    MessageBox.Show("Xóa thất bại!");
                     status = false;
                 }
             }
@@ -396,6 +396,7 @@ namespace quanLyKho
             txtXuatXu.Enabled = false;
             cboMaLoai.Enabled = false;
             txtMaHangHoa.Enabled = false;
+            loadDuLieuLenLuoi();
             getDongThuI(0);
             errorProvider1.Clear();
             if (rdoTheoMa.Checked)

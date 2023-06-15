@@ -18,6 +18,7 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
+
         private void DinhDangLuoi()
         {
             dgvMain.Columns[0].HeaderText = "Mã loại hàng";
@@ -28,18 +29,18 @@ namespace quanLyKho
             dgvMain.Columns[2].Width = 250;
 
         }
+
         private void frm_BCTK_ThongKeLoaiHang_Load(object sender, EventArgs e)
         {
             string query = "SELECT lh.id,lh.tenLoai,lh.dienGiai from loaiHang as lh";
             DataTable dt = DataProvider.Instance.executeQuery(query);
             dgvMain.DataSource = dt;
             DinhDangLuoi();
-           
         }
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            frm_BCK_InLoaiHang f = new frm_BCK_InLoaiHang();
+            frm_InLoaiHang f = new frm_InLoaiHang();
             f.ShowDialog();
         }
     }

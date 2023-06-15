@@ -1,6 +1,7 @@
-﻿namespace quanLyKho
+﻿
+namespace quanLyKho
 {
-    partial class frm_BCK_InLoaiHang
+    partial class frm_InLoaiHang
     {
         /// <summary>
         /// Required designer variable.
@@ -33,21 +34,22 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(0, -2);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(801, 451);
-            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Size = new System.Drawing.Size(601, 367);
+            this.reportViewer1.TabIndex = 1;
             // 
-            // frm_BCK_InLoaiHang
+            // frm_InLoaiHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frm_BCK_InLoaiHang";
-            this.Text = "In loại hàng";
-            this.Load += new System.EventHandler(this.frm_BCK_InLoaiHang_Load);
+            this.Name = "frm_InLoaiHang";
+            this.Text = "frm_InLoaiHang";
+            this.Load += new System.EventHandler(this.frm_InLoaiHang_Load);
             this.ResumeLayout(false);
 
         }

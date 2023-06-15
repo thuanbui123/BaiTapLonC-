@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace quanLyKho
 {
-    public partial class frm_BCK_InLoaiHang : Form
+    public partial class frm_InLoaiHang : Form
     {
-        public frm_BCK_InLoaiHang()
+        public frm_InLoaiHang()
         {
             InitializeComponent();
         }
 
-        private void frm_BCK_InLoaiHang_Load(object sender, EventArgs e)
+        private void frm_InLoaiHang_Load(object sender, EventArgs e)
         {
             string query = "SELECT lh.id,lh.tenLoai,lh.dienGiai from loaiHang as lh";
             DataTable dt = DataProvider.Instance.executeQuery(query);
@@ -28,7 +28,7 @@ namespace quanLyKho
             rds.Name = "DataSet1";
             rds.Value = dt;
             this.reportViewer1.LocalReport.DataSources.Add(rds);
-            
+
             this.reportViewer1.RefreshReport();
         }
     }

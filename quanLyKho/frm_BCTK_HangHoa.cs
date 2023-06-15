@@ -56,10 +56,5 @@ namespace quanLyKho
             frm_In_BCTKHangHoa f = new frm_In_BCTKHangHoa();
             f.Show();
         }
-
-        private void lblThongKeHangHoa_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
-using quanLyKho.DAO;
+﻿using quanLyKho.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +17,7 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
+
         private void DinhDangLuoi()
         {
             dgvMain.Columns[0].HeaderText = "Mã loại hàng";
@@ -28,8 +28,8 @@ namespace quanLyKho
             dgvMain.Columns[2].Width = 200;
             dgvMain.Columns[3].HeaderText = "Số lượng";
             dgvMain.Columns[3].Width = 150;
-
         }
+
         private void frm_BCTK_BaoCaoKho_Load(object sender, EventArgs e)
         {
             string query = "SELECT hangHoa.id,hangHoa.tenHangHoa,hangHoa.donViTinh,kho.soLuong FROM hangHoa,kho WHERE hangHoa.id = kho.idHangHoa";

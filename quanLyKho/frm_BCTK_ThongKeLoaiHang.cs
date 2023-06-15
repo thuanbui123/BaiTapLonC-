@@ -18,17 +18,29 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
+        private void DinhDangLuoi()
+        {
+            dgvMain.Columns[0].HeaderText = "Mã loại hàng";
+            dgvMain.Columns[0].Width = 200;
+            dgvMain.Columns[1].HeaderText = "Tên loại hàng";
+            dgvMain.Columns[1].Width = 250;
+            dgvMain.Columns[2].HeaderText = "Diễn giải";
+            dgvMain.Columns[2].Width = 250;
 
+        }
         private void frm_BCTK_ThongKeLoaiHang_Load(object sender, EventArgs e)
         {
             string query = "SELECT lh.id,lh.tenLoai,lh.dienGiai from loaiHang as lh";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportLoaiHang.rdlc";
-            ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSet1";
-            rds.Value = dt;
-            this.reportViewer1.LocalReport.DataSources.Add(rds);
-            this.reportViewer1.RefreshReport();
+            dgvMain.DataSource = dt;
+            DinhDangLuoi();
+           
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frm_BCK_InLoaiHang f = new frm_BCK_InLoaiHang();
+            f.ShowDialog();
         }
     }
 }

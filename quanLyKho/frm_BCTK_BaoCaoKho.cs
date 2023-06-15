@@ -18,20 +18,37 @@ namespace quanLyKho
         {
             InitializeComponent();
         }
+        private void DinhDangLuoi()
+        {
+            dgvMain.Columns[0].HeaderText = "Mã loại hàng";
+            dgvMain.Columns[0].Width = 200;
+            dgvMain.Columns[1].HeaderText = "Tên loại hàng";
+            dgvMain.Columns[1].Width = 250;
+            dgvMain.Columns[2].HeaderText = "Đơn vị";
+            dgvMain.Columns[2].Width = 200;
+            dgvMain.Columns[3].HeaderText = "Số lượng";
+            dgvMain.Columns[3].Width = 150;
 
+        }
         private void frm_BCTK_BaoCaoKho_Load(object sender, EventArgs e)
         {
             string query = "SELECT hangHoa.id,hangHoa.tenHangHoa,hangHoa.donViTinh,kho.soLuong FROM hangHoa,kho WHERE hangHoa.id = kho.idHangHoa";
             DataTable dt = DataProvider.Instance.executeQuery(query);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.ReportKho.rdlc";
-            ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataSet1";
-            rds.Value = dt;
-            this.reportViewer1.LocalReport.DataSources.Add(rds);
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                dgvMain.DataSource = dt;
+            }
+            else
+            {
+                dgvMain.DataSource = null;
+            }
+            DinhDangLuoi();
+        }
 
-
-
-            this.reportViewer1.RefreshReport();
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frm_BCK_InBaoCaoKho f = new frm_BCK_InBaoCaoKho();
+            f.ShowDialog();
         }
     }
 }

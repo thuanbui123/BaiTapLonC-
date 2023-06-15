@@ -172,6 +172,12 @@
     <Compile Include="frm_BCK_HangTonKho.Designer.cs">
       <DependentUpon>frm_BCK_HangTonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_BCK_InBaoCaoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BCK_InBaoCaoKho.Designer.cs">
+      <DependentUpon>frm_BCK_InBaoCaoKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_BCTK_BaoCaoKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,12 @@
     <Compile Include="frm_InChiTietPhieuNhap.Designer.cs">
       <DependentUpon>frm_InChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_InLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_InLoaiHang.Designer.cs">
+      <DependentUpon>frm_InLoaiHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_In_BCTKHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,7 +342,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmDM_NCC.resx">
       <DependentUpon>frmDM_NCC.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_BCK_HangTonKho.resx">
       <DependentUpon>frm_BCK_HangTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BCK_InBaoCaoKho.resx">
+      <DependentUpon>frm_BCK_InBaoCaoKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_BCTK_BaoCaoKho.resx">
       <DependentUpon>frm_BCTK_BaoCaoKho.cs</DependentUpon>
@@ -417,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_InChiTietPhieuNhap.resx">
       <DependentUpon>frm_InChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_InLoaiHang.resx">
+      <DependentUpon>frm_InLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_In_BCTKHangHoa.resx">
       <DependentUpon>frm_In_BCTKHangHoa.cs</DependentUpon>
@@ -562,19 +579,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

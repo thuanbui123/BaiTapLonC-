@@ -29,12 +29,10 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopMatHangBanChay));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnThucHien = new System.Windows.Forms.Button();
             this.rdoTheoNam = new System.Windows.Forms.RadioButton();
             this.rdoTheoQuy = new System.Windows.Forms.RadioButton();
             this.rdoTheoThang = new System.Windows.Forms.RadioButton();
@@ -45,7 +43,6 @@ namespace quanLyKho
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnThucHien);
             this.groupBox1.Controls.Add(this.rdoTheoNam);
             this.groupBox1.Controls.Add(this.rdoTheoQuy);
             this.groupBox1.Controls.Add(this.rdoTheoThang);
@@ -57,18 +54,6 @@ namespace quanLyKho
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tác vụ";
             // 
-            // btnThucHien
-            // 
-            this.btnThucHien.Image = ((System.Drawing.Image)(resources.GetObject("btnThucHien.Image")));
-            this.btnThucHien.Location = new System.Drawing.Point(12, 168);
-            this.btnThucHien.Name = "btnThucHien";
-            this.btnThucHien.Size = new System.Drawing.Size(150, 50);
-            this.btnThucHien.TabIndex = 3;
-            this.btnThucHien.Text = "Thực hiện";
-            this.btnThucHien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThucHien.UseVisualStyleBackColor = true;
-            this.btnThucHien.Click += new System.EventHandler(this.btnThucHien_Click);
-            // 
             // rdoTheoNam
             // 
             this.rdoTheoNam.AutoSize = true;
@@ -78,6 +63,7 @@ namespace quanLyKho
             this.rdoTheoNam.TabIndex = 2;
             this.rdoTheoNam.Text = "Theo năm";
             this.rdoTheoNam.UseVisualStyleBackColor = true;
+            this.rdoTheoNam.CheckedChanged += new System.EventHandler(this.rdoTheoNam_CheckedChanged);
             // 
             // rdoTheoQuy
             // 
@@ -88,6 +74,7 @@ namespace quanLyKho
             this.rdoTheoQuy.TabIndex = 1;
             this.rdoTheoQuy.Text = "Theo quý";
             this.rdoTheoQuy.UseVisualStyleBackColor = true;
+            this.rdoTheoQuy.CheckedChanged += new System.EventHandler(this.rdoTheoQuy_CheckedChanged);
             // 
             // rdoTheoThang
             // 
@@ -100,19 +87,20 @@ namespace quanLyKho
             this.rdoTheoThang.TabStop = true;
             this.rdoTheoThang.Text = "Theo tháng";
             this.rdoTheoThang.UseVisualStyleBackColor = true;
+            this.rdoTheoThang.CheckedChanged += new System.EventHandler(this.rdoTheoThang_CheckedChanged);
             // 
             // chartHangBanChay
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartHangBanChay.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartHangBanChay.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chartHangBanChay.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartHangBanChay.Legends.Add(legend4);
             this.chartHangBanChay.Location = new System.Drawing.Point(26, 94);
             this.chartHangBanChay.Name = "chartHangBanChay";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartHangBanChay.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartHangBanChay.Series.Add(series4);
             this.chartHangBanChay.Size = new System.Drawing.Size(630, 403);
             this.chartHangBanChay.TabIndex = 2;
             this.chartHangBanChay.Text = "chart1";
@@ -139,7 +127,6 @@ namespace quanLyKho
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnThucHien;
         private System.Windows.Forms.RadioButton rdoTheoNam;
         private System.Windows.Forms.RadioButton rdoTheoQuy;
         private System.Windows.Forms.RadioButton rdoTheoThang;

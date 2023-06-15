@@ -59,6 +59,7 @@ namespace quanLyKho
             // 
             this.lblBaoCaoKho.AutoSize = true;
             this.lblBaoCaoKho.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaoCaoKho.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblBaoCaoKho.Location = new System.Drawing.Point(239, 8);
             this.lblBaoCaoKho.Name = "lblBaoCaoKho";
             this.lblBaoCaoKho.Size = new System.Drawing.Size(128, 25);

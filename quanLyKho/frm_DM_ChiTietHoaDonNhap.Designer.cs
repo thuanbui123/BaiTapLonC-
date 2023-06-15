@@ -146,7 +146,7 @@ namespace quanLyKho
             this.groupBox1.Size = new System.Drawing.Size(656, 104);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cập nhật Chi tiết Hóa đơn nhập";
+            this.groupBox1.Text = "Cập nhật Chi tiết phiếu nhập";
             this.groupBox1.UseCompatibleTextRendering = true;
             // 
             // lblSoHoaDon1
@@ -155,9 +155,9 @@ namespace quanLyKho
             this.lblSoHoaDon1.Location = new System.Drawing.Point(4, 35);
             this.lblSoHoaDon1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon1.Name = "lblSoHoaDon1";
-            this.lblSoHoaDon1.Size = new System.Drawing.Size(82, 19);
+            this.lblSoHoaDon1.Size = new System.Drawing.Size(64, 19);
             this.lblSoHoaDon1.TabIndex = 0;
-            this.lblSoHoaDon1.Text = "Số hóa đơn";
+            this.lblSoHoaDon1.Text = "Số phiếu";
             // 
             // txtDonGia
             // 
@@ -292,12 +292,12 @@ namespace quanLyKho
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(223, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 22);
+            this.label1.Size = new System.Drawing.Size(218, 22);
             this.label1.TabIndex = 6;
-            this.label1.Text = "CHI TIẾT HÓA ĐƠN NHẬP";
+            this.label1.Text = "CHI TIẾT PHIẾU NHẬP";
             // 
             // btnThem
             // 

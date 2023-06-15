@@ -29,6 +29,7 @@ namespace quanLyKho
 
 
 
+
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "quanLyKho.Report_DM_CTPX.rdlc";
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DataSet1";

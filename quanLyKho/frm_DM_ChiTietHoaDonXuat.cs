@@ -48,7 +48,6 @@ namespace quanLyKho
 
             return data;
         }
-
         private void dinhDangLuoi()
         {
             dgv_Main_DonXuat.Columns[0].HeaderText = "Tên hàng hóa";
@@ -64,68 +63,6 @@ namespace quanLyKho
 
         }
 
-
-        private void setState(string state)
-        {
-            switch (state)
-            {
-                case "Reset":
-
-                    btn_DM_ThemDonXuat.Enabled = true;
-                    btn_DM_SuaDonXuat.Enabled = true;
-                    btn_DM_XoaDonXuat.Enabled = true;
-                    btn_DM_HuyDonXuat.Enabled = true;
-
-                    btn_DM_LuuDonXuat.Enabled = true;
-                    txt_SoLuong.Text = "";
-                    txt_DonGia.Text = "";
-                    break;
-
-                case "Adding":
-                    txt_SoLuong.Focus();
-                    btn_DM_ThemDonXuat.Enabled = false;
-                    btn_DM_SuaDonXuat.Enabled = false;
-                    btn_DM_XoaDonXuat.Enabled = false;
-                    btn_DM_HuyDonXuat.Enabled = true;
-
-                    btn_DM_LuuDonXuat.Enabled = true;
-                    cbo_HangHoa.Enabled = true;
-                    txt_DonGia.Enabled = true;
-                    txt_SoLuong.Enabled = true;
-                    txt_SoLuongKho.Enabled = false;
-
-                    txt_SoLuong.Text = "";
-                    txt_DonGia.Text = "";
-                    break;
-                case "Editing":
-                    txt_DonGia.Focus();
-                    btn_DM_ThemDonXuat.Enabled = false;
-                    btn_DM_SuaDonXuat.Enabled = false;
-                    btn_DM_XoaDonXuat.Enabled = false;
-                    btn_DM_HuyDonXuat.Enabled = true;
-
-                    btn_DM_LuuDonXuat.Enabled = true;
-
-                    cbo_HangHoa.Enabled = true;
-                    txt_DonGia.Enabled = true;
-                    txt_SoLuong.Enabled = true;
-                    txt_SoLuongKho.Enabled = false;
-                    break;
-
-
-            }
-        }
-        private void updateKho()
-        {
-            string id = cbo_HangHoa.SelectedValue.ToString();
-            object idKho = DataProvider.Instance.executeScalar("select id from kho  where idHangHoa = '" + id + "'");
-            object soluongKho = DataProvider.Instance.executeScalar("select soLuong from kho where idHangHoa = '" + id + "'");
-            s1 = Convert.ToInt32(soluongKho) - Convert.ToInt32(txt_SoLuong.Text);
-            MessageBox.Show("Thêm thành công");
-            string query1 = "update kho as k set k.soLuong= '" + s1 + "'where k.id = '" + idKho + "'";
-            s1 = 0;
-            
-        }
         private void addCustomer()
         {
             try
@@ -141,13 +78,13 @@ namespace quanLyKho
                 }
                 else
                 {
-                    string query = "insert into chiTietPhieuXuat values ('" + idKho+ "', '" + lbl_DM_CTPX_SoHoaDon.Text + "',  '" + Convert.ToInt32(txt_SoLuong.Text) + "', '" + Convert.ToDecimal(txt_DonGia.Text) + "')";
+                    string query = "insert into chiTietPhieuXuat values ('" + idKho + "', '" + lbl_DM_CTPX_SoHoaDon.Text + "',  '" + Convert.ToInt32(txt_SoLuong.Text) + "', '" + Convert.ToDecimal(txt_DonGia.Text) + "')";
                     int i = DataProvider.Instance.executeNonQuery(query);
                     if (i > 0)
                     {
                         MessageBox.Show("Thêm thành công");
                         //s1 = Convert.ToInt32(soluongKho) - Convert.ToInt32(txt_SoLuong.Text);
-                        updateKho();
+                       
                         //string query1 = "update kho as k set k.soLuong= '" + s1 + "'where k.id = '" + idKho + "'";
                         //s1 = 0;
                         loadDuLieuLenLuoi();
@@ -169,7 +106,7 @@ namespace quanLyKho
             {
                 string id = cbo_HangHoa.SelectedValue.ToString();
                 object idKho = DataProvider.Instance.executeScalar("select id from kho  where idHangHoa = '" + id + "'");
-                string query = "update chiTietPhieuXuat set  idKho = '" +idKho + "', idPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "',soLuongXuat ='" + Convert.ToInt32(txt_SoLuong.Text.Trim()) + "', donGiaXuat = '" + Convert.ToInt32(txt_DonGia.Text) + "' where idXuat='" + idchitietphieuxuat() + "'";
+                string query = "update chiTietPhieuXuat set  idKho = '" + idKho + "', idPhieuXuat = '" + lbl_DM_CTPX_SoHoaDon.Text + "',soLuongXuat ='" + Convert.ToInt32(txt_SoLuong.Text.Trim()) + "', donGiaXuat = '" + Convert.ToInt32(txt_DonGia.Text) + "' where idXuat='" + idchitietphieuxuat() + "'";
                 int i = DataProvider.Instance.executeNonQuery(query);
 
                 if (i > 0)
@@ -192,7 +129,6 @@ namespace quanLyKho
 
         private void btn_DM_ThemDonXuat_Click(object sender, EventArgs e)
         {
-
             addnew = true;
             setState("Adding");
         }
@@ -233,10 +169,64 @@ namespace quanLyKho
             return error;
         }
 
-        public int getSoLuong ()
+
+        private void setState(string state)
+        {
+            switch (state)
+            {
+                case "Reset":
+
+                    btn_DM_ThemDonXuat.Enabled = true;
+                    btn_DM_SuaDonXuat.Enabled = true;
+                    btn_DM_XoaDonXuat.Enabled = true;
+                    btn_DM_HuyDonXuat.Enabled = false;
+                    
+                    btn_DM_LuuDonXuat.Enabled = false;
+                    txt_SoLuong.Text = "";
+                    txt_DonGia.Text = "";
+                    break;
+
+                case "Adding":
+                    txt_SoLuong.Focus();
+                    btn_DM_ThemDonXuat.Enabled = false;
+                    btn_DM_SuaDonXuat.Enabled = false;
+                    btn_DM_XoaDonXuat.Enabled = false;
+                    btn_DM_HuyDonXuat.Enabled = true;
+
+                    btn_DM_LuuDonXuat.Enabled = true;
+                    cbo_HangHoa.Enabled = true;
+                    txt_DonGia.Enabled = true;
+                    txt_SoLuong.Enabled = true;
+                    txt_SoLuongKho.Enabled = false;
+
+                    txt_SoLuong.Text = "";
+                    txt_DonGia.Text = "";
+                    break;
+                case "Editing":
+                    txt_DonGia.Focus();
+                    btn_DM_ThemDonXuat.Enabled = false;
+                    btn_DM_SuaDonXuat.Enabled = false;
+                    btn_DM_XoaDonXuat.Enabled = false;
+                    btn_DM_HuyDonXuat.Enabled = true;
+
+                    btn_DM_LuuDonXuat.Enabled = true;
+
+                    cbo_HangHoa.Enabled = true;
+                    txt_DonGia.Enabled = true;
+                    txt_SoLuong.Enabled = true;
+                    txt_SoLuongKho.Enabled = false;
+                    break;
+
+
+            }
+        }
+
+
+
+        public int getSoLuong()
         {
             string id = cbo_HangHoa.SelectedValue.ToString();
-            object soLuong = DataProvider.Instance.executeScalar("select k.soLuong from kho as k where k.idHangHoa = '"+id+"'");
+            object soLuong = DataProvider.Instance.executeScalar("select k.soLuong from kho as k where k.idHangHoa = '" + id + "'");
             return Convert.ToInt32(soLuong);
         }
 
@@ -302,7 +292,7 @@ namespace quanLyKho
                 txt_SoLuongKho.Text = Convert.ToString(data);
                 data = DataProvider.Instance.executeScalar("Select xuatXu from hangHoa where tenHangHoa = N'" + tenHH + "'");
                 lbl_XuatXu.Text = Convert.ToString(data);
-                data = DataProvider.Instance.executeScalar("Select ctpx.soLuongXuat * ctpx.donGiaXuat from hangHoa as hh, chiTietPhieuXuat as ctpx, kho as k where tenHangHoa = N'" + tenHH + "' and ctpx.idKho = k.id and k.idHangHoa = hh.id and ctpx.idPhieuXuat='"+GlobalDataChiTietHoaDonXuat.soHoaDon+"'");
+                data = DataProvider.Instance.executeScalar("Select ctpx.soLuongXuat * ctpx.donGiaXuat from hangHoa as hh, chiTietPhieuXuat as ctpx, kho as k where tenHangHoa = N'" + tenHH + "' and ctpx.idKho = k.id and k.idHangHoa = hh.id");
                 lbl_ThanhTien.Text = Convert.ToString(data);
                 txt_SoLuong.Text = dgv_Main_DonXuat.Rows[i].Cells[2].Value.ToString();
                 txt_DonGia.Text = dgv_Main_DonXuat.Rows[i].Cells[3].Value.ToString();
@@ -346,22 +336,18 @@ namespace quanLyKho
         {
             errorProvider1.Clear();
             setState("Reset");
+            
         }
 
         private void btn_DM_LuuDonXuat_Click(object sender, EventArgs e)
         {
-            //addCustomer();
+            addCustomer();
         }
 
         private void cbo_HangHoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_SoLuongKho.Text = getSoLuong().ToString();
-            txt_GiaGoc.Text = getGiaGoc().ToString();          
-            txt_SoLuong.Text = getSoLuongXuat().ToString();
-            txt_DonGia.Text = getDonGia().ToString();
-            lbl_DonVi.Text = getDonVi().ToString();
-            lbl_XuatXu.Text = getXuatXu().ToString();
-            //lbl_ThanhTien.Text = getThanhTien().ToString();
+            txt_GiaGoc.Text = getGiaGoc().ToString();
         }
 
         private void btn_DM_LuuDonXuat_Click_1(object sender, EventArgs e)
@@ -420,16 +406,9 @@ namespace quanLyKho
             return idPhieuXuat;
         }
 
-        private void txt_SoLuong_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            //lbl_ThanhTien.Text = (Convert.ToDouble(txt_DonGia.Text) * Convert.ToDouble(txt_SoLuong.Text)).ToString();
-            //lbl_ThanhTien.Text = getThanhTien().ToString();
-        }
 
-        private void txt_DonGia_TextChanged(object sender, EventArgs e)
-        {
-            //lbl_ThanhTien.Text = getThanhTien().ToString();
-            //lbl_ThanhTien.Text = (Convert.ToDouble(txt_DonGia.Text) * Convert.ToDouble(txt_SoLuong.Text)).ToString();
         }
 
         private void btn_DM_XoaDonXuat_Click(object sender, EventArgs e)

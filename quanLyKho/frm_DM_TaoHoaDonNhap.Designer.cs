@@ -74,9 +74,9 @@ namespace quanLyKho
             this.lblTaoHoaDonDanhMuc.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblTaoHoaDonDanhMuc.Location = new System.Drawing.Point(289, 14);
             this.lblTaoHoaDonDanhMuc.Name = "lblTaoHoaDonDanhMuc";
-            this.lblTaoHoaDonDanhMuc.Size = new System.Drawing.Size(203, 22);
+            this.lblTaoHoaDonDanhMuc.Size = new System.Drawing.Size(173, 22);
             this.lblTaoHoaDonDanhMuc.TabIndex = 8;
-            this.lblTaoHoaDonDanhMuc.Text = "TẠO HÓA ĐƠN NHẬP";
+            this.lblTaoHoaDonDanhMuc.Text = "TẠO PHIẾU NHẬP";
             // 
             // errorProvider1
             // 
@@ -97,7 +97,7 @@ namespace quanLyKho
             this.groupBox1.Size = new System.Drawing.Size(693, 142);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cập nhật Hóa đơn nhập";
+            this.groupBox1.Text = "Cập nhật phiếu nhập";
             // 
             // cboNhaCungCap
             // 
@@ -150,9 +150,9 @@ namespace quanLyKho
             this.lblSoHoaDon.Location = new System.Drawing.Point(12, 43);
             this.lblSoHoaDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon.Name = "lblSoHoaDon";
-            this.lblSoHoaDon.Size = new System.Drawing.Size(79, 19);
+            this.lblSoHoaDon.Size = new System.Drawing.Size(62, 19);
             this.lblSoHoaDon.TabIndex = 0;
-            this.lblSoHoaDon.Text = "Số hóa đơn";
+            this.lblSoHoaDon.Text = "Số phiếu";
             // 
             // btnThem
             // 

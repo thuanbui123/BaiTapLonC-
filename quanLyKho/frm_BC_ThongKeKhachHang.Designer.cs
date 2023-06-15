@@ -40,7 +40,7 @@ namespace quanLyKho
             // 
             this.lblThongKeKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblThongKeKhachHang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongKeKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblThongKeKhachHang.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblThongKeKhachHang.Location = new System.Drawing.Point(0, 0);
             this.lblThongKeKhachHang.Name = "lblThongKeKhachHang";
             this.lblThongKeKhachHang.Size = new System.Drawing.Size(1001, 58);

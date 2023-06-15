@@ -60,7 +60,7 @@ namespace quanLyKho
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(127, 23);
+            this.label1.Location = new System.Drawing.Point(160, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(340, 25);
             this.label1.TabIndex = 88;
@@ -70,19 +70,21 @@ namespace quanLyKho
             // cbo_NCC
             // 
             this.cbo_NCC.Enabled = false;
+            this.cbo_NCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_NCC.FormattingEnabled = true;
-            this.cbo_NCC.Location = new System.Drawing.Point(168, 69);
+            this.cbo_NCC.Location = new System.Drawing.Point(178, 66);
             this.cbo_NCC.Name = "cbo_NCC";
-            this.cbo_NCC.Size = new System.Drawing.Size(135, 21);
+            this.cbo_NCC.Size = new System.Drawing.Size(135, 28);
             this.cbo_NCC.TabIndex = 84;
             this.cbo_NCC.SelectedIndexChanged += new System.EventHandler(this.cbo_NCC_SelectedIndexChanged);
             // 
             // rdo_loaihang
             // 
             this.rdo_loaihang.AutoSize = true;
-            this.rdo_loaihang.Location = new System.Drawing.Point(382, 70);
+            this.rdo_loaihang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdo_loaihang.Location = new System.Drawing.Point(366, 69);
             this.rdo_loaihang.Name = "rdo_loaihang";
-            this.rdo_loaihang.Size = new System.Drawing.Size(68, 17);
+            this.rdo_loaihang.Size = new System.Drawing.Size(91, 24);
             this.rdo_loaihang.TabIndex = 85;
             this.rdo_loaihang.TabStop = true;
             this.rdo_loaihang.Text = "loại hàng";
@@ -92,19 +94,21 @@ namespace quanLyKho
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 72);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.Size = new System.Drawing.Size(113, 20);
             this.label3.TabIndex = 87;
             this.label3.Text = "Nhà Cung Cấp";
             // 
             // rdo_Reset
             // 
             this.rdo_Reset.AutoSize = true;
-            this.rdo_Reset.Location = new System.Drawing.Point(498, 73);
+            this.rdo_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdo_Reset.Location = new System.Drawing.Point(486, 67);
             this.rdo_Reset.Name = "rdo_Reset";
-            this.rdo_Reset.Size = new System.Drawing.Size(53, 17);
-            this.rdo_Reset.TabIndex = 89;
+            this.rdo_Reset.Size = new System.Drawing.Size(70, 24);
+            this.rdo_Reset.TabIndex = 90;
             this.rdo_Reset.TabStop = true;
             this.rdo_Reset.Text = "Reset";
             this.rdo_Reset.UseVisualStyleBackColor = true;

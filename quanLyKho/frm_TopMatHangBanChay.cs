@@ -21,31 +21,17 @@ namespace quanLyKho
             InitializeComponent();
         }
 
-        private void btnThucHien_Click(object sender, EventArgs e)
-        {
-            if (rdoTheoThang.Checked)
-            {
-                theoThang();
-            } else if (rdoTheoQuy.Checked)
-            {
-                theoQuy();
-            } else if (rdoTheoNam.Checked)
-            {
-                theoNam();
-            }
-        }
-
         private void theoThang()
         {
             chartHangBanChay.Series.Clear();
             chartHangBanChay.Titles.Clear();
             int month = DateTime.Now.Month;
-            chartHangBanChay.Titles.Add("Top 5 mặt hàng bán chạy nhất tháng "+month+"");
+            chartHangBanChay.Titles.Add("Top 3 mặt hàng bán chạy nhất tháng "+month+"");
             chartHangBanChay.ChartAreas[0].AxisX.Title = "Mặt hàng";
             chartHangBanChay.ChartAreas[0].AxisY.Title = "Tỷ lệ bán";
             DataTable data = new DataTable();
 
-            string query = "select top(5) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) = '"+month+"'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
+            string query = "select top(3) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) = '"+month+"'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
             data = DataProvider.Instance.executeQuery(query);
 
             chartHangBanChay.DataSource = data;
@@ -86,12 +72,12 @@ namespace quanLyKho
                 thangBatDau = 10;
                 thangKetThuc = 12;
             }
-            chartHangBanChay.Titles.Add("Top 5 mặt hàng bán chạy nhất quý " + quy + "");
+            chartHangBanChay.Titles.Add("Top 3 mặt hàng bán chạy nhất quý " + quy + "");
             chartHangBanChay.ChartAreas[0].AxisX.Title = "Mặt hàng";
             chartHangBanChay.ChartAreas[0].AxisY.Title = "Tỷ lệ bán";
             DataTable data = new DataTable();
 
-            string query = "select top(5) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) >= '" + thangBatDau + "' And MONTH(px.ngayLap_Xuat) <= '"+thangKetThuc+"')  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
+            string query = "select top(3) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) >= '" + thangBatDau + "' And MONTH(px.ngayLap_Xuat) <= '"+thangKetThuc+"')  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
             data = DataProvider.Instance.executeQuery(query);
 
             chartHangBanChay.DataSource = data;
@@ -106,12 +92,12 @@ namespace quanLyKho
             chartHangBanChay.Series.Clear();
             chartHangBanChay.Titles.Clear();
             int year = DateTime.Now.Year;
-            chartHangBanChay.Titles.Add("Top 5 mặt hàng bán chạy nhất năm " + year + "");
+            chartHangBanChay.Titles.Add("Top 3 mặt hàng bán chạy nhất năm " + year + "");
             chartHangBanChay.ChartAreas[0].AxisX.Title = "Mặt hàng";
             chartHangBanChay.ChartAreas[0].AxisY.Title = "Tỷ lệ bán";
             DataTable data = new DataTable();
 
-            string query = "select top(5) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (Year(px.ngayLap_Xuat) = '" + year + "'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
+            string query = "select top(3) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (Year(px.ngayLap_Xuat) = '" + year + "'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
             data = DataProvider.Instance.executeQuery(query);
 
             chartHangBanChay.DataSource = data;
@@ -124,6 +110,21 @@ namespace quanLyKho
         private void frm_TopMatHangBanChay_Load(object sender, EventArgs e)
         {
             theoThang();
+        }
+
+        private void rdoTheoThang_CheckedChanged(object sender, EventArgs e)
+        {
+            theoThang();
+        }
+
+        private void rdoTheoQuy_CheckedChanged(object sender, EventArgs e)
+        {
+            theoQuy();
+        }
+
+        private void rdoTheoNam_CheckedChanged(object sender, EventArgs e)
+        {
+            theoNam();
         }
     }
 }

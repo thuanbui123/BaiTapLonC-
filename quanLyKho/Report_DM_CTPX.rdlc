@@ -2,11 +2,11 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.37521cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -33,7 +33,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox35">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -47,7 +47,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>Textbox35</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -63,7 +63,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -77,7 +77,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -93,7 +93,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="Textbox39">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -107,7 +107,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <rd:DefaultName>Textbox39</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -123,21 +123,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox15">
+                    <Textbox Name="Textbox41">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Số lượng </Value>
+                              <Value>Số lượng</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <rd:DefaultName>Textbox41</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -153,21 +153,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox19">
+                    <Textbox Name="Textbox43">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Đơn giá </Value>
+                              <Value>Đơn giá</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <rd:DefaultName>Textbox43</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -183,7 +183,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox21">
+                    <Textbox Name="Textbox45">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -197,7 +197,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox21</rd:DefaultName>
+                      <rd:DefaultName>Textbox45</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -213,21 +213,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox23">
+                    <Textbox Name="Textbox47">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Thành tiền </Value>
+                              <Value>Thành tiền</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <rd:DefaultName>Textbox47</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -248,7 +248,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
+                    <Textbox Name="Textbox36">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -262,7 +262,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <rd:DefaultName>Textbox36</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -482,10 +482,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.63183cm</Top>
-        <Left>1.66875cm</Left>
+        <Top>1.42943cm</Top>
+        <Left>1.959cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.5cm</Width>
+        <Width>16.37521cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -526,8 +526,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>3.66917cm</Top>
-          <Left>13.34792cm</Left>
+          <Top>3.86085cm</Top>
+          <Left>14.35254cm</Left>
           <Height>0.73229cm</Height>
           <Width>7.30249cm</Width>
           <Style>
@@ -559,8 +559,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>6.40376cm</Top>
-          <Left>13.34792cm</Left>
+          <Top>6.59544cm</Top>
+          <Left>14.35254cm</Left>
           <Height>0.6cm</Height>
           <Width>3.98167cm</Width>
           <ZIndex>1</ZIndex>
@@ -609,10 +609,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.03528cm</Top>
-          <Left>1.75917cm</Left>
+          <Top>0.37042cm</Top>
+          <Left>1.56212cm</Left>
           <Height>2.71667cm</Height>
-          <Width>13.4925cm</Width>
+          <Width>15.34458cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -708,8 +708,8 @@ Email: vlxdNhom1HT22@gmail.com</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
-          <Top>3.22379cm</Top>
-          <Left>0.26458cm</Left>
+          <Top>3.41547cm</Top>
+          <Left>1.2692cm</Left>
           <Height>4.28653cm</Height>
           <Width>12.08515cm</Width>
           <ZIndex>3</ZIndex>
@@ -753,8 +753,8 @@ Email: vlxdNhom1HT22@gmail.com</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox25</rd:DefaultName>
-          <Top>8.09681cm</Top>
-          <Left>5.95438cm</Left>
+          <Top>8.28849cm</Top>
+          <Left>6.959cm</Left>
           <Height>1.16445cm</Height>
           <Width>8.16083cm</Width>
           <ZIndex>4</ZIndex>
@@ -791,8 +791,8 @@ Email: vlxdNhom1HT22@gmail.com</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>5.20816cm</Top>
-          <Left>13.34792cm</Left>
+          <Top>5.39984cm</Top>
+          <Left>14.35254cm</Left>
           <Height>0.80754cm</Height>
           <Width>7.30249cm</Width>
           <ZIndex>5</ZIndex>
@@ -829,8 +829,8 @@ Email: vlxdNhom1HT22@gmail.com</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>4.47202cm</Top>
-          <Left>13.34792cm</Left>
+          <Top>4.6637cm</Top>
+          <Left>14.35254cm</Left>
           <Height>0.55976cm</Height>
           <Width>7.30249cm</Width>
           <ZIndex>6</ZIndex>
@@ -856,7 +856,7 @@ Email: vlxdNhom1HT22@gmail.com</Value>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="PageNumber">
+        <Textbox Name="PageNumber2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -873,8 +873,8 @@ Email: vlxdNhom1HT22@gmail.com</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>1.56172cm</Top>
-          <Left>9.47931cm</Left>
+          <Top>0.97cm</Top>
+          <Left>10.21212cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -910,7 +910,7 @@ Email: vlxdNhom1HT22@gmail.com</Value>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>f89ed155-1f00-4798-9f04-5f7cf2b8ea6a</rd:DataSourceID>
+      <rd:DataSourceID>43236868-3649-42f6-9c92-7435b517b700</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -959,7 +959,7 @@ Email: vlxdNhom1HT22@gmail.com</Value>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Ds_CTPX</rd:DataSetName>
-        <rd:SchemaPath>D:\c#\push16\BaiTapLonC-\quanLyKho\Ds_CTPX.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Quản lý kho\quanLyKho\quanLyKho\quanLyKho\Ds_CTPX.xsd</rd:SchemaPath>
         <rd:TableName>chiTietPhieuXuat</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -968,5 +968,5 @@ Email: vlxdNhom1HT22@gmail.com</Value>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>612efa33-68a7-4ff4-82c5-6540c04202cb</rd:ReportID>
+  <rd:ReportID>7cba6d81-cca0-4531-a5d5-ac2cfcd174e6</rd:ReportID>
 </Report>

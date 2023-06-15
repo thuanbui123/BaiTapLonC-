@@ -66,13 +66,13 @@ namespace quanLyKho
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(346, 30);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(257, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 22);
+            this.label1.Size = new System.Drawing.Size(209, 25);
             this.label1.TabIndex = 66;
-            this.label1.Text = "TẠO HÓA ĐƠN XUẤT ";
+            this.label1.Text = "TẠO PHIẾU XUẤT ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label7
@@ -101,7 +101,7 @@ namespace quanLyKho
             this.btn_DM_XuatHoaDon.Name = "btn_DM_XuatHoaDon";
             this.btn_DM_XuatHoaDon.Size = new System.Drawing.Size(105, 50);
             this.btn_DM_XuatHoaDon.TabIndex = 59;
-            this.btn_DM_XuatHoaDon.Text = "Xuất hóa đơn";
+            this.btn_DM_XuatHoaDon.Text = "Xuất hàng";
             this.btn_DM_XuatHoaDon.UseVisualStyleBackColor = true;
             this.btn_DM_XuatHoaDon.Click += new System.EventHandler(this.btn_DM_XuatHoaDon_Click);
             // 
@@ -169,9 +169,9 @@ namespace quanLyKho
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(30, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 19);
+            this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Số hóa đơn ";
+            this.label2.Text = "Phiếu xuất";
             // 
             // btn_DM_ThemDonXuat
             // 
@@ -225,7 +225,7 @@ namespace quanLyKho
             this.grb_DM_Cap_Nhat_Khach_Hang.Size = new System.Drawing.Size(745, 199);
             this.grb_DM_Cap_Nhat_Khach_Hang.TabIndex = 60;
             this.grb_DM_Cap_Nhat_Khach_Hang.TabStop = false;
-            this.grb_DM_Cap_Nhat_Khach_Hang.Text = "Cập nhật Hóa Đơn Xuất";
+            this.grb_DM_Cap_Nhat_Khach_Hang.Text = "Cập nhật Phiếu Xuất";
             // 
             // cbo_DM_KhachHang
             // 

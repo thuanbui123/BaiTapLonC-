@@ -82,9 +82,9 @@ namespace quanLyKho
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(152, 36);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 19);
+            this.label17.Size = new System.Drawing.Size(92, 19);
             this.label17.TabIndex = 62;
-            this.label17.Text = "Số Hóa Đơn";
+            this.label17.Text = "Số Phiếu xuất";
             // 
             // lbl_DM_CTPX_SoHoaDon
             // 
@@ -117,13 +117,14 @@ namespace quanLyKho
             this.lbl_ThanhTien.AutoSize = true;
             this.lbl_ThanhTien.Location = new System.Drawing.Point(519, 142);
             this.lbl_ThanhTien.Name = "lbl_ThanhTien";
-            this.lbl_ThanhTien.Size = new System.Drawing.Size(0, 19);
+            this.lbl_ThanhTien.Size = new System.Drawing.Size(21, 19);
             this.lbl_ThanhTien.TabIndex = 87;
+            this.lbl_ThanhTien.Text = "...";
             // 
             // lbl_DonVi
             // 
             this.lbl_DonVi.AutoSize = true;
-            this.lbl_DonVi.Location = new System.Drawing.Point(719, 107);
+            this.lbl_DonVi.Location = new System.Drawing.Point(756, 107);
             this.lbl_DonVi.Name = "lbl_DonVi";
             this.lbl_DonVi.Size = new System.Drawing.Size(21, 19);
             this.lbl_DonVi.TabIndex = 86;
@@ -207,7 +208,6 @@ namespace quanLyKho
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(227, 26);
             this.txt_SoLuong.TabIndex = 85;
-            this.txt_SoLuong.TextChanged += new System.EventHandler(this.txt_SoLuong_TextChanged);
             // 
             // label16
             // 
@@ -225,7 +225,6 @@ namespace quanLyKho
             this.txt_DonGia.Name = "txt_DonGia";
             this.txt_DonGia.Size = new System.Drawing.Size(327, 26);
             this.txt_DonGia.TabIndex = 81;
-            this.txt_DonGia.TextChanged += new System.EventHandler(this.txt_DonGia_TextChanged);
             // 
             // txt_GiaGoc
             // 
@@ -325,7 +324,7 @@ namespace quanLyKho
             this.grbChiTietDonXuat.Size = new System.Drawing.Size(953, 333);
             this.grbChiTietDonXuat.TabIndex = 72;
             this.grbChiTietDonXuat.TabStop = false;
-            this.grbChiTietDonXuat.Text = "Cập nhật chi tiết hóa đơn xuất ";
+            this.grbChiTietDonXuat.Text = "Cập nhật chi tiết phiếu xuất ";
             // 
             // label14
             // 
@@ -468,14 +467,15 @@ namespace quanLyKho
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1147, 47);
             this.label2.TabIndex = 74;
-            this.label2.Text = "CHI TIẾT HÓA ĐƠN XUẤT ";
+            this.label2.Text = "CHI TIẾT PHIẾU XUẤT ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // errorProvider1
             // 

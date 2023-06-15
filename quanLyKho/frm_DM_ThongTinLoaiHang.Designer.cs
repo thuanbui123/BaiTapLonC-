@@ -246,6 +246,7 @@ namespace quanLyKho
             // 
             this.lblThongTinLoaiHang.AutoSize = true;
             this.lblThongTinLoaiHang.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongTinLoaiHang.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblThongTinLoaiHang.Location = new System.Drawing.Point(209, 27);
             this.lblThongTinLoaiHang.Name = "lblThongTinLoaiHang";
             this.lblThongTinLoaiHang.Size = new System.Drawing.Size(202, 25);

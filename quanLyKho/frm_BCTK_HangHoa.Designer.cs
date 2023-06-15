@@ -46,15 +46,12 @@ namespace quanLyKho
             this.lblThongKeHangHoa.TabIndex = 0;
             this.lblThongKeHangHoa.Text = "THỐNG KÊ HÀNG HÓA";
             this.lblThongKeHangHoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblThongKeHangHoa.Click += new System.EventHandler(this.lblThongKeHangHoa_Click);
             // 
             // dgvMain
             // 
             this.dgvMain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMain.ColumnHeadersHeight = 29;
             this.dgvMain.Location = new System.Drawing.Point(22, 85);
             this.dgvMain.Name = "dgvMain";
-            this.dgvMain.RowHeadersWidth = 51;
             this.dgvMain.Size = new System.Drawing.Size(850, 324);
             this.dgvMain.TabIndex = 2;
             // 
@@ -72,7 +69,7 @@ namespace quanLyKho
             // 
             // frm_BCTK_HangHoa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(890, 421);

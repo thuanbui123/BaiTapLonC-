@@ -29,45 +29,45 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblBaoCaoKho = new System.Windows.Forms.Label();
-            this.btnIn = new System.Windows.Forms.Button();
             this.dgvMain = new System.Windows.Forms.DataGridView();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.lblBaoCaoKho = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvMain
+            // 
+            this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMain.Location = new System.Drawing.Point(12, 166);
+            this.dgvMain.Name = "dgvMain";
+            this.dgvMain.RowHeadersWidth = 51;
+            this.dgvMain.RowTemplate.Height = 24;
+            this.dgvMain.Size = new System.Drawing.Size(807, 413);
+            this.dgvMain.TabIndex = 17;
+            // 
+            // btnIn
+            // 
+            this.btnIn.Location = new System.Drawing.Point(12, 66);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(155, 55);
+            this.btnIn.TabIndex = 16;
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // lblBaoCaoKho
             // 
             this.lblBaoCaoKho.AutoSize = true;
             this.lblBaoCaoKho.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaoCaoKho.Location = new System.Drawing.Point(239, 9);
+            this.lblBaoCaoKho.Location = new System.Drawing.Point(239, 8);
             this.lblBaoCaoKho.Name = "lblBaoCaoKho";
-            this.lblBaoCaoKho.Size = new System.Drawing.Size(161, 32);
-            this.lblBaoCaoKho.TabIndex = 12;
+            this.lblBaoCaoKho.Size = new System.Drawing.Size(128, 25);
+            this.lblBaoCaoKho.TabIndex = 15;
             this.lblBaoCaoKho.Text = "Báo cáo kho";
-            // 
-            // btnIn
-            // 
-            this.btnIn.Location = new System.Drawing.Point(12, 67);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(155, 55);
-            this.btnIn.TabIndex = 13;
-            this.btnIn.Text = "In";
-            this.btnIn.UseVisualStyleBackColor = true;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
-            // dgvMain
-            // 
-            this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Location = new System.Drawing.Point(12, 167);
-            this.dgvMain.Name = "dgvMain";
-            this.dgvMain.RowHeadersWidth = 51;
-            this.dgvMain.RowTemplate.Height = 24;
-            this.dgvMain.Size = new System.Drawing.Size(807, 413);
-            this.dgvMain.TabIndex = 14;
             // 
             // frm_BCTK_BaoCaoKho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(831, 587);
@@ -77,7 +77,7 @@ namespace quanLyKho
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_BCTK_BaoCaoKho";
-            this.Text = "Báo cáo kho";
+            this.Text = "frm_BCTK_BaoCaoKho";
             this.Load += new System.EventHandler(this.frm_BCTK_BaoCaoKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
             this.ResumeLayout(false);
@@ -86,8 +86,9 @@ namespace quanLyKho
         }
 
         #endregion
-        private System.Windows.Forms.Label lblBaoCaoKho;
-        private System.Windows.Forms.Button btnIn;
+
         private System.Windows.Forms.DataGridView dgvMain;
+        private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.Label lblBaoCaoKho;
     }
 }

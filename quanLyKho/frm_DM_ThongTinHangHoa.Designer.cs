@@ -141,9 +141,9 @@ namespace quanLyKho
             this.lblMaLoai.AutoSize = true;
             this.lblMaLoai.Location = new System.Drawing.Point(330, 34);
             this.lblMaLoai.Name = "lblMaLoai";
-            this.lblMaLoai.Size = new System.Drawing.Size(55, 19);
+            this.lblMaLoai.Size = new System.Drawing.Size(68, 19);
             this.lblMaLoai.TabIndex = 3;
-            this.lblMaLoai.Text = "Mã loại";
+            this.lblMaLoai.Text = "Loại hàng";
             // 
             // lblDonViTinh
             // 

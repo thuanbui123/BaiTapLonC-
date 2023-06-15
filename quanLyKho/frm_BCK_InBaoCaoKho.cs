@@ -31,7 +31,7 @@ namespace quanLyKho
 
 
 
-            
+
             this.reportViewer1.RefreshReport();
         }
     }
